@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reservations - WebApp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/alfred.css" rel="stylesheet" media="screen">
+  </head>
+  <body class="reservations push-top">
+  <div class="modal fade" id="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Administration des stocks</h4>
+        </div>
+        <div class="modal-body">
+          <h6>{Lunch}</h6>
+          <div class="form-group">
+            <div class="input-group stock-update">
+              <div class="input-group-addon">-</div>
+              <input type="text" class="form-control input-lg" value="780">
+              <div class="input-group-addon">+</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="col-xs-6 col-md-6 col-lg-6 nopr nopl">
+            <button type="button" class="btn btn-default btn-block textgrey nopr nopl squared" data-dismiss="modal">Annuler</button>
+          </div>
+          <div class="col-xs-6 col-md-6 col-lg-6 nopr nopl">
+            <button type="button" class="btn btn-default btn-block nopr nopl squared">Enregistrer</button>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+<!--*****Drawer*****-->
+    <nav class="drawer effect" id="menu-1">
+        <div class="drawer-content col-lg-12">
+          <!-- <h5 class="textlight">Choisir un autre restaurant<i class="fa fa-angle-down pull-right"></i></h5> -->
+          <div class="restoselect">
+              Restaurant #2
+              <i class="fa fa-angle-down fa-2x pull-right restoselect"></i>
+          </div>
+          <div class="liner">&nbsp;</div>
+          <div class="rubrik">
+            <a href="#" class="menuitem textlight">
+              <!-- <i class="fa fa-check-circle-o m-r"></i> -->
+              <img src="img/side-acknowledge.png">
+              Validation des réservations
+              <span class="badge bg-danger pin pull-right">12</span>
+            </a>
+            <a href="#" class="menuitem active">
+              <!-- <i class="fa fa-tasks m-r"></i> -->
+              <img src="img/side-list.png">
+              Affichez vos réservations
+            </a>
+            <a href="#" class="menuitem textlight">
+              <!-- <i class="fa fa-lock m-r"></i> -->
+              <img src="img/side-shifts.png">
+              Ouvrez / fermez vos services
+            </a>
+          </div>
+          <btn class="btn btn-danger btn-block btn-lg disconnect">
+            <i class="fa fa-power-off m-x"></i>Déconnexion
+          </btn>
+      </div>
+    </nav>
+<!-- //drawer -->
+    <div class="fixed-top">
+      <div class="col-lg-12 dark-heading">
+        <div class="container-fluid valign-middle padding-none">
+          <div class="row nomargin">
+            <div class="col-lg-1 col-xs-1 padding-none pull-left"><a class="fa fa-bars text-shaq" id ="trigger"></a></div>
+          <div class="col-lg-10 col-xs-10 text-center">
+            <h1 class="title">Réservations internet</h1>
+              <div class="color-soft italic">Matsuri Marbeuf</div>
+          </div>
+          <div class="col-lg-1 col-xs-1 padding-none pull-right"><a class="fa fa-sliders text-shaq" data-toggle="modal" data-target="#modal"></a></div>
+          </div>
+        </div>
+    </div><!-- /header -->
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $(function() {
+        var $drawer = $('.drawer');
+        $('#trigger').on('click',function(event){
+            if(!$drawer.hasClass('st-menu-open')) {
+                $drawer.addClass('st-menu-open');
+                event.stopPropagation();
+            }
+        });
+        $(document).on('click',function(event){
+            var $target = $(event.target);
+            if(!$target.closest('.drawer').length) {
+                if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }   
+            }
+        });
+        $('#closer').on('click',function(event){
+            if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }
+        });
+    });
+    </script>
+  </body>
+</html>

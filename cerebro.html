@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Cerebro - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/cerebro.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body class="admin">
+    <div class="header">
+        <div class="logo">
+            <i class="fa fa-graduation-cap fa-lg"></i>
+            <span>Cerebro</span>
+        </div>
+    </div>
+
+<!-- Content begins -->
+<div class="container-fluid">
+    <h1 class="col-lg-12">Title</h1>
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h1>Core metrics</h1>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Releases</a></li>
+                    <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Performance</a></li>
+                    <!-- <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">xxx</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">xxx</a></li> -->
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane" id="home">
+                    </div>
+                    <div role="tabpanel" class="tab-paneactive performance" id="profile">
+                            <h2>Web performance metrics</h2>
+                            <div class="col-lg-6 pull-right apps">
+                            <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                <label class="btn btn-default col-xs-12">
+                                    <input type="radio" autocomplete="off" checked>
+                                    Portal
+                                </label>
+                                <label class="btn btn-default col-xs-12">
+                                    <input type="radio" autocomplete="off" checked>
+                                    Core b2c
+                                </label>
+                                <label class="btn btn-default col-xs-12">
+                                    <input type="radio" autocomplete="off" checked>
+                                    LaFourchette RR
+                                </label>
+                                </label>
+                                <label class="btn btn-default col-xs-12">
+                                    <input type="radio" autocomplete="off" checked>
+                                    Core b2b
+                                </label>
+                            </div>
+                        </div>
+
+                        <canvas id="line3"></canvas>
+                    </div>
+                    <!-- <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                    <div role="tabpanel" class="tab-pane" id="settings">...</div> -->
+                  </div>
+                <div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //content -->
+</body>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.js"></script>
+<script src="js/charts.js"></script>
+<script type="text/javascript">
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var lineChartData3 = {
+        labels : ["v1","v2","v3","v4","v5","v6","v7","v8","v9","v10","v11","v12"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(0,0,0,0)",
+                strokeColor : "rgba(59,175,218,1)",
+                // pointColor : "rgba(255,255,255,1)",
+                // pointStrokeColor : "rgba(29,147,217,1)",
+                // pointHighlightFill : "#fff",
+                // pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+    var ctx4 = document.getElementById("line3").getContext("2d");
+    window.line = new Chart(ctx4).Line(lineChartData3,{
+            maintainAspectRatio: false,
+            responsive: false,
+            scaleShowGridLines: false,
+            showScale: true,
+            pointDot: false,
+        });
+</script>
+</html>

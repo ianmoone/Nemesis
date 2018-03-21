@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>neXus</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/nexus-stats.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="logo expander">neXus</div>
+    </header>
+    <div class="sidebar">
+        xxx
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Customers repeat</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="full-width-chart">
+                            <canvas id="live"></canvas>
+                        </div>
+                        <row>
+                            <div class="metric col-lg-4 text-center">
+                                <div class="metric-title">Net Promoter Score</div>
+                                <div class="metric-value textgreen">16,942</div>
+                            </div>
+                            <div class="metric col-lg-4 text-center">
+                                <div class="metric-title">New cust. 90d repeat</div>
+                                <div class="metric-value">19.4 <span class="small">%</span></div>
+                            </div>
+                            <div class="metric col-lg-4 text-center">
+                                <div class="metric-title">Yums attributed yesterday</div>
+                                <div class="metric-value">4,800</div>
+                            </div>
+                        </row>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                        <div class="col-lg-6">
+                            <div id="realtime" class="category20" style="height: 200px"></div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/d3min.js"></script>
+<script src="js/epoch.min.js"></script>
+<script src="js/realtime.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+$(document).ready(function(){
+    $(".collapser").click(function () {
+        $(".sidebar,header,.logo").toggleClass("collapsed");
+    });
+});
+</script>
+<script>
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var lineChartData = {
+        labels : ["#1","#2","#3","#4","#5","#6","#7","#8","#9","#10"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(45, 140, 203, .6)",
+                strokeColor : "rgba(45, 140, 203, 0)",
+                pointColor : "#2ecc71",
+                pointStrokeColor : "#1D93D9",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "#dcdcdc",
+                data : [
+                    randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()
+                    ]
+            },
+            {
+                label: "My Second dataset",
+                fillColor : "rgba(46, 204, 113, .6)",
+                strokeColor : "rgba(46, 204, 113, 0)",
+                pointColor : "#2d8ccb",
+                pointStrokeColor : "#1D93D9",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "#dcdcdc",
+                data : [
+                    randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()
+                    ]
+            }
+        ]
+    };
+
+    window.onload = function(){
+    var ctx1 = document.getElementById("live").getContext("2d");
+    window.line = new Chart(ctx1).Line(lineChartData,{
+            maintainAspectRatio : false,
+            responsive : true,
+            scaleShowHorizontalLines: false,
+            scaleShowVerticalLines: false,
+            showScale : false,
+            // scaleFontColor: "#999",
+            bezierCurve : false,
+            pointDot : false,
+            bezierCurve : true,
+            datasetFill : true,
+            tooltipXPadding : 20,
+        });
+    }
+</script>
+<script>
+$(document).ready(function(){
+    $(".expander").click(function () {
+        $(".sidebar,.container-fluid").toggleClass("expanded");
+    });
+});
+</script>
+<script>
+$(function() {
+    var data = new RealTimeData(4);
+
+    var chart = $('#realtime').epoch({
+        type: 'time.area',
+        data: data.history(),
+        axes: []
+    });
+
+    setInterval(function() { chart.push(data.next()); }, 1000);
+    chart.push(data.next());
+});
+</script>
+</html>

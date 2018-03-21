@@ -1,0 +1,53 @@
+/*
+/$$                 /$$ /$$
+| $$                | $$|__/
+| $$$$$$$   /$$$$$$ | $$ /$$ /$$   /$$
+| $$__  $$ /$$__  $$| $$| $$|  $$ /$$/
+| $$  \ $$| $$$$$$$$| $$| $$ \  $$$$/
+| $$  | $$| $$_____/| $$| $$  >$$  $$
+| $$  | $$|  $$$$$$$| $$| $$ /$$/\  $$
+|__/  |__/ \_______/|__/|__/|__/  \__/   mark I
+*/
+
+/* Generics
+-----------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {font-weight:300;}
+.m-y{margin: 20px 0;}
+
+/***************************************************
+           ___       ___        ___      ___  __  **
+|  | |    |__  |    |__   |\/| |__  |\ |  |  /__` **
+\__/ |    |___ |___ |___  |  | |___ | \|  |  .__/ **
+***************************************************/
+
+html {height:100%;}
+body {height:100%;background: #f6f6f6;color:#555555;font-size:14px;}
+.container, .container-fluid {padding: 70px 0 20px 0;transition:padding 0.6s ease;}
+.panel-body [class*='col-'] {padding:0;}
+
+/* Header
+-------------------------------------------------- */
+header {background:#fff; height:60px; width:100%; top:0; z-index:942; position:fixed; box-shadow:0 1px 1px rgba(0,0,0,.05);}
+.logo {height:60px; background:#fff; width:200px; float:left; line-height:60px; font-size:24px; color:#999; font-weight:300; margin-left:15px;}
+.logo img {max-height:40px;}
+.trigger, .trigger:hover {display:inline-block; color:#999; padding:2px 10px; font-size:18px; margin:20px; cursor:pointer; text-decoration:none;}
+.trigger span {margin-right:10px;}
+.filters {width:100%; padding:30px 20px; top:60px; left:0; z-index:942;}
+
+/* Elements
+-------------------------------------------------- */
+.sidebar { background: #2F313B; width: 0; height: 100%; padding: 0 0 20px 0; display: block; position: fixed; font-weight: 300; font-size: 15px; right: 0; top: 50px; transition: all .2s ease-in-out; }
+.sidebar.sidebar-expanded { width: 300px; transition: all .2s ease-in-out; z-index: 42;}
+.container-fluid.sidebar-expanded { margin-right: 300px; transition: all .2s ease-in-out;}
+.sidebar .btn {margin-top: 30px;}
+
+/* Bootstrap Overrides
+-------------------------------------------------- */
+.btn {border-radius: 2px;}
+.panel {height:100%; border:0; border-radius:0; margin:10px 0; box-shadow:0 1px 1px rgba(0,0,0,.05); padding:0 0 10px 0;}
+.panel-default>.panel-heading {background:#fff;color:#999;text-align: left;text-transform:uppercase;line-height:40px;font-size:18px;font-weight:200;}
+label {margin-top: 5px; font-weight: 300;}
+.form-group {margin-bottom: 10px;}
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

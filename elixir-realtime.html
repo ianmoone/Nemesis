@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Elixir - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/elixir-components.css"type="text/css"/>
+        <link rel="stylesheet"href="css/rickshaw.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/weather-icons.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body class="mfn">
+<!-- Content begins -->
+<header>
+    xxx
+</header>
+<div class="container-fluid content">
+
+<!-- __ xxx __ -->
+<div class="row">
+    <canvas id="hero"></canvas>
+</div><!-- /row -->
+</div>
+<!-- //content -->
+
+</body>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/charts.js"></script>
+<script>
+    (function(){
+    // Colour variables
+    var red = "#bf616a",
+        blue = "#5B90BF",
+        orange = "#d08770",
+        yellow = "#ebcb8b",
+        green = "#a3be8c",
+        teal = "#96b5b4",
+        pale_blue = "#8fa1b3",
+        purple = "#b48ead",
+        brown = "#ab7967";
+
+
+        var baseDataset = {
+            fill: 'rgba(222,225,232,0.4)',
+            stroke: 'rgba(222,225,232,0)',
+            highlight: 'rgba(222,225,232,0)',
+            highlightStroke: 'rgba(222,225,232,0)'
+        },
+        overlayDataset = {
+            fill: 'rgba(91,144,191,0.4)',
+            stroke: 'rgba(91,144,191,1)',
+            highlight: 'rgba(91,144,191,0.8)',
+            highlightStroke: 'rgba(91,144,191,1)'
+        };
+
+    var data = [],
+        barsCount = 10,
+        labels = new Array(barsCount),
+        updateDelayMax = 200,
+        $id = function(id){
+            return document.getElementById(id);
+        },
+        random = function(max){ return Math.round(Math.random()*42)},
+        helpers = Chart.helpers;
+
+
+    Chart.defaults.global.responsive = true;
+
+
+    for (var i = barsCount - 1; i >= 0; i--) {
+        data.push(Math.round(Math.random() * 42));
+    };
+    new Chart($id('hero').getContext('2d')).Line({
+        labels : labels,
+        datasets : [{
+            fillColor : blue,
+            pointDot: false,
+            data : data
+        }]
+    },{
+        showScale : false,
+        showTooltips : false,
+        onAnimationComplete : function(){
+            // Get scope of the hero chart during updates
+            var heroChart = this,
+                timeout;
+            // Stop this running every time the update is fired
+            this.options.onAnimationComplete = randomUpdate;
+
+            this.options.animationEasing = 'easeOutQuint';
+
+            randomUpdate();
+
+            function randomUpdate(){
+                heroChart.stop();
+                clearTimeout(timeout);
+                // Get a random bar
+                timeout = setTimeout(function(){
+                    var randomNumberOfBars = Math.floor(Math.random() * barsCount),
+                        i;
+                    for (i = randomNumberOfBars - 1; i >= 0; i--) {
+                        heroChart.datasets[0].points[Math.floor(Math.random() * barsCount)].value = Math.round(Math.random() * 42);
+                    };
+                    heroChart.update();
+                },Math.random() * updateDelayMax);
+            };
+        }
+    });
+
+})();
+
+</script> <!-- / charts -->
+</html>

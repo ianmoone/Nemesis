@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>neXus</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/nexus.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <header>
+        <span class="fa fa-bars collapser"></span>
+        neXus
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li class="active">
+                xxx
+            </li>
+            <li>
+                zzz
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+            </div>
+        </div>
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+$(document).ready(function(){
+    $(".collapser").click(function () {
+        $(".sidebar,header,.logo").toggleClass("collapsed");
+    });
+});
+</script>
+</html>

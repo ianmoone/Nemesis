@@ -1,0 +1,163 @@
+/*
+      _        _
+     | |      | |
+  ___| |_ __ _| |_ _   _ ___
+ / __| __/ _` | __| | | / __|
+ \__ \ || (_| | |_| |_| \__ \
+ |___/\__\__,_|\__|\__,_|___/  mark.II
+*/
+
+/* Alignment, emphasis & Colors
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.m-x {margin: 0 15px;}
+.small {font-size: 12px; }
+.big{font-size: 18px !important; margin-right: 20px !important;}
+.hulk{font-size: 24px !important;}
+.flatblue {background: #3bafda; color: #ffffff; }
+.flatgreen {background: #2ecc71; color: #ffffff; }
+.flatred {background: #e74c3c; color: #ffffff; }
+.flatorange {background: #f1c40f; color: #ffffff; }
+.flatpurple {background: #967ADC; color: #ffffff; }
+.flatgrey {background: #bdc3c7; }
+.textblue {color: #2980b9; }
+.textgreen {color: #2ecc71; }
+.textred {color: #e74c3c; }
+.textorange {color: #f1c40f; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+small { font-size: 65%; }
+.row {margin: 10px 0; }
+
+/***************************************************
+           ___       ___        ___      ___  __  **
+|  | |    |__  |    |__   |\/| |__  |\ |  |  /__` **
+\__/ |    |___ |___ |___  |  | |___ | \|  |  .__/ **
+***************************************************/
+
+/* Content elements
+-----------------------------------------------------*/
+html {height: 100%;}
+body{font-size: 16px; height: 100%;}
+h1, h2, h3, h4, .btn {font-weight: 300;}
+.container-fluid {height: 100%;}
+form {padding-top: 20px;}
+form > [class*='col-lg'] {padding: 10px 15px;}
+.label-floatlabel {color: #2ecc71!important;}
+.btn-default {color: #666; background-color: #fff; border-color: #dedede;}
+.btn-default:hover {color: #333; background-color: #e9e9e9; border-color: #dedede; font-weight: bold; transition: all 0.2s;}
+.btn-default.active,.btn-default.active:hover {color: #fff; background-color: #3498db; font-weight: normal; border-color: #dedede;}
+.btn-group-justified .btn {border-right-width:0px}
+.btn-group-justified .btn:last-of-type {border-right-width:1px}
+.btn:hover {transition: all 0.4s ease;}
+.content {margin-left: 220px;}
+.list{background: #fff; border-radius: 4px; border: 1px solid #eee; padding: 0; margin-top: 20px;}
+.events{margin-top: 10px;}
+.events h4{padding-left: 15px;}
+.events .list{margin-top: 10px;}
+.bubble{font-size: 14px;}
+.status{font-weight: 200;}
+.status-success{background: rgba(40, 187, 114, 0.2);}
+.status-alert{background: #fff;}
+.panel-status{height: 60px; line-height: 60px;}
+.status-icon{width: 60px; height: 60px; line-height: 60px;margin: -1px 20px 0 -16px; border-radius: 4px 0 0 4px;}
+.status-icon i{margin: 16px 0 0 18px;}
+.status-timestamp{font-size: 14px; font-weight: 300;}
+.panel-service{color: #888; border-bottom: 1px solid #EBEBE9;}
+.panel-service:last-child{border-bottom: 0;}
+.panel-event{padding-left: 20px;}
+.panel-service i, .panel-event i{margin-top: 8px;min-width: 20px;}
+.event-warning{background: rgba(241, 196, 15, 0.2);}
+.event-alert{background: rgba(231, 76, 60, 0.2);}
+.timestamp{text-transform: uppercase; text-decoration: underline;}
+.description{color: #888; font-weight: 200; font-size: 14px;}
+
+/* Sidebar
+-------------------------------------------------- */
+.sidebar {
+    background: #31343B;
+    min-width: 180px;
+    width: 220px;
+    height: 100%;
+    color: #333;
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.sidebar ul{padding: 0;}
+.sidebar ul li{/* border-bottom: 1px solid #2980b9; */}
+.sidebar ul ul li{border: 0;}
+.sidebar a{padding: 15px 20px; display: block; color: rgba(255, 255, 255, 0.6); font-weight: 300;}
+.sidebar a:hover,.sidebar a:focus,.sidebar a.active{text-decoration: none; color: rgba(255, 255, 255, 1);background-color: rgba(68, 71, 78, 1);}
+.sidebar a i {margin-right: 10px;}
+.logo{color: #fff; font-size: 24px; padding: 30px 0; font-weight: 300;padding-left: 20px; background: #9b59b6;}
+.logo img {width: 50px;margin: -8px 10px 0 30px;}
+.bottom-menu {position: absolute; bottom: -10px; width: 100%;}
+a.logout {background: #e74c3c; color: rgba(255, 255, 255, 1);}
+a.logout:hover {background: #c0392b; color: rgba(255, 255, 255, 1);}
+
+/* Panel overrides
+-------------------------------------------------- */
+.panel {border-radius: 0;padding: 0 15px; margin: 1px 0;}
+.panel:last-child{margin-bottom: 0; box-shadow: none;}
+.panel-body {padding: 10px 0;}
+
+/* Responsive table
+-------------------------------------------------- */
+@media only screen and (max-width: 800px) {
+/* Force table to not be like tables anymore */
+  #no-table table,
+  #no-table thead,
+  #no-table tbody,
+  #no-table th,
+  #no-table td,
+  #no-table tr {
+    display: block;
+  }
+
+/* Hide table headers (but not display: none;, for accessibility) */
+  #no-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-table tr { border: 1px solid #ccc; }
+
+  #no-table td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align:left;
+  }
+
+  #no-table td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align:left;
+    font-weight: 500;
+    color: #333;
+  }
+
+/*
+Label the data
+*/
+  #no-table td:before { content: attr(data-title); }
+}
+
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

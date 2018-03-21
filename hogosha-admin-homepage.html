@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Hogosha - mark II</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/> -->
+        <link rel="stylesheet"href="css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+        <link rel="stylesheet"href="css/hogosha.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body class="admin">
+    <div class="header">
+        <div class="logo">
+            <i class="fa fa-graduation-cap fa-lg"></i>
+            <span>Hogosha</span>
+        </div>
+        <a class="fa fa-bars fa-lg expander"></a>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li class="active">
+                <a href="#" data-toggle="collapse" data-target="#submenu1" aria-expanded="false" aria-controls="submenu1" class="collapsed">
+                    <i class="fa fa-rocket fa-lg"></i>
+                    <span>Menu item</span>
+                    <span class="fa fa-arrow pull-right"></span>
+                </a>
+                <ul id="submenu1" class="submenu collapse">
+                    <li><a href="#">Submenu item</a></li>
+                    <li><a href="#">Submenu item</a></li>
+                    <li><a href="#">Submenu item</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-bomb fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-list fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-puzzle-piece fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="bottom-menu">
+            <li>
+                <a href="#">
+                    <i class="fa fa-rocket fa-lg"></i>
+                    <span>Boost</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-rocket fa-lg"></i>
+                    <span>Boost</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class="fa fa-fw fa-power-off fa-lg"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /sidebar -->
+
+    <!-- Content begins -->
+    <div class="container-fluid content">
+        <h1 class="col-lg-12">Dashboard</h1>
+        <div class="col-md-3">
+            <div class="panel panel-default metric">
+                <div class="metric-value">4</div>
+                <div class="metric-label">Incidents in the last 7 d.</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default metric">
+                <div class="metric-value">1,5 <span class="metric-unit">d.</span></div>
+                <div class="metric-label">Avg time for resolution</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default metric">
+                <div class="metric-value">7,942</div>
+                <div class="metric-label">Subscribers</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default metric">
+                <div class="metric-value">7,942</div>
+                <div class="metric-label">Subscribers</div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <canvas id="line" class="graphe"></canvas>
+        </div>
+    </div>
+    <!-- //content -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- <script src="js/charts.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.0/Chart.js"></script>
+<script>
+var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    // var ChartData = {
+    //     labels : ["January","February","March","April","May","June","July","xxx","ddd","eee","zzz","ppp"],
+    //     datasets : [
+    //         {
+    //             label: "My First dataset",
+    //             fillColor : "rgba(52, 152, 219,.6)",
+    //             strokeColor : "rgba(41, 128, 185,1)",
+    //             // pointColor : "rgba(255,255,255,1)",
+    //             // pointStrokeColor : "rgba(29,147,217,1)",
+    //             // pointHighlightFill : "#fff",
+    //             // pointHighlightStroke : "rgba(220,220,220,1)",
+    //             data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+    //         }
+    //     ]
+    // };
+
+window.onload = function(){
+    var ctx1 = document.getElementById("line");
+    var myChart = new Chart(ctx1,{
+            type: 'bar',
+            data: {
+                labels : ["January","February","March","April","May","June","July","xxx","ddd","eee","zzz","ppp"],
+                datasets : [{
+                        label: "My First dataset",
+                        fillColor : "rgba(52, 152, 219,.6)",
+                        strokeColor : "rgba(41, 128, 185,1)",
+                        // pointColor : "rgba(255,255,255,1)",
+                        // pointStrokeColor : "rgba(29,147,217,1)",
+                        // pointHighlightFill : "#fff",
+                        // pointHighlightStroke : "rgba(220,220,220,1)",
+                        data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+                    }]
+            },
+            options: {
+                maintainAspectRatio: true,
+                responsive: true,
+                scaleShowGridLines: true,
+                showScale: true,
+            }
+        });
+    ;};
+</script>
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+    $( ".expander" ).click(function() {
+    $( ".header, .sidebar, .container-fluid" ).toggleClass( "sidebar-collapsed" );
+    });
+</script><!-- /sidebar expand -->
+</html>

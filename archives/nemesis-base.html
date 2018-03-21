@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Nemesis</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/nemesis.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body class="navbar-fixed">
+        <!-- header -->
+        <header id="header" class="navbar"> 
+            <ul class="nav navbar-nav navbar-avatar pull-right">
+                <li class="dropdown"> 
+                    <a href="#"class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="hidden-xs-only">Ian MOONE</span>
+                        <span class="thumb-small avatar inline">
+                            <img src="img/13.png" alt="Da user"class="img-circle"> 
+                        </span>
+                        <b class="caret hidden-xs-only"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="badge bg-danger pull-right">3</span>Notifications
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li> 
+                            <a href="docs.html">Help</a>
+                        </li>
+                        <li> <a href="signin.html">Logout</a>
+                        </li>
+                        </ul>
+                        </li>
+                    </ul>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/fork-50.png">
+                        </a>
+                        <button type="button" class="btn btn-link pull-left nav-toggle visible-xs" data-toggle="class:slide-nav slide-nav-left" data-target="body">
+                        <i class="icon-reorder icon-xlarge text-default"></i>
+                        </button>
+                        <ul class="nav navbar-nav hidden-xs">
+                            <li> 
+                                <div class="m-t m-b-small" id="panel-notifications">
+                                    <a href="#"class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon-comment-alt icon-xlarge text-default"></i>
+                                            <b class="badge badge-notes bg-danger count-n">2</b>
+                                    </a>
+                                    <section class="dropdown-menu m-l-small m-t-mini">
+                                        <section class="panel panel-large arrow arrow-top">
+                                            <header class="panel-heading bg-white">
+                                                <span class="h5">
+                                                    <strong>You have <span class="count-n">2</span> notifications</strong>
+                                                </span>
+                                            </header>
+                                            <div class="list-group">
+                                                <a href="#" class="media list-group-item">
+                                                    <span class="pull-left thumb-small">
+                                                        <img src="images/avatar.jpg" alt="John said" class="img-circle">
+                                                    </span>
+                                                    <span class="media-body block m-b-none">
+                                                        Moved to Bootstrap 3.0 <br> 
+                                                        <small class="text-muted">
+                                                            23 June 13
+                                                        </small>
+                                                    </span>
+                                                </a>
+                                                <a href="#" class="media list-group-item">
+                                                    <span class="media-body block m-b-none">
+                                                        first v.1 (Bootstrap 2.3 based) released <br>
+                                                        <small class="text-muted">
+                                                            19 June 13
+                                                        </small>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <footer class="panel-footer text-small">
+                                                <a href="#" class="pull-right">
+                                                    <i class="icon-cog"></i>
+                                                </a>
+                                                <a href="#">
+                                                    See all the notifications
+                                                </a>
+                                            </footer>
+                                        </section>
+                                    </section>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="m-t-small">
+                                    <a class="btn btn-sm btn-success" data-toggle="modal" href="#modal">
+                                        <i class="icon-plus"></i>
+                                        RESA
+                                    </a>
+                                </div>
+                            </li>
+            </ul>
+            <form class="navbar-form pull-left shift" action="" data-toggle="shift:appendTo" data-target=".nav-primary">
+                <i class="icon-search text-muted"></i>
+                <input type="text" class="input-sm form-control" placeholder="Search">
+            </form>
+        </header>
+        <!-- / header -->
+        <!-- nav -->
+        <nav id="nav" class="nav-primary hidden-xs nav-vertical">
+            <ul class="nav" data-spy="affix" data-offset-top="50">
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-dashboard icon-xlarge"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-book icon-xlarge"></i>
+                        <span>Gestion de service</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-calendar icon-xlarge"></i>
+                        <span>Calendrier</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-desktop icon-xlarge"></i>
+                        <span>Gestion internet</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-user icon-xlarge"></i>
+                        <span>Gestion des clients</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-list-alt icon-xlarge"></i>
+                        <span>Mon compte</span>
+                    </a>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="#">
+                        <i class="icon-cog icon-xlarge"></i>
+                        <span>Paramètres</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="buttons.html">item 1</a>
+                        </li>
+                        <li>
+                            <a href="icons.html">
+                                <b class="badge pull-right">302</b>
+                                item 2 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="grid.html">item 3 </a>
+                        </li>
+                        <li>
+                            <a href="widgets.html">
+                                <b class="badge bg-primary pull-right">8</b>
+                                item 4 
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- / nav -->
+        <section id="content">
+            <section class="main padder"> 
+                <div class="row"> 
+                    <div class="col-lg-12"> 
+                        <section class="toolbar clearfix"> 
+                            <h1>Components</h1>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2 class="col-lg-12">Modules</h2>
+                    <div class="col-lg-6"> <!-- scrollable inbox widget --> 
+                        <section class="panel"> 
+                            <header class="panel-heading"> 
+                                <ul class="nav nav-pills pull-right"> 
+                                    <li> 
+                                        <a href="#" class="panel-toggle text-muted"> 
+                                            <i class="icon-caret-down icon-large text-active"></i> 
+                                            <i class="icon-caret-up icon-large text"></i> 
+                                        </a> 
+                                    </li> 
+                                </ul> 
+                                <span class="label label-large bg-default">
+                                    15
+                                </span>
+                                Inbox
+                            </header> 
+                            <section class="panel-body scrollbar scroll-y m-b"> 
+                                <article class="media"> 
+                                    <span class="pull-left thumb-small"> 
+                                        <img src="images/avatar.jpg" alt="John said" class="img-circle"> 
+                                    </span> 
+                                    <div class="media-body"> 
+                                        <div class="pull-right media-mini text-center text-muted"> 
+                                            <strong class="h4">12:18</strong> <br> 
+                                            <small class="label bg-light">pm</small> 
+                                        </div> 
+                                        <a href="#"class="h4">Bootstrap 3.0 is comming</a> 
+                                        <small class="block"> 
+                                            <a href="#" class="">John Smith</a> 
+                                            <span class="label label-success">Circle</span> 
+                                        </small> 
+                                        <small class="block">Sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.</small> 
+                                    </div> 
+                                </article>
+                                <div class="line pull-in"></div>
+                            </section>
+                        </section> <!-- / mail--> 
+                    </div>
+                    <div class="col-lg-6"> <!-- task --> 
+                        <section class="panel"> 
+                            <header class="panel-heading">
+                                Tasks
+                            </header> 
+                            <ul class="list-group"> 
+                                <li class="list-group-item" data-toggle="class:active" data-target="#todo-1"> 
+                                    <div class="media"> 
+                                        <span class="pull-left thumb-small m-t-mini"> 
+                                            <i class="icon-code icon-xlarge text-default"></i> 
+                                        </span> 
+                                        <div id="todo-1" class="pull-right text-primary m-t-small"> 
+                                            <i class="icon-circle icon-large text text-default"></i> 
+                                            <i class="icon-ok-sign icon-large text-active text-primary"></i> 
+                                        </div> 
+                                        <div class="media-body"> 
+                                            <div> 
+                                                <a href="#" class="h5">
+                                                    Coding on app
+                                                </a> 
+                                            </div> 
+                                            <small class="text-muted">9:30 am every day</small> 
+                                        </div> 
+                                    </div> 
+                                </li> 
+                            </ul> 
+                        </section> <!-- / task--> 
+                    </div>
+                </div><!--  / row -->
+                <div class="row">
+                    <h2 class="col-lg-12">Databox</h2>
+                    <div class="col-lg-3">
+                        <div class="databox text-center">
+                            <span class="value">8 484</span>
+                            le metric
+                            <footer class="category flatblue">
+                                <i class="icon-star"></i>
+                            </footer>
+                        </div><!-- /databox -->
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="databox text-center">
+                            <span class="value">8 484</span>
+                            le metric
+                            <footer class="category flatred">
+                                <i class="icon-star"></i>
+                            </footer>
+                        </div><!-- /databox -->
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="databox text-center">
+                            <span class="value">8 484</span>
+                            le metric
+                            <footer class="category flatgreen">
+                                <i class="icon-star"></i>
+                            </footer>
+                        </div><!-- /databox -->
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="databox text-center">
+                            <span class="value">8 484</span>
+                            le metric
+                            <footer class="category flatorange">
+                                <i class="icon-star"></i>
+                            </footer>
+                        </div><!-- /databox -->
+                    </div>
+                </div><!--  / row -->
+            </section>
+        </section>
+        <footer id="footer"> 
+            <div class="text-center padder clearfix"> 
+                <p> 
+                    <small>&copy; - 2013 Nemesis template </small>
+                </p> 
+            </div> 
+        </footer> 
+    <div class="modal fade" id="modal"> 
+        <form class="m-b-none"> 
+            <div class="modal-dialog"> 
+                <div class="modal-content"> 
+                    <div class="modal-header"> 
+                        <button data-dismiss="modal" class="close" type="button">
+                        <i class="icon-remove"></i>
+                        </button> 
+                        <h4 id="myModalLabel" class="modal-title">Post your first idea</h4> 
+                    </div> 
+                    <div class="modal-body"> 
+                        <div class="block"> 
+                            <label class="control-label">Title</label> 
+                            <input type="text" placeholder="Post title" class="form-control"> 
+                        </div> 
+                        <div class="block"> 
+                            <label class="control-label">Content</label> 
+                            <textarea rows="5" placeholder="Content" class="form-control"></textarea> 
+                        </div> 
+                        <div class="checkbox"> 
+                            <label> <input type="checkbox"> Share with all memebers of first </label> 
+                        </div> 
+                        <div class="modal-footer"> 
+                            <button data-dismiss="modal" class="btn btn-sm btn-default" type="button">Save</button> 
+                            <button data-loading-text="Publishing..." class="btn btn-sm btn-primary" type="button">Publish</button> 
+                    </div> 
+                </div><!-- /.modal-content --> 
+            </div> 
+        </form> 
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+    <script>
+$( ".nav-toggle" ).click(function() {
+  $( ".navbar-fixed" ).toggleClass( "slide-nav slide-nav-left" );
+});
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Elixir - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/elixir-messenger.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/nanoscroll.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<header>
+    <img src="img/renovatio-small.png" class="hidden-xs">
+    <!-- <img src="img/fork.png" class="visible-xs"> -->
+    <div class="title pull-left">Elixir</div>
+</header>
+<!-- Content begins -->
+<div class="container-fluid content">
+    <div class="col-lg-12 nano">
+        <div class="sender-details textgrey font-light">wheisenberg@hotmail.se &#8226; 17:42</div>
+        <h1>You should put the message object here</h1>
+        <div class="sender">
+            <div class="avatar pull-left"><img src="https://placeimg.com/90/90/people"></div>
+            <div class="sender-name textgrey">Walt HEISENBERG</div>
+        </div>
+        <div class="message-content nano-content">
+            <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p><p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</p><p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.</p>
+        </div>
+    </div>
+    <div class="sidebar messages-list">
+        <ul class="nav nav-bar tools">
+            <li class="pull-left"><span class="fa fa-reorder"></span></li>
+            <li class="searchbox">
+                <a class="btn-search pull-right">
+                    <i class="fa fa-search"></i>
+                </a>
+                <div class="dropdown-search">
+                <form role="search">
+                <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <i class="fa fa-search nav-search-icon"></i>
+                </div>
+                </form>
+                </div>
+            </li>
+            <li class="pull-right"><span class="hulk font-light text-right">+</span></li>
+        </ul>
+        <div class="trends row">
+            <div class="item col-lg-4">
+                <div class="value text-center">42</div>
+                <div class="label textgrey font-light text-center">all</div>
+            </div>
+            <div class="item col-lg-4">
+                <div class="value text-center">42</div>
+                <div class="label textgrey font-light text-center">all</div>
+            </div>
+            <div class="item active col-lg-4">
+                <div class="value text-center">42</div>
+                <div class="label textgrey font-light text-center">all</div>
+            </div>
+        </div>
+        <ul class="messages-list">
+          <li>
+            <div class="message-title">Message title</div>
+            <div class="message-preview textgrey font-light">Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</div>
+            <div class="avatar"></div>
+          </li>
+        </ul>
+    </div><!-- /sidebar -->
+</div>
+<!-- //content -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/nanoscroll.js"></script>
+<script>
+    $(".nano").nanoScroller();
+    $(".messages-content").nanoScroller();
+</script>
+<script>
+    $( ".btn-search" ).click(function() {
+        $(".searchbox").toggleClass( "active" );
+    });
+    $( ".nav-search-icon" ).click(function() {
+        $(".searchbox").toggleClass( "active" );
+    });
+</script>
+</html>

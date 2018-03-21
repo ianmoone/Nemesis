@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Irongate - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/irongate.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body class="admin">
+    <div class="sidebar">
+        <div class="adminlogo">Hal <small>1.0</small></div>
+        <ul>
+          <li><a href="#" class="active"><i class="fa fa-exclamation-triangle"></i>Incidents</a></li>
+          <li><a href="#"><i class="fa fa-object-group"></i>Components</a></li>
+          <li><a href="#"><i class="fa fa-bar-chart"></i>Metrics</a></li>
+        </ul>
+        <ul class="bottom-menu">
+            <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
+            <li><a href="#" class="logout"><i class="fa fa-power-off"></i>Logout</a></li>
+        </ul>
+    </div><!-- /sidebar -->
+<!-- Content begins -->
+<div class="container-fluid content">
+    <h1 class="col-lg-12">Declare an incident</h1>
+    <div class="row">
+        <div class="col-lg-12 nopl nopr">
+            <form>
+                <div class="col-lg-6 col-xs-12">
+                    <input type="text" class="floatlabel form-control" placeholder="Incident name" data-label="Incident name" />
+                </div>
+                <div class="col-lg-6 col-xs-12 visible-xs">
+                    <select class="form-control">
+                        <option value="0">Investigating</option>
+                        <option value="1">Identified</option>
+                        <option value="2">Monitoring</option>
+                        <option value="3">Resolved</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 hidden-xs">
+                    <div class="btn-group btn-group-justified" data-toggle="buttons">
+                        <label class="btn btn-default col-xs-12">
+                            <input type="radio" autocomplete="off" checked>
+                            Investigating
+                        </label>
+                        <label class="btn btn-default col-xs-12">
+                            <input type="radio" autocomplete="off" checked>
+                            Identified
+                        </label>
+                        <label class="btn btn-default col-xs-12">
+                            <input type="radio" autocomplete="off" checked>
+                            Monitoring
+                        </label>
+                        </label>
+                        <label class="btn btn-default col-xs-12">
+                            <input type="radio" autocomplete="off" checked>
+                            Resolved
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-12 m-b">
+                    <textarea rows="5" class="floatlabel form-control" placeholder="Message" data-label="Message" /></textarea>
+                </div>
+                <button class="btn btn-success pull-right m-x">Publish this incident</button>
+            </form>
+        </div>
+    </div>
+
+    <h1 class="col-lg-12">Add a component</h1>
+    <div class="row">
+        <div class="col-lg-12 nopl nopr">
+            <form>
+                <div class="col-lg-4">
+                    <input type="text" class="floatlabel form-control" placeholder="Component name" data-label="Component name" />
+                </div>
+                <div class="col-lg-8">
+                    <div class="btn-group btn-group-justified" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                            <input type="radio" autocomplete="off">
+                            Operational
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" autocomplete="off">
+                            Performance issue
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" autocomplete="off">
+                            Partial outage
+                        </label>
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" autocomplete="off">
+                            Major outage
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <textarea rows="5" class="floatlabel form-control" placeholder="Description" data-label="Description" /></textarea>
+                </div>
+                <button class="btn btn-success pull-right m-x">Create</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <h1 class="col-lg-12">Incident history</h1>
+        <div class="col-lg-12 col-xs-12">
+            <table id="no-table" class="table table-hover">
+                <thead>
+                    <th>Incident Name</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Creation date</th>
+                    <th>Last update</th>
+                </thead>
+                <tbody>
+                    <tr class="trigger">
+                        <td data-title="Incident Name">Here goes the incident name</td>
+                        <td data-title="Description">An incident description should go here</td>
+                        <td data-title="Status">Resolved</td>
+                        <td data-title="Creation date">10/08/2015</td>
+                        <td data-title="Last update">29/09/2015</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td data-title="Incident Name">Here goes the incident name</td>
+                        <td data-title="Description">An incident description should go here</td>
+                        <td data-title="Status">Resolved</td>
+                        <td data-title="Creation date">10/08/2015</td>
+                        <td data-title="Last update">29/09/2015</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- //content -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+</html>

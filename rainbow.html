@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Rainbow - mark I</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet"href="css/rainbow.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <link href="css/prism.css" rel="stylesheet" />
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body class="navbar-fixed">
+        <nav class="drawer effect" id="menu-1">
+            <h2 class="drawertitle">Contenu message - {IdMessage}</h2>
+            <div class="col-md-12">
+            </div>
+        </nav><!-- //drawer -->
+        <!-- header -->
+        <header id="header" class="navbar"> 
+            <a class="navbar-brand" href="#">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEMkRGNTg2NUFBQjIxMUUzOEIxMDg5NUEwOTI1MUNGMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEMkRGNTg2NkFBQjIxMUUzOEIxMDg5NUEwOTI1MUNGMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQyREY1ODYzQUFCMjExRTM4QjEwODk1QTA5MjUxQ0YyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQyREY1ODY0QUFCMjExRTM4QjEwODk1QTA5MjUxQ0YyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+9eOYoAAABD5JREFUeNrsWEtsE1cUnXme8fgX/x1/IHaMiW0IIYIEUkqBVBGVUsRPSEggtSrtosvSLqqqqtRFV91AJbpFAsQCUaldBFFQJdREFbRFBFAbggJBSkiwmzpxYjuJ7fHM9GomcRN73vPwSVElrizr+s2bd+a+e8+5b0zHf/qEehmGqJdk/x9gHY32+ds+CL0J/uexA1+tOwzO0YbthwJb4dIKAiOa3mwP73DHwbcyRitrBKfdvmaLI7KywGAlUSgIPDiCJMIHHF4USrKz8jmm6VdVvaLADK0jbb88gaboFwlsZ83HQp3d3lYdhSS1CZIkAWSXp/nDcJeHs74Y4Gbr6q+bj3zatDdsrpcoicZXW8Do/CjSfWLDO8Cu5wXu8mz4duOxne514E8VcxJ+JjxTqpABgrU71nzT8i7ozLMDA+qX8UM+g135WRBLsDoemJoTikWxBL5Tb/kidvBgYMuzALfaQrC95YSBSuRKeUU1WVmkQMWQ7DAIKbIFqDBNmV/HGD+OvP26M/p0wDbW9F5wV9DkLo8IksBLgiRRs0IBIlOKnJXrfF7gM3weNgP2WaT+lTB46PdDnaq1xuCAd7risM/LVRoxNIKlvxv/FaKBGv7xrzuszJ/zj38pinxJFOkqRdvuiu2ub7kwdl2UpNrAkKE9vs0sWsZaPWLMOgM4I3MpZeTa3wOKcz87rjgGxHKIrVhtv7/92sSfycJM7a2OWvxvuGLV4y69hSDSEDrsqlGnrxjfaA222IKacrzJ1qja4+J1AZOOI7TqqMWneqnDsVYTMCiG6jh04qDRjQNuMLo6HE2ql2KWgCZg/yJxK8zL2Xa4YzjgDufakEn9sRx6syZgUGbc6nt9bY0mT/W4j7OBXOAOIYaqikO4PoMzQFXVwre8revrVj1vW5zm5wgVBEFHzN6KcPf72whNsyDraG3gZH6a8LDAmV1yzyjbNlc0bKon3JLmZzUBD2THCKtwiAF6GBb5CnuwzRmtpu9SG8olNAHfmRmpULgKAw1vXCzges4GgkPO6O/ph5qAB7PjN6aGCAs5WUs5zU1mLygaYfK97NjdmVFNwOni7KXk7ZIk4NYyM1yZVA0mt4UxEIB7Ev0Ty4UaCwwNrm9ysC91n1DbPs5eVptqmpbt1vSjKxN3harjPrYfwynnzGhvIp/GTTDoWCR3DDtrIhTz6ZGfVTlCOoHcTA+ffHh5BsNpCBrJt+PomxeKp4av9qbuqZ+UydXYk+yH4v4sus+lr1PNCHyr1n+Gnz85fPni+A0cO5ia2nYp2Z/ITx+PdLc5wksP65C2BWCqMn8DmbFTj670pgZJ7wZadBUK5PgfZ+FMcnjVa2UWQShKNEvfE0fnJ79/8tsPT25OFDI1Xko0avpkMXdutK8ncWurI9LpWd9iDaaK2QWwudSDXBK0CYhwfXJois+RxWehD7368+W/sn8EGACnVWw9j0jkNAAAAABJRU5ErkJggg==">
+            </a>
+            <h2 class="opensans m_t">Rainbow v1.0</h2>
+        </header>
+        <!-- / header -->
+        <!-- sidebar for Jimmy -->
+        <ul id="sidebar">
+            <li>
+                <a href="#" class="fa fa-refresh">
+                    <span class="refresh">Refresh</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="fa fa-play">
+                    <span class="recycle">Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="fa fa-times-circle">
+                    <span class="delete">Delete</span>
+                </a>
+            </li>
+        </ul>
+        <!-- / sidebar -->
+        <!-- Content begins -->
+        <section id="content" class="col-lg-12">
+            <h1>Synchronization failures</h1>
+            <div id="filter-panel" class="collapse in col-lg-12 filters">
+                <form>
+                    <div class="col-lg-6 nopl">
+                        <div class="form-group">
+                            <label class="col-lg-12 nopl">Texte</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-lg-12 nopl">
+                            <label for="projects" class="col-lg-12 nopl">Projets</label>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-default">
+                                    <input type="checkbox" autocomplete="off" checked>
+                                    Myfourchette (142)
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="checkbox" autocomplete="off" checked>
+                                    Core B2C (1)
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="checkbox" autocomplete="off" checked>
+                                    Portal (8 243)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 nopl m_y">
+                            <label for="projects" class="col-lg-12 nopl">From sync</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                DECODER (805)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 nopl">
+                        <div>
+                            <label class="col-lg-12 nopl">Preview FailuresCount</label>
+                            <div class="form-group col-lg-6 nopl">
+                                <input type="text" placeholder="Min" class="form-control">
+                            </div>
+                            <div class="col-lg-6 nopr">
+                                <input type="text" placeholder="Max" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 nopl">
+                         <label for="esm" class="col-lg-12 nopl">Envelope SupportedMessage</label>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-default">
+                                    <input type="checkbox" autocomplete="off" checked>
+                                    Myfourchette (142)
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="checkbox" autocomplete="off" checked>
+                                    Core B2C (1)
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="checkbox" autocomplete="off" checked>
+                                    Portal (8 243)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 nopl m_y">
+                            <label for="esm" class="col-lg-12 nopl">Envelope SupportedType</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                Portal (257)
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <th>Id message</th>
+                    <th>Projet</th>
+                    <th>From sync</th>
+                    <th>Envelope supported class</th>
+                    <th>Envelope supported message</th>
+                </thead>
+                <tbody>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                    <tr class="trigger">
+                        <td>151842</td>
+                        <td>lafourchette portal</td>
+                        <td>Core B2B</td>
+                        <td>yes</td>
+                        <td>121 - lipsum de dev</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <div id="filters" class="modal modal-wide fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Filtres</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                    <div class="col-lg-6 nopl">
+                        <div class="form-group">
+                            <label class="col-lg-12 nopl">Texte</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-lg-12 nopl">
+                            <label for="projects" class="col-lg-12 nopl">Projets</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                Portal (257)
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                Myfourchette (142)
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                Core B2C (0)
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                FeniX (1)
+                            </label>
+                        </div>
+                        <div class="col-lg-12 nopl m_y">
+                            <label for="projects" class="col-lg-12 nopl">From sync</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                DECODER (805)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 nopl">
+                        <div>
+                            <label class="col-lg-12 nopl">Preview FailuresCount</label>
+                            <div class="form-group col-lg-6 nopl">
+                                <input type="text" placeholder="Min" class="form-control">
+                            </div>
+                            <div class="col-lg-6 nopr">
+                                <input type="text" placeholder="Max" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 nopl">
+                            <label for="esm" class="col-lg-12 nopl">Envelope SupportedMessage</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                Portal (257)
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                Myfourchette (142)
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                Core B2C (0)
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                FeniX (1)
+                            </label>
+                        </div>
+                        <div class="col-lg-12 nopl m_y">
+                            <label for="esm" class="col-lg-12 nopl">Envelope SupportedType</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">
+                                Portal (257)
+                            </label>
+                        </div>
+                    </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- //content -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+    $(function() {
+        var $drawer = $('.drawer');
+        $('.trigger').on('click',function(event){
+            if(!$drawer.hasClass('st-menu-open')) {
+                $drawer.addClass('st-menu-open');
+                event.stopPropagation();
+            }
+        });
+        $(document).on('click',function(event){
+            var $target = $(event.target);
+            if(!$target.closest('.drawer').length) {
+                if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }   
+            }
+        });
+        $('#closer').on('click',function(event){
+            if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }
+        });
+    });
+    </script>
+    </body>
+    </html>

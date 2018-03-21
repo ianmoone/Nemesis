@@ -1,0 +1,107 @@
+/*
+                            /$$   /$$
+                            |__/  | $$
+/$$$$$$/$$$$   /$$$$$$  /$$ /$$ /$$$$$$    /$$$$$$
+| $$_  $$_  $$ /$$__  $$|__/| $$|_  $$_/   /$$__  $$
+| $$ \ $$ \ $$| $$  \ $$ /$$| $$  | $$    | $$  \ $$
+| $$ | $$ | $$| $$  | $$| $$| $$  | $$ /$$| $$  | $$
+| $$ | $$ | $$|  $$$$$$/| $$| $$  |  $$$$/|  $$$$$$/
+|__/ |__/ |__/ \______/ | $$|__/   \___/   \______/    mark I
+                   /$$  | $$
+                  |  $$$$$$/
+                   \______/
+
+*/
+
+/* Alignment, emphasis & Colors
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.m-x {margin: 0 15px;}
+.m-y {margin: 10px 0;}
+.m-b {margin-bottom: 10px;}
+.flatblue {background: #3bafda; color: #ffffff; }
+.flatgreen {background: #2ecc71; color: #ffffff; }
+.flatred {background: #ec644b; color: #ffffff; }
+.flatorange {background: #f1c40f; color: #ffffff; }
+.flatpurple {background: #967adc; color: #ffffff; }
+.flatgrey {background: #bdc3c7; }
+.textblue {color: #2980b9; }
+.textgreen {color: #2ecc71; }
+.textred {color: #ec644b; }
+.textorange {color: #f5Ab35; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+small { font-size: 65%; }
+.row {margin: 10px 0; }
+
+/* Content elements
+-----------------------------------------------------*/
+html {min-height: 100%;}
+body{font-size: 14px; color: #666; background: #f9fafc; min-height: 100%;}
+.container-fluid {height: 100%; padding-top: 80px;}
+.list{background: #fff; border-radius: 4px; border: 1px solid #eee; padding: 0; margin-top: 20px;}
+.report-name {padding: 15px!important;}
+.report-name a {color: #999;}
+.report-name a:hover {text-decoration: none; color: #666;}
+.report-name:hover {cursor: pointer;}
+/* Bootstrap overrides
+-------------------------------------------------- */
+.panel {border-radius: 0;padding: 0 15px 15px; margin: 0 0 20px 0;border: 1px solid #e6e9f1;}
+.panel-default .panel-heading {background: transparent; border: 0; font-size: 14px; font-weight: 300; padding: 10px 0;}
+.panel:last-child{box-shadow: none;}
+.panel-body {padding: 10px 0;}
+.label {font-weight: normal;}
+.btn, .btn-lg{border-radius: 3px;}
+
+/* Responsive table
+-------------------------------------------------- */
+.wrapper {margin-left: 15em; overflow-x: overlay;}
+.test-report th {border: 0!important;}
+.test-report tr th:first-child {
+    position: absolute;
+    left: 40px;
+    top: 21px;
+    width: 15em;
+}
+.test-report tr td:first-child {
+    position: absolute;
+    left: 40px;
+    width: 15em;
+}
+td .failed {color: #ec644b;}
+@media only screen and (max-width: 800px) {
+/* Force table to not be like tables anymore */
+  #no-table table, #no-table thead, #no-table tbody, #no-table th, #no-table td, #no-table tr { display: block; }
+/* Hide table headers (but not display: none;, for accessibility) */
+  #no-table thead tr { position: absolute; top: -9999px; left: -9999px; }
+  #no-table tr { border: 1px solid #ccc; }
+  #no-table td { /* Behave  like a "row" */ border: none; border-bottom: 1px solid #eee; position: relative; padding-left: 50%; white-space: normal; text-align:left; }
+  #no-table td:before { /* Now like a table header */ position: absolute; /* Top/left values mimic padding */ top: 6px; left: 6px; width: 45%; padding-right: 10px; white-space: nowrap; text-align:left; font-weight: 500; color: #333; }
+  .wrapper {margin-left: 0; position: relative;}
+  .test-report tr th:first-child {}
+  .test-report tr td:first-child {}
+/*
+Label the data
+*/
+  #no-table td:before { content: attr(data-title); }
+}
+/* Sidebar
+-------------------------------------------------- */
+.header { height: 50px; line-height: 50px; width: 100%; display: block; z-index: 42; background: #fff; position: fixed; box-shadow: 0 2px 2px -3px rgba(0,0,0,.4);}
+.header>.logo{font-size: 16px; padding: 0 0 0 14px; background: #fff; color: #589442; transition: all .2s ease-in-out; }
+.container-fluid.content { padding: 70px 20px 0 10px; margin-left: 200px; margin-bottom: 10px; min-height: 100%; height: 100%; position: relative; transition: all .2s ease-in-out; }
+.sidebar { background: #2F313B; width: 200px; height: 100%; padding: 0 0 20px 0; display: block; position: fixed; font-weight: 300; font-size: 15px; top: 50px; transition: all .2s ease-in-out; }
+.sidebar.sidebar-collapsed { width: 50px; transition: all .2s ease-in-out; z-index: 42;}
+.sidebar ul { padding: 0; }
+.sidebar a { padding: 15px 14px; display: block; color: #b8c7ce; }
+.sidebar a:hover, .sidebar a:focus { background: #1e282c; color: #fff; text-decoration: none; }
+.sidebar a i { padding-right: 10px; }
+.sidebar ul li { color: #fff; list-style-type: none; line-height: 10px; }
+.sidebar ul li a label {margin-top: -4px!important;}
+.sidebar .active a{background: #1e282c; color: #fff; text-decoration: none;}
+
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

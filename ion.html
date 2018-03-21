@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Elixir - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet"href="css/ion.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<header>
+    <h1 class="col-lg-12">{brand_name} Edit</h1>
+</header>
+
+<!-- Content begins -->
+<div class="container-fluid content">
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="overview">
+            6 active cities / <span class="text-muted">3 coming soon cities</span>
+            <a href="#" class="btn btn-primary pull-right">
+                <i class="fa fa-plus-circle fa-lg"></i>
+                Add a city
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- __ Cities_List __ -->
+<div id="sortable" class="row">
+    <div class="col-lg-4 col-md-4">
+        <div class="panel panel-default trigger">
+            <div class="panel-heading">
+                City 1
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                City 2
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                City 3
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                City 4
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                City 5
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                City 6
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading coming-soon">
+                City 7
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading coming-soon">
+                City 8
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading coming-soon">
+                City 9
+            </div>
+        </div><!-- /panel -->
+    </div>
+</div><!-- /row -->
+
+<div class="sidebar">
+    <header>
+        <img src="img/fork-transparent-bg.png" class="hidden-xs">
+    </header>
+    <!-- / header -->
+    <!-- sidebar for Jimmy -->
+    <ul id="sidebar">
+        <li class="brand active">
+            <div class="brand-flag pull-left"><img src="img/france.png"></div>
+            <div class="brand-elements">
+                <div class="brand-country">France</div>
+                <div class="brand-domain">lafourchette.com</div>
+            </div>
+        </li>
+        <li class="brand">
+            <div class="brand-flag pull-left"><img src="img/spain.png"></div>
+            <div class="brand-elements">
+                <div class="brand-country">Spain</div>
+                <div class="brand-domain">eltenedor.es</div>
+            </div>
+        </li>
+        <li class="brand">
+            <div class="brand-flag pull-left"><img src="img/switzerland.png"></div>
+            <div class="brand-elements">
+                <div class="brand-country">Switzerland</div>
+                <div class="brand-domain">lafourchette.ch</div>
+            </div>
+        </li>
+    </ul>
+</div><!-- /sidebar -->
+</div>
+<nav class="drawer effect" id="menu-1">
+    <h5 class="published">{City_name} Edit</h5>
+    <h5 class="danger copperfield">
+        <i class="fa fa-exclamation-triangle fa-lg"></i>
+        You're about to delete a city from the {Brand Name} homepage
+        <div class="pull-right">
+            <a href="#" class="btn btn-default btn-xs dismiss">Cancel</a>
+            <a href="#" class="btn btn-danger btn-xs m-x">Confirm</a>
+        </div>
+    </h5>
+    <div class="drawer-content">
+        <div class="form-group">
+            <label for="cmn-toggle-1">Coming soon city ?</label>
+            <div class="switch pull-right">
+                <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox" checked="checked">
+                <label for="cmn-toggle-1"></label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="CityDescription">City description text</label>
+            <textarea class="form-control" rows="3" id="CityDescription"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="CityInputFile">City picture</label>
+            <input type="file" id="CityInputFile">
+            <p class="help-block">The image should be in jpg or png format. Optimal resolution is 310x150.</p>
+            <img src="http://uploads.lafourchette.com/homepage_city/415144.jpg">
+        </div>
+        <div class="form-group">
+            <a href="#" class="btn btn-success btn-lg pull-right">
+                <i class="fa fa-save fa-lg"></i>
+                Save
+            </a>
+            <a href="#" class="delete pull-right">
+                Delete this city ?
+            </a>
+        </div>
+    </div>
+</nav><!-- //drawer -->
+<div class="overlay"></div>
+<!-- //content -->
+
+</body>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/Sortable/1.2.0/Sortable.min.js"></script>
+<script>
+    new Sortable(sortable, {
+        animation: 200,
+        ghostClass: "sortable-ghost",
+        filter: ".sortable-ignore", // Selectors that do not lead to dragging (String or Function)
+    });
+</script><!-- /sortable -->
+<script>
+    $(function() {
+        var $drawer = $('.drawer');
+        var $overlay = $('.overlay');
+        $('.trigger').on('click',function(event){
+            if(!$drawer.hasClass('st-menu-open')) {
+                $drawer.addClass('st-menu-open'),
+                $overlay.addClass('active');
+                event.stopPropagation();
+            }
+        });
+        $(document).on('click',function(event){
+            var $target = $(event.target);
+            if(!$target.closest('.drawer').length) {
+                if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open'),
+                $overlay.removeClass('active');
+            }
+            }
+        });
+        $('.closer').on('click',function(event){
+            if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open'),
+                $overlay.removeClass('active');
+            }
+        });
+    });
+</script><!-- /drawer -->
+<script>
+    $( ".delete" ).click(function() {
+    $( ".published , .danger" ).toggleClass( "copperfield" );
+    });
+</script><!-- /delete city function -->
+</html>

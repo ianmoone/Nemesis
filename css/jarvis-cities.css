@@ -1,0 +1,172 @@
+/*
+   ___                  _
+  |_  |                (_)
+    | | __ _ _ ____   ___ ___
+    | |/ _` | '__\ \ / / / __|
+/\__/ / (_| | |   \ V /| \__ \
+\____/ \__,_|_|    \_/ |_|___/ mark.I
+*/
+
+/* Generics
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.small {font-size: 12px; }
+.big{font-size: 16px;}
+.m-x{margin: 0 20px;}
+.m-y{margin: 20px 0;}
+.m-all{margin: 20px;}
+.flatblue {background: #3bafda!important; color: #ffffff!important; }
+.flatgreen {background: #589442!important; color: #ffffff!important; }
+.flatred {background: #e74c3c!important; color: #ffffff!important; }
+.flatorange {background: #f1c40f!important; color: #ffffff!important; }
+.flatpurple {background: #967ADC!important; color: #ffffff!important; }
+.flatgrey {background: #bdc3c7!important; }
+.textblue {color: #2980b9; }
+.textgreen {color: #589442; }
+.textred {color: #e74c3c; }
+.textorange {color: #f1c40f; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+.row {margin: 0 0 10px 0; }
+.btn {padding: 6px 6px; border-radius: 4px;}
+.btn i{padding: 0 5px 0 0;}
+h1,h2,h3,h4,h5,h6 {font-weight: 300;}
+
+/***************************************************
+           ___       ___        ___      ___  __  **
+|  | |    |__  |    |__   |\/| |__  |\ |  |  /__` **
+\__/ |    |___ |___ |___  |  | |___ | \|  |  .__/ **
+***************************************************/
+
+/* Bootstrap Overrides
+-------------------------------------------------- */
+.panel {box-shadow: none; border: 0;border-bottom: 1px solid #e7e7e7; margin: 10px 0;}
+.panel-default>.panel-heading {background: #ffffff; margin-bottom: 0; border-bottom: 1px solid #dedede;min-height: 43px;}
+.panel-title {font-size: 20px;}
+.panel-heading{padding: 0; border: 0;}
+.panel-heading h3{ font-weight: 200;}
+.panel-heading:hover{cursor: pointer;}
+.panel-body {padding: 0 0 10px 10px;}
+.panel.squared{border-radius: 0;}
+.rounded-top{border-radius: 4px 4px 0 0;}
+.progress{height: 5px; background: #e7e7e7;}
+
+/* Drawer
+-------------------------------------------------- */
+.drawer {position: fixed; top: 50px; right: 0; z-index: 100; padding: 20px; visibility: hidden; width: 0; height: 0; background: #ffffff; -webkit-transition: height 0.5s; transition: height 0.5s; -webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.3); box-shadow: 0 0 3px 0 rgba(0,0,0,0.3); overflow-y: hidden;}
+.drawer h5{text-transform: uppercase;}
+/* Effect : Slide in on top */
+.effect.drawer {-webkit-transform: translate3d(0, -100%, 0); transform: translate3d(100%, -100%, 0); }
+.effect.drawer.st-menu-open {visibility: visible; width: 30%; height: 80%; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); z-index: 9942; }
+.effect.drawer::after {display: none; }
+
+/* Content elements
+-------------------------------------------------- */
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 16px;
+    background: #f3f3f3;
+    color: #333;
+}
+
+header {
+    /* background: #363D47; */
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    padding: 0 0 0 20px;
+    font-weight: 100;
+    top: 0;
+    left: 0px;
+    z-index: 942;
+    position: fixed;
+    color: #666;
+}
+
+header h4,
+header h4 small {
+    /* padding: 5px 0 0 10px; */
+    /* color: #fff; */
+    font-weight: 300;
+}
+
+header a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.trigger,
+.trigger:hover {
+    display: inline-block;
+    color: #333;
+    padding: 2px 10px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    margin: 6px 30px;
+}
+
+/* Layout
+-------------------------------------------------- */
+.container-fluid.content {}
+
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    vertical-align: middle;
+    background: #fff;
+}
+
+th {
+    background: #435163;
+    color: #fff;
+    border-bottom: none;
+    font-weight: 300;   
+}
+
+thead>tr>th:first-of-type {
+    border-top-left-radius: 4px;
+}
+
+thead>tr>th:last-of-type {
+    border-top-right-radius: 4px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    height: 40px;
+    line-height: 40px;
+}
+
+li.item:hover {
+    cursor: pointer;
+    background: #e7e7e7;    
+}
+
+li.sortable-placeholder {
+    background: #589442;
+    opacity: 0.4;
+}
+
+.copperfield {
+    visibility: hidden;
+}
+
+.filters {
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+
+
+
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Nemesis dashboard</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/apo-statistics.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body>
+        <div class="container-fluid">
+            <nav class="drawer effect" id="menu-1">
+                <h2 class="drawertitle">Filtres</h2>
+                <div class="col-md-12">
+                    <select class="form-control m_y col-md-12">
+                        <option value="">Restaurant #1</option>
+                        <option value="">Restaurant #2</option>
+                        <option value="" selected>Le nom du restaurant qui peut être un peu long</option>
+                    </select>
+                    <select class="form-control m_y">
+                        <option value="" selected>Déjeuner</option>
+                        <option value="">Dîner</option>
+                        <option value="">Souper</option>
+                    </select>
+                    <select class="form-control m_y">
+                        <option value="">01 Juin 2014 - 30 Juin 2014</option>
+                    </select>
+                    <a href="#" id="closer" class="btn btn-success pull-right col-lg-4">Appliquer</a>
+                </div>
+            </nav><!-- //drawer -->
+            <h1 class="hr_bottom">Dashboard activité
+                <div class="hidden-xs hidden-md pull-right">
+                    <a href="#" class="btn btn-success pull-right m_x">Exporter <span class="fa fa-download"></span></a>
+                    <select class="form-control pull-right col-lg-3">
+                        <option value="">01 Juin 2014 - 30 Juin 2014</option>
+                    </select>
+                    <select class="form-control pull-right col-lg-3 m_x">
+                        <option value="" selected>Déjeuner</option>
+                        <option value="">Dîner</option>
+                        <option value="">Souper</option>
+                    </select>
+                    <select class="form-control pull-right col-lg-3">
+                        <option value="">Restaurant #1</option>
+                        <option value="">Restaurant #2</option>
+                        <option value="" selected>Le nom du restaurant qui peut être un peu long</option>
+                    </select>
+                </div>
+                <a href="#" id="trigger" class="btn btn-primary hidden-lg pull-right">Filtres</a>
+            </h1>
+            <div class="bigger textgrey pull-right visible-xs visible-md">Le nom du restaurant qui peut être un peu long / Déjeuner / 01/06/2014 - 30/06/2014</div>
+            <div class="row">
+                <h3>Réservations Myfourchette</h3>
+                <div class="metrics clearfix">
+                    <div class="kpi col-md-3 col-lg-3">
+                        <div class="kpi-title">couverts honorés</div>
+                        <div class="kpi-value opensans">121</div>
+                    </div>
+                    <div class="kpi col-md-3 col-lg-3">
+                        <div class="kpi-title">réservations honorées</div>
+                        <div class="kpi-value opensans">42</div>
+                    </div>
+                    <div class="kpi col-md-3 col-lg-3">
+                        <div class="kpi-title">couverts annulés</div>
+                        <div class="kpi-value opensans">0</div>
+                    </div>
+                    <div class="kpi col-md-3 col-lg-3">
+                        <div class="kpi-title">couverts en no show</div>
+                        <div class="kpi-value opensans textred bold">3</div>
+                    </div>
+                </div><!-- //metrics -->
+            </div><!-- //row -->
+            <div class="row">
+                <h3>Réservations Internet</h3>
+                <div class="metrics clearfix">
+                    <div class="kpi col-md-3 col-lg-3">
+                        <div class="kpi-title">couverts honorés</div>
+                        <div class="kpi-value opensans">142</div>
+                    </div>
+                    <div class="kpi col-md-3 col-lg-3">
+                        <div class="kpi-title">réservations honorées</div>
+                        <div class="kpi-value opensans">61</div>
+                    </div>
+                    <div class="kpi col-md-3 col-lg-3">
+                        <div class="kpi-title">couverts annulés</div>
+                        <div class="kpi-value opensans">0</div>
+                    </div>
+                    <div class="kpi col-md-3 col-lg-3">
+                        <div class="kpi-title">couverts en no show</div>
+                        <div class="kpi-value opensans">-</div>
+                    </div>
+                </div><!-- //metrics -->
+            </div><!-- //row -->
+            <div class="row m_y">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title opensans nabilla text-center">RESERVATIONS</h3>
+                    </div>
+                    <div class="panel-body">
+                            <iframe src="js/samples/columnSimple.html" style="width: 100%; height: 420px; background-color: #FFFFFF;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- //row -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title opensans nabilla text-center">DELAI DE RESERVATION</h3>
+                        </div>
+                        <div class="panel-body">
+                                <iframe src="js/samples/pieSimple.html" style="width: 100%; height: 320px; background-color: #FFFFFF;" seamless="seamless"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title opensans nabilla text-center">FREQUENTATION HORAIRE</h3>
+                        </div>
+                        <div class="panel-body">
+                                <iframe src="js/samples/columnSimple2.html" style="width: 100%; height: 320px; background-color: #FFFFFF;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+    $(function() {
+        var $drawer = $('.drawer');
+        $('#trigger').on('click',function(event){
+            if(!$drawer.hasClass('st-menu-open')) {
+                $drawer.addClass('st-menu-open');
+                event.stopPropagation();
+            }
+        });
+        $(document).on('click',function(event){
+            var $target = $(event.target);
+            if(!$target.closest('.drawer').length) {
+                if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }   
+            }
+        });
+        $('#closer').on('click',function(event){
+            if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }
+        });
+    });
+    </script>
+    </body>
+    </html>

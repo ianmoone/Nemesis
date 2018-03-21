@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Skeleton</title>
+    <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+    <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+    <link rel="stylesheet"href="css/notifications.css"type="text/css"/>
+    <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+    <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <nav class="drawer effect" id="menu-1">
+        <div class="col-lg-12 m_y">
+            <div class="alert alert-success fade in">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="fa fa-check-circle fa-fw fa-lg"></i>
+                <strong>The path of the righteous man</strong> is beset on all sides by the inequities of the selfish and <a href="#" class="alert-link">the tyranny of evil men.</a>
+            </div><!-- //success -->
+            <div class="alert alert-info fade in">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="fa fa-info-circle fa-fw fa-lg"></i>
+                <strong>The path of the righteous man</strong> is beset on all sides by the inequities of the selfish and <a href="#" class="alert-link">the tyranny of evil men.</a>
+            </div><!-- //info -->
+            <div class="alert alert-warning fade in">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="fa fa-warning fa-fw fa-lg"></i>
+                <strong>The path of the righteous man</strong> is beset on all sides by the inequities of the selfish and <a href="#" class="alert-link">the tyranny of evil men.</a>
+            </div><!-- //warning -->
+            <div class="alert alert-danger fade in">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="fa fa-times-circle fa-fw fa-lg"></i>
+                <strong>The path of the righteous man</strong> is beset on all sides by the inequities of the selfish and <a href="#" class="alert-link">the tyranny of evil men.</a>
+            </div><!-- //danger is my name -->
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <h1 class="col-lg-12 nopl">Notification creation</h1>
+        <div class="col-lg-12 nopl">
+            <form role="form">
+                <fieldset>
+                    <legend>notification settings</legend>
+                    <div class="col-lg-6 nopl">
+                        <div class="form-group">
+                            <label for="1">Notification's name <span class="passepartout textgrey">(internal only)</span></label>
+                            <input type="text" id="1" class="form-control" placeholder="Insert name here">
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label" for="inputSuccess2">Publication date</label>
+                            <input type="text" class="form-control" id="inputSuccess2" placeholder="DD/MM/YYYY">
+                            <span class="fa fa-calendar form-control-feedback"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <label>Notification type (<a id ="trigger" class="passepartout" href="#">Display notifications preview</a>)</label>
+                        <div class="col-lg-6">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="" value="">
+                                    Success (green)
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="" value="">
+                                    Warning (orange)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="" value="">
+                                    Info (blue)
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="" value="">
+                                    Danger (red)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 nopl">
+                        <div class="form-group has-feedback">
+                            <label for="1">Notification's content <span class="passepartout textgrey">(displayed in myfourchette)</span></label>
+                            <textarea rows="5" class="form-control col-lg-12"></textarea>
+                            <span class="form-control-payback">
+                                <i class="fa fa-bold wysiwyg"></i>
+                                <i class="fa fa-italic wysiwyg"></i>
+                                <i class="fa fa-link wysiwyg"></i>
+                            </span>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-lg-12 nopl m_y">
+            <form role="form">
+                <fieldset>
+                    <legend>clients selection</legend>
+                    <div class="col-lg-4 nopl">
+                       <label for="x" class=" col-lg-12">Offer subscribed
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="col-lg-4">
+                       <label for="x" class=" col-lg-12">Geographical zone <span class="passepartout pull-right"><a href="#">import zipcodes list</a></span>
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="col-lg-4">
+                        <label>Portal published</label>
+                        <div class="col-lg-12">
+                            <div class="radio col-lg-4">
+                                <label class="radio-inline nopl">
+                                    <input type="radio" name="optionsRadios" id="" value="">
+                                    All
+                                </label>
+                            </div>
+                            <div class="radio col-lg-4">
+                                <label class="radio-inline nopl">
+                                    <input type="radio" name="optionsRadios" id="" value="">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="radio col-lg-4">
+                                <label class="radio-inline nopl">
+                                    <input type="radio" name="optionsRadios" id="" value="">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div><!-- //container -->
+<!--Javascript Magic
+***************************************-->    
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $(function() {
+        var $drawer = $('.drawer');
+        $('#trigger').on('click',function(event){
+            if(!$drawer.hasClass('st-menu-open')) {
+                $drawer.addClass('st-menu-open');
+                event.stopPropagation();
+            }
+        });
+        $(document).on('click',function(event){
+            var $target = $(event.target);
+            if(!$target.closest('.drawer').length) {
+                if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }   
+            }
+        });
+        $('#closer').on('click',function(event){
+            if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }
+        });
+    });
+</script>
+</body>
+</html>

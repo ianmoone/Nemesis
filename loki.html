@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Loki</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/> -->
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/loki.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa fa-graduation-cap fa-lg"></i>
+            <span>Arkangel</span>
+        </div>
+        <a class="fa fa-bars fa-lg expander"></a>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li class="active">
+                <a href="#" data-toggle="collapse" data-target="#submenu1" aria-expanded="false" aria-controls="submenu1" class="collapsed">
+                    <i class="fa fa-rocket fa-lg"></i>
+                    <span>Menu item</span>
+                    <span class="fa fa-arrow pull-right"></span>
+                </a>
+                <ul id="submenu1" class="submenu collapse">
+                    <li><a href="#">Submenu item</a></li>
+                    <li><a href="#">Submenu item</a></li>
+                    <li><a href="#">Submenu item</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-bomb fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-list fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-puzzle-piece fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /sidebar -->
+
+    <div class="container-fluid content">
+<!-- Desktop reservations -->
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">toto</div>
+                <div class="panel-body">
+                    <div class="metric col-xs-12">
+                        <div class="metric-value col-xs-12">330,242</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">tata</div>
+                <div class="panel-body">
+                    <div class="metric col-xs-12">
+                        <div class="metric-value col-xs-12">624,115</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">tete</div>
+                <div class="panel-body">
+                    <div class="metric col-xs-12">
+                        <div class="metric-value col-xs-12">712</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">tutu</div>
+                <div class="panel-body">
+                    <div class="metric col-xs-12">
+                        <div class="metric-value col-xs-12">204</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Analytics</div>
+                <div class="panel-body">
+                    <div id="analytics" height="300px"></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $('.progress .progress-bar').css("width",
+                function() {
+                    return $(this).attr("aria-valuenow") + "%";
+                }
+        )
+    });
+</script> <!-- /progress bars animated loading -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.min.js"></script>
+<script src="js/arkangel.js"></script>
+<script>
+    $( ".expander" ).click(function() {
+    $( "header, .sidebar, .container-fluid" ).toggleClass( "sidebar-collapsed" );
+    });
+</script><!-- /sidebar  -->
+</html>

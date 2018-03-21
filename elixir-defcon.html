@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>D3fc0N - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/elixir-defcon.css"type="text/css"/>
+        <link rel="stylesheet"href="css/rickshaw.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/weather-icons.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<div class="particles">
+    <header>
+        <img src="img/renovatio-small.png" class="hidden-xs">
+    </header>
+    <a class="fa fa-bars fa-lg collapser"></a>
+</div>
+
+<div class="sidebar">
+    <ul id="sidebar">
+        <li>
+            <a href="#">
+                <i class="fa fa-rocket fa-lg"></i>
+                <span>Boost</span>
+            </a>
+        </li>
+    </ul>
+</div><!-- /sidebar -->
+<!-- Content begins -->
+<div class="container-fluid content">
+
+<!-- __ Forms_Xperiment __ -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Floating labels 
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-4">
+                <input type="text" class="floatlabel form-control" placeholder="Adresse customer" data-label="Adresse customer" />
+                </div>
+                <div class="col-lg-4">
+                <input type="text" class="floatlabel form-control" placeholder="Please make some input" data-label="I am a floating label !!" />
+                </div>
+                <div class="col-lg-4">
+                <input type="text" class="floatlabel form-control" placeholder="Please make some input" data-label="I am a floating label !!" />
+                </div>
+            </div>
+        </div>
+    </div><!-- /panel -->
+</div><!-- /row -->
+
+</div><!-- /container -->
+
+</body>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+    $( ".collapser" ).click(function() {
+    $( ".sidebar" ).toggleClass( "sidebar-collapsed" );
+    });
+</script><!-- /sidebar expand -->
+</html>

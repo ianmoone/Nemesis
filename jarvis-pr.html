@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>j4rv1s - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/jarvis-pr.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<header>
+    <img src="img/renovatio-small.png" class="hidden-xs pull-left">
+    <h4 class="pull-left">{ORGANIZATION } <small>94 pending pull requests</small></h4>
+</header>
+<!-- Content begins -->
+<div class="container-fluid content">
+
+<!-- __ Filters __ -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Filters
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-4 col-md-4 col-xs-4 nopl">
+                    <select class="form-control">
+                            <option>Repository #1</option>
+                            <option>Repository #2</option>
+                            <option>Repository #3</option>
+                            <option>Repository #4</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-4">
+                    <input type="text" class="floatlabel form-control" placeholder="Creation date" data-label="Creation date" />
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-4 nopr">
+                    <input type="text" class="floatlabel form-control" placeholder="Author" data-label="Author" />
+                </div>
+            </div>
+        </div>
+    </div><!-- /panel -->
+</div><!-- /row -->
+
+<!-- __ Pull_Request __ -->
+<div class="col-lg-12">
+    <div class="panel panel-default pr">
+        <div id="no-table" class="panel-body">
+            <table id="pr-list" class="table table-hover sortable">
+                <thead>
+                    <th>Pull request title</th>
+                    <th>Repository</th>
+                    <th>Creation date</th>
+                    <th>Author</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-title="PR title">[sear-316] Fix entity</td>
+                        <td data-title="Repository">lafourchette-rr</td>
+                        <td data-title="Creation date">02 Jun 2015</td>
+                        <td data-title="Author">Ian Moone</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PR title">PR title</td>
+                        <td data-title="Repository">repository</td>
+                        <td data-title="Creation date">dd mmm yyyy</td>
+                        <td data-title="Author">Ian Moone</td>
+                    </tr>
+                    <tr class="danger">
+                        <td data-title="PR title">PR title</td>
+                        <td data-title="Repository">repository</td>
+                        <td data-title="Creation date">dd mmm yyyy</td>
+                        <td data-title="Author">Ian Moone</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><!-- /panel -->
+</div>
+</div><!-- /container -->
+
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/tablesorter.js"></script>
+<script>
+    $(document).ready(function(){
+        $(function(){
+            $("#pr-list").tablesorter();
+        });
+    });
+</script>
+</html>

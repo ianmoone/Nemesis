@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>neXus</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/nexus-devops.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="logo expander">
+            <img src="img/heliX.png">heliX</div>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li class="active">
+                <div data-toggle="collapse" href="#sub-1">
+                    <i class="fa fa-area-chart"></i>
+                    Monitor
+                </div>
+
+                <ul id="sub-1" class="collapse">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+
+            </li>
+            <li>
+                <i class="fa fa-rocket"></i>
+                <span class="menu-item">Deployments</span>
+            </li>
+            <li>
+                <i class="fa fa-code-fork"></i>
+                <span class="menu-item">Pull requests</span>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="title">
+            <h1>Monitor</h1>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-monitor rounded-top">
+                <div class="panel-heading">
+                    <h3>lafourchette-portal</h3>
+                    <div class="deploy-infos">
+                        Last deploy : 2.2.742 - Fri. 29th Dec. @17:14
+                    </div>
+                </div>
+                <div class="panel-body project">
+                    <div class="col-lg-12 metric">
+                            <div class="metric-label textlight col-lg-6">End user response time</div>
+                            <div class="metric-value textdark text-right col-lg-2">3,51 <span class="metric-unit">s</span></div>
+                            <div class="col-lg-4">
+                                <canvas id="myChart"
+                                    width="130" height="30" class="sparkline"
+                                    data-chart_values="[144,256,40,19,12,8,4]"
+                                    data-chart_StrokeColor="rgba(88,148,66,1)">
+                                </canvas>
+                            </div>
+                    </div> <!--/col -->
+                    <div class="col-lg-12 metric danger">
+                            <div class="metric-label col-lg-6">App server</div>
+                            <div class="metric-value textdark text-right col-lg-2">212 <span class="metric-unit">ms</span></div>
+                            <div class="col-lg-4">
+                                <canvas id="myChart"
+                                    width="130" height="30" class="sparkline"
+                                    data-chart_values="[17,4,40,19,12,8,80]"
+                                    data-chart_StrokeColor="rgba(88,148,66,1)">
+                                </canvas>
+                            </div>
+                    </div> <!--/col -->
+                </div>
+                <div class="panel-footer textlight">Last deploy : 2.2.742 - Fri. 29th Dec. @17:14</div>
+            </div>
+        </div> <!--/col -->
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/sparks.js"></script>
+</html>
+
+<!-- sparkline
+<canvas id="myChart" width="100" height="30" class="sparkline"
+data-chart_values="[42,48,40,19,96,27,100]"
+data-chart_StrokeColor="rgba(151,187,0,1)"></canvas>
+-->

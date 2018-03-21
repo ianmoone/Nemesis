@@ -1,0 +1,101 @@
+/* 
+ _   __            _       
+| | / /           | |      
+| |/ /  ___   __ _| | __ _ 
+|    \ / _ \ / _` | |/ _` |
+| |\  \ (_) | (_| | | (_| |
+\_| \_/\___/ \__,_|_|\__,_|
+*/
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('../font/OpenSans-Light-webfont.eot');
+    src: url('../font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-Light-webfont.woff') format('woff'),
+         url('../font/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Alignment, emphasis & Colors
+-----------------------------------------------------*/
+.bold{font-weight:bold;}
+.sep_top{border-top: 5px solid #BBB;padding-top: 5px;}
+.sep_right{border-right: 5px solid #BBB;padding-right: 5px;}
+.sep_bottom{border-bottom: 2px solid #BBB;padding-bottom: 10px;}
+.sep_left{border-left: 5px solid #BBB;padding-left: 5px;}
+.noborder{border: none!important ;}
+.hr_top{border-top: 1px solid #BBB;}
+.hr_right{border-right: 1px solid #BBB;}
+.hr_bottom{border-bottom: 1px solid #BBB;}
+.hr_left{border-left: 1px solid #BBB;}
+.spacer{display: block;height: 10px;}
+.nomargin{margin: 0;}
+.m_x{margin: 0px 10px;}
+.m_y{margin: 10px 0;}
+.m_t{margin-top: 10px;}
+.s_m_t{margin-top: 30px;}
+.m_b{margin-bottom: 10px;}
+.m_t{margin-top: 10px!important;}
+.m_r{margin-right: 10px;}
+.m_l{margin-left: 10px;}
+.p_r{padding-right: 5px;}
+.p_x{padding: 0 15px;}
+.p_b{padding-bottom: 15px;}
+.p_y{padding: 15px 0;}
+.p_xy{padding: 15px;}
+.spacer{display: block;height: 20px;}
+.nopl{padding-left:0;}
+.nopr{padding-right:0;}
+.nopt{padding-top:0;}
+.squared{border-radius:0!important}
+.small{font-size:12px;}
+.bigger{font-size: 16px;}
+.biggest{font-size: 18px;}
+.bayrou{margin:0 auto;}
+.clearfix {}
+.clearfix:after {content:"."; height:0; line-height:0; display:block; visibility:hidden; clear:both; }
+.flatblue{background: #2980b9;color: #ffffff;}
+.flatgreen{background: #27ae60;color: #ffffff;}
+.flatred{background: #c0392b;color: #ffffff;}
+.flatorange{background: #d35400;color: #ffffff;}
+.flatpurple{background: #8e44ad;color: #ffffff;}
+.flatgrey{background: #bdc3c7;}
+.flatblack{background: #1e1e1e;}
+.textblue{color: #2980b9;}
+.textgreen{color: #27ae60;}
+.textred{color: #c0392b;}
+.textorange{color: #d35400;}
+.textpurple{color: #8e44ad;}
+.textgrey{color: #bdc3c7;}
+.textwhite{color: #ffffff;}
+.btn-default{background:#ffffff;}
+.opensans{font-family:OpenSansLight;}
+
+/* ProjectX - MessagesStatus
+-------------------------------------------------- */
+.copperfield{display: none;}
+.colhead{background: #3498db; height: 60px; line-height: 60px; text-align: center; color: #ffffff; }
+.item:hover{background: #cde6f6;cursor: pointer;}
+.dest{color: #999999;}
+.object{color:#999999;font-weight: bold;}
+.messagecontent{color:#999999;}
+.ivresse{font-style: italic;}
+.panel {position: absolute; top: 0; right: 0; z-index: 100; visibility: hidden; width: 50%; height: 100%; background: #ffffff; -webkit-transition: all 0.5s; transition: all 0.5s; -webkit-box-shadow: -4px 0 20px 0 rgba(0,0,0,0.3); box-shadow: -4px 0 10px 0 rgba(0,0,0,0.3); }
+/* Effect : Slide in on top */
+.effect.panel {/*visibility: visible;*/ -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); }
+.effect.panel.st-menu-open {visibility: visible; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.effect.panel::after {display: none; }
+.sidebartitle{background: #27ae60; color: #ffffff; height: 60px; line-height: 60px; margin: 0; padding: 0 20px; }
+.maildetails{background: #f1f1f1; color: #444444; height: 60px; line-height: 60px; padding: 0 20px; margin: 0 0 30px 0; }
+.preview{width: 90%;margin: 0 auto;}
+.preview-tabs{border:1px solid #cccccc;}
+.preview-tabs > li > a {margin-right: 0;border-radius:0;}
+.preview-tabs > li > a:hover {background: #f1f1f1;color: #ffffff;border-radius:0;}
+.preview-tabs>li.active>a,.gds-tabs>li.active>a:hover{cursor:pointer;}
+.tab-content{background:#ffffff;border-left:1px solid #cccccc;border-right:1px
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

@@ -1,0 +1,63 @@
+/*
+  __  __             _ _             
+ |  \/  |           (_) |            
+ | \  / | ___  _ __  _| |_ ___  _ __ 
+ | |\/| |/ _ \| '_ \| | __/ _ \| '__|
+ | |  | | (_) | | | | | || (_) | |   
+ |_|  |_|\___/|_| |_|_|\__\___/|_|    mark.II
+*/
+
+/* Alignment, emphasis & Colors
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.nopadding {padding: 0 !important;}
+.small {font-size: 12px; }
+.big{font-size: 16px;}
+.flatblue {background: #3bafda; color: #ffffff; }
+.flatgreen {background: #28bb72; color: #ffffff; }
+.flatred {background: #e74c3c; color: #ffffff; }
+.flatorange {background: #f1c40f; color: #ffffff; }
+.flatpurple {background: #967ADC; color: #ffffff; }
+.flatgrey {background: #bdc3c7; }
+.textblue {color: #2980b9; }
+.textgreen {color: #28bb72; }
+.textred {color: #e74c3c; }
+.textorange {color: #f1c40f; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+.row {margin: 0; }
+
+/* Content elements
+-----------------------------------------------------*/
+html {height: 100%;}
+body{font-size: 16px; background: #EBEAE8; margin-top: 20px;}
+header {margin: 0 15px;}
+header img {width: 220px;}
+.list{background: #fff; border-radius: 4px; border: 1px solid #DBDBD9; padding: 20px 0 0 0; margin: 20px 0;}
+.list h3 {margin-top: 0;}
+.events{margin-top: 10px;}
+.events h4{padding-left: 15px;}
+.events .list{margin-top: 10px;}
+.bubble{padding-right: 10px; font-size: 12px;   }
+.status{font-weight: 200;}
+.panel-status{height: 60px; line-height: 60px;}
+.status-icon{width: 60px; height: 60px; line-height: 60px;margin: -1px 20px 0 -16px; border-radius: 4px 0 0 4px;}
+.status-icon i{margin: 14px 0 0 16px;}
+.panel-service{color: #888; border-bottom: 1px solid #EBEBE9;}
+.panel-service:last-child{border-bottom: 0;}
+.panel-event{padding-left: 20px;}
+.panel-event i{margin-top: 8px;}
+.timestamp{text-transform: uppercase; text-decoration: underline;}
+.description{color: #888; font-weight: 200; font-size: 14px;}
+
+/* Panel overrides
+-------------------------------------------------- */
+.panel {border-radius: 4px;padding: 0 15px; margin: 0; box-shadow: none;}
+.panel:last-child{margin-bottom: 0;}
+.panel-body {padding: 10px 0;}
+
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>neXus</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/nexus-photo.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <h3>Customers photos moderation</h3>
+        </div>
+        <div class="col-lg-4 report-pending">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                        <div class="restaurant-name col-lg-8">Charlie Birdy Commerce</div>
+                        <div class="cuisine text-right col-lg-4">Français</div>
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-12">
+                        <img src="img/lf1.jpg" class="customer-photo">
+                        <div class="food-report-title">
+                            Here goes the title of my photo
+                        </div>
+                        <div class="food-report-description">
+                            This little thing was absolutely delicious ! You
+                            should check this restaurant on Thefork.com
+                        </div>
+                        <div class="btn-group nopl nopr col-lg-12" role="group" aria-label="...">
+                            <button type="button" class="btn btn-danger btn-block">Refuse</button>
+                            <button type="button" class="btn btn-success btn-block">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 ">
+            <div class="panel panel-default report-published">
+                <div class="panel-heading">
+                        <div class="restaurant-name col-lg-8">Charlie Birdy Commerce</div>
+                        <div class="cuisine text-right col-lg-4">Français</div>
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-12">
+                        <img src="img/lf1.jpg" class="customer-photo">
+                        <div class="food-report-title">
+                            Here goes the title of my photo
+                        </div>
+                        <div class="food-report-description">
+                            This little thing was absolutely delicious ! You
+                            should check this restaurant on Thefork.com
+                        </div>
+                        <div class="nopl nopr col-lg-12" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default btn-block">UNPUBLISH</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4 report-unpublished">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                        <div class="restaurant-name col-lg-8">Charlie Birdy Commerce</div>
+                        <div class="cuisine text-right col-lg-4">Français</div>
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-12">
+                        <img src="img/lf1.jpg" class="customer-photo">
+                        <div class="food-report-title">
+                            Here goes the title of my photo
+                        </div>
+                        <div class="food-report-description">
+                            This little thing was absolutely delicious ! You
+                            should check this restaurant on Thefork.com
+                        </div>
+                        <div class="btn-group nopl nopr col-lg-12" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default btn-block">PUBLISH</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+$(document).ready(function(){
+    $(".collapser").click(function () {
+        $(".sidebar").toggleClass("collapsed");
+    });
+});
+</script>
+</html>

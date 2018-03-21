@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Hogosha - mark II</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/> -->
+        <link rel="stylesheet"href="css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+        <link rel="stylesheet"href="css/hogosha.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body class="login">
+<!-- //content -->
+<div class="login-form">
+    <div class="row">
+        <div class="col-xs-6 nopr text-right pull-right">
+            <div class="login-links">
+                <a href="#" class="" title="Register">Register</a>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <form method="post" action="/" id="contact">
+            <div class="panel-body">
+                <div class="text-center welcome"><h1>Hello,</h1>Please signup to proceed</div>
+                <div class="row">
+                    <div class="col-lg-12 m-y">
+                        <input type="text" class="floatlabel form-control input-lg" placeholder="Username" data-label="Username" />
+                    </div>
+                    <div class="col-lg-12 m-y">
+                        <input type="password" class="floatlabel form-control input-lg" placeholder="Password" data-label="Password" />
+                    </div>
+                    <div class="col-lg-12 m-y">
+                        <button type="submit" class="btn btn-success btn-lg btn-block">Sign In</button>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label class="text-muted remember">
+                        <input type="checkbox" name="remember" id="remember" checked="">
+                        <label for="remember" data-on="YES" data-off="NO"></label>
+                        <span>Remember me</span>
+                    </label>
+                </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <a href="#" class="button btn-social github btn-block">
+                <span>
+                    <i class="fa fa-github"></i>
+                </span>Github</a>
+        </div>
+        <div class="col-lg-6">
+            <a href="#" class="button btn-social google btn-block">
+                <span>
+                    <i class="fa fa-google"></i>
+                </span>Google</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+</html>

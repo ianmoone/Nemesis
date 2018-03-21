@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Avalon - mark I</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/avalon.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body>
+    <!-- Content begins -->
+    <section class="container">
+        <div class="row">
+            <div id="radial" class="col-lg-2 col-md-2 col-xs-2 m_t"></div>
+            <div class="col-lg-10 col-md-10 col-xs-10">
+                <h1 class="opensans">Feature name</h1>
+                <h4 class="tags">
+                    <span class="label label-default flatblue">da tag</span>
+                    <span class="label label-default flatgrey">da tag</span>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Tab #1</a></li>
+                    <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Tab #2</a></li>
+                    <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Tab #3</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="tab1">
+                    Tab #1 content
+                    <div class="status status-success col-lg-12 nopl">
+                        <div class="icon">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="status-content">Successful build is successful</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="video">
+                                <video src="img/bbb.mp4" controls="controls" width="100%"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab2">Tab #2 content</div>
+                <div role="tabpanel" class="tab-pane" id="tab3">Tab #3 content</div>
+            </div>
+        </div>
+    </section>
+    <!-- //content -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/d3-radial.js" charset="utf-8"></script>
+    <script language="JavaScript">
+    var radial=d3.select(document.getElementById('radial'));
+    start();
+    function onClick1() {
+        deselect();
+        div1.attr("class","selectedRadial");
+    }
+    function labelFunction(val,min,max) {
+    }
+    function deselect() {
+        div1.attr("class","radial");
+    }
+    function start() {
+
+        var rp1 = radialProgress(document.getElementById('radial'))
+                .label("")
+                .onClick(onClick1)
+                .diameter(120)
+                .value(84)
+                .render();
+    }
+    </script>
+    </body>
+    </html>

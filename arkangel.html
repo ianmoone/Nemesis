@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Arkang3L</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/> -->
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/arkangel.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa fa-graduation-cap fa-lg"></i>
+            <span>Arkangel</span>
+        </div>
+        <a class="fa fa-bars fa-lg expander"></a>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li class="active">
+                <a href="#" data-toggle="collapse" data-target="#submenu1" aria-expanded="false" aria-controls="submenu1" class="collapsed">
+                    <i class="fa fa-rocket fa-lg"></i>
+                    <span>Menu item</span>
+                    <span class="fa fa-arrow pull-right"></span>
+                </a>
+                <ul id="submenu1" class="submenu collapse">
+                    <li><a href="#">Submenu item</a></li>
+                    <li><a href="#">Submenu item</a></li>
+                    <li><a href="#">Submenu item</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-bomb fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-list fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-puzzle-piece fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /sidebar -->
+
+    <div class="container-fluid content">
+<!-- Desktop reservations -->
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Desktop gross bookings last 30d.
+                </div>
+                <div class="panel-body">
+                    <div class="metric col-xs-12">
+                        <div class="metric-value-hulk col-xs-12">330,242</div>
+                        <div class="background-stat">
+                            <div id="bar-desktop" height="60px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Mobile reservations -->
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Mobile gross bookings last 30d.
+                </div>
+                <div class="panel-body">
+                    <div class="metric col-xs-12">
+                        <div class="metric-value-hulk col-xs-12">389,729</div>
+                        <div class="background-stat">
+                            <div id="bar-mobile" height="60px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- New customers -->
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    New customers last 30d.
+                </div>
+                <div class="panel-body">
+                    <div class="metric col-xs-12">
+                        <div class="metric-value-hulk col-xs-12">9,651</div>
+                        <div class="background-stat">
+                            <div id="bar-customers" height="60px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Bugs creation -->
+        <div class="col-lg-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Bugs created last 30d.
+                </div>
+                <div class="panel-body">
+                    <div id="line" class="chart col-md-6"></div>
+                </div>
+                <div class="panel-footer">
+                    <h5>Total bugs pending</h5>
+                    <div class="metric col-xs-4">
+                        <div class="metric-value text-right col-xs-6">42</div>
+                        <div class="metric-evolution danger col-xs-6">
+                            <i class="fa fa-long-arrow-up"></i>
+                            +4
+                        </div>
+                        <div class="metric-name">b2b bugs</div>
+                    </div>
+                    <div class="metric col-xs-4">
+                        <div class="metric-value text-right col-xs-6">184</div>
+                        <div class="metric-evolution success col-xs-6">
+                            <i class="fa fa-long-arrow-down"></i>
+                            -12
+                        </div>
+                        <div class="metric-name">b2c bugs</div>
+                    </div>
+                    <div class="metric col-xs-4">
+                        <div class="metric-value text-right col-xs-6">17</div>
+                        <div class="metric-evolution neutral col-xs-6">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </div>
+                        <div class="metric-name">internal tools bugs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Bugs in sprints -->
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Bugs volume in active sprints
+                </div>
+                <div class="panel-body">
+                    <h6>b2b sprints</h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="max-width: 20%;">
+                            20%
+                        </div>
+                    </div>
+                    <h6>b2c sprints</h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="max-width: 5%;">
+                            5%
+                        </div>
+                    </div>
+                    <h6>internal tools sprints</h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" style="max-width: 42%;">
+                            42%
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <h5>View details</h5>
+                    <div class="metric col-xs-12">
+                        <div class="widget-links"><a href="#">b2b issue details</a></div>
+                        <div class="widget-links"><a href="#">b2c issue details</a></div>
+                        <div class="widget-links"><a href="#">internal tools issue details</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- QA -->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    QA builds
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-3">
+                        <div class="timeline-name text-center">
+                            Survivor Preprod
+                        </div>
+                        <section class="main-timeline-section">
+                            <div class="conference-center-line"></div>
+                            <div class="conference-timeline-content space-between">
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2540</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2541</span>
+                                    </div>
+                                    <div class="meta-date fail"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2542</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2543</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2544</span>
+                                    </div>
+                                    <div class="meta-date running"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="timeline-name text-center">
+                            Survivor Prod
+                        </div>
+                        <section class="main-timeline-section">
+                            <div class="conference-center-line"></div>
+                            <div class="conference-timeline-content space-between">
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2540</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2541</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2542</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2543</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2544</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="timeline-name text-center">
+                            Sanity Preprod
+                        </div>
+                        <section class="main-timeline-section">
+                            <div class="conference-center-line"></div>
+                            <div class="conference-timeline-content space-between">
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2540</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2541</span>
+                                    </div>
+                                    <div class="meta-date fail"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2542</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2543</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2544</span>
+                                    </div>
+                                    <div class="meta-date fail"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="timeline-name text-center">
+                            Sanity Prod
+                        </div>
+                        <section class="main-timeline-section">
+                            <div class="conference-center-line"></div>
+                            <div class="conference-timeline-content space-between">
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2540</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2541</span>
+                                    </div>
+                                    <div class="meta-date fail"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2542</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2543</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+
+                                <div class="timeline-article timeline-article-bottom">
+                                    <div class="content-date">
+                                        <span>#2544</span>
+                                    </div>
+                                    <div class="meta-date success"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Releases -->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Production releases
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-8">
+                        <div id="bar-releases" height="300px"></div>
+                    </div>
+                    <div class="releases col-md-4">
+                        <h5>What's coming next ?</h5>
+                        <div class="release">
+                            <div class="release-title">QA - Some dummy release description</div>
+                            <div class="release-slot">Tue 16th Jan. // 09:OO - 10:00</div>
+                        </div>
+                        <div class="release">
+                            <div class="release-title">QA - Some dummy release description</div>
+                            <div class="release-slot">Tue 16th Jan. // 09:OO - 10:00</div>
+                        </div>
+                        <div class="release">
+                            <div class="release-title">QA - Some dummy release description</div>
+                            <div class="release-slot">Tue 16th Jan. // 09:OO - 10:00</div>
+                        </div>
+                        <div class="release">
+                            <div class="release-title">QA - Some dummy release description</div>
+                            <div class="release-slot">Tue 16th Jan. // 09:OO - 10:00</div>
+                        </div>
+                        <div class="release">
+                            <div class="release-title">QA - Some dummy release description</div>
+                            <div class="release-slot">Tue 16th Jan. // 09:OO - 10:00</div>
+                        </div>
+                        <div class="release">
+                            <div class="release-title">QA - Some dummy release description</div>
+                            <div class="release-slot">Tue 16th Jan. // 09:OO - 10:00</div>
+                        </div>
+                        <div class="release">
+                            <div class="release-title">QA - Some dummy release description</div>
+                            <div class="release-slot">Tue 16th Jan. // 09:OO - 10:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Analytics -->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Analytics metrics</div>
+                <div class="panel-body">
+                    <div class="col-md-8">
+                        <div id="analytics" height="300px"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Key traffic metrics</h5>
+                        <div class="metric border-bottom col-xs-12">
+                            <div class="metric-value-hulk text-center col-xs-12">12,684,259</div>
+                            <div class="metric-name">Unique visitors</div>
+                        </div>
+                        <div class="metric border-bottom col-xs-12">
+                            <div class="metric-value-hulk text-center col-xs-12">22,983</div>
+                            <div class="metric-name">iOS downloads <i class="fa fa-apple"></i></div>
+                        </div>
+                        <div class="metric border-bottom col-xs-12">
+                            <div class="metric-value-hulk text-center col-xs-12">12,684,259</div>
+                            <div class="metric-name">Unique visitors</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div id="bar-yums" height="300px"></div>
+        </div>
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $('.progress .progress-bar').css("width",
+                function() {
+                    return $(this).attr("aria-valuenow") + "%";
+                }
+        )
+    });
+</script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+<script src="js/arkangel-charts.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.min.js"></script>
+<script src="js/arkangel.js"></script>
+<script>
+    $( ".expander" ).click(function() {
+    $( "header, .sidebar, .container-fluid" ).toggleClass( "sidebar-collapsed" );
+    });
+</script><!-- /sidebar expand -->
+</html>

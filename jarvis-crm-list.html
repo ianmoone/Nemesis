@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>j4rv1s - CRM !</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+        <!-- <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/> -->
+        <link rel="stylesheet"href="css/jarvis-crm.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+
+<header>
+    <div class="logo">Jarvis CRM</div>
+    <h4 class="pull-left">{CRM } <small>Loyalty codes list</small></h4>
+</header><!-- /Header -->
+<div class="container-fluid nopl nopr"><!-- __ Filters __ -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Filters
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-3 col-md-3 col-xs-12">
+                        <input type="text" class="floatlabel form-control col-lg-3 col-md-3 col-xs-12" placeholder="Campaign name" data-label="Campaign name" />
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-xs-12">
+                        <input type="text" class="floatlabel form-control col-lg-3 col-md-3 col-xs-12" placeholder="Campaign type" data-label="Campaign type" />
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-xs-12">
+                        <input type="text" class="floatlabel form-control" placeholder="Yums offered" data-label="Yums offered" />
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-xs-12">
+                        <input type="text" class="floatlabel form-control" placeholder="Campaign end date" data-label="Campaign end date" />
+                    </div>
+                </div>
+            </div>
+        </div><!-- /panel -->
+    </div><!-- /row -->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <button class="btn btn-info pull-right"><span class="fa fa-plus-circle"></span>Create a loyalty code</button>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="panel panel-default pr">
+            <div id="no-table" class="panel-body">
+                <div class="col-lg-12">
+                    <table class="table table-hover">
+                        <thead>
+                            <th>Creation date</th>
+                            <th>Code</th>
+                            <th>Campaign name</th>
+                            <th>Yums</th>
+                            <th>Campaign description</th>
+                            <th>Campaign type</th>
+                            <th>Days remaining</th>
+                            <th>End date</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="Creation date">25/08/2015 - 12:42:02</td>
+                                <td data-title="Code">142</td>
+                                <td data-title="Campaign name">Yummy Days September</td>
+                                <td data-title="Yums">500</td>
+                                <td data-title="Campaign description">500 YUMS for 3 &+ bookings</td>
+                                <td data-title="Campaign type">Ad-hoc</td>
+                                <td data-title="Days remaining">2</td>
+                                <td data-title="End date">30/09/2015 - 23:59:00</td>
+                            </tr>
+                            <tr>
+                                <td data-title="Creation date">24/09/2015 - 11:21:42</td>
+                                <td data-title="Code">304</td>
+                                <td data-title="Campaign name">Best of terrasses Yums</td>
+                                <td data-title="Yums">300</td>
+                                <td data-title="Campaign description">--</td>
+                                <td data-title="Campaign type"></td>
+                                <td data-title="Days remaining">14</td>
+                                <td data-title="End date">17/10/2015 - 00:00:00</td>
+                            </tr>
+                            <tr>
+                                <td data-title="Creation date">29/09/2015 - 17:00:00</td>
+                                <td data-title="Code">357</td>
+                                <td data-title="Campaign name">A rather very much long name for a campaign, long enough to be never used in real life :)</td>
+                                <td data-title="Yums">2000</td>
+                                <td data-title="Campaign description">Supercalifragilistic campaign </td>
+                                <td data-title="Campaign type">Reflex</td>
+                                <td data-title="Days remaining">342</td>
+                                <td data-title="End date">07/07/2016 - 06:00:01</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /panel -->
+    </div>
+</div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+$(document).ready(function(){
+    $('.rule-and').hide();
+    $(".trigger-and").click(function () {
+        $(".rule-and").slideToggle("slow");
+    });
+    $('.rule-or').hide();
+    $(".trigger-or").click(function () {
+        $(".rule-or").slideToggle("slow");
+    });
+});
+</script>
+</html>

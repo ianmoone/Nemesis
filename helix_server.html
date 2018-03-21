@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>heliX</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/helix.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="img/heliX.png">heliX
+        </div>
+        <ul>
+            <li class="active">
+                <div data-toggle="collapse" href="#sub-1">
+                    <i class="fa fa-area-chart"></i>
+                    Monitor
+                </div>
+
+                <ul id="sub-1" class="collapse">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+
+            </li>
+            <li>
+                <i class="fa fa-rocket"></i>
+                <span class="menu-item">Deployments</span>
+            </li>
+            <li>
+                <i class="fa fa-code-fork"></i>
+                <span class="menu-item">Pull requests</span>
+            </li>
+        </ul>
+    </div> <!-- /sidebar -->
+    <div class="side-content">
+        <dl>
+            <dt>Today's reservations</dt>
+            <dd>
+                <span class="metric">8,251</span>
+                <span class="unit">desktop</span>
+            </dd>
+            <dd>
+                <span class="metric">7,642</span>
+                <span class="unit">mobile</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt>Today's visits</dt>
+            <dd>
+                <span class="metric">1,244,922</span>
+                <span class="fa fa-caret-up textgreen big"></span>
+            </dd>
+        </dl>
+    </div>
+    <div class="container-fluid">
+        <!-- <div class="title">
+            <div class="col-lg-6">
+                <span class="project-name">lafourchette-portal</span>
+            </div>
+        </div> -->
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <table id="no-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Server</th>
+                            <th>Last check</th>
+                            <th class="text-right">Charge</th>
+                            <th class="text-center">History</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-title="Server" class="textlight">web1-core</td>
+                            <td data-title="Last check" class="textlight">11:02:53</td>
+                            <td data-title="Charge" class="text-right charge">0.54</td>
+                            <td data-title="History">
+                                <canvas id="myChart" width="100" height="20" class="sparkline"
+                                data-chart_values="[42,48,40,19,96,27,100,42,48,40,19,96,27,100]"
+                                data-chart_StrokeColor="rgba(189, 195, 199,1)"
+                                data-chart_FillColor="rgba(189, 195, 199,1)"></canvas>
+                            </td>
+                        </tr>
+                        <tr class="danger">
+                            <td data-title="Server" class="textlight">web2-core</td>
+                            <td data-title="Last check" class="textlight">11:01:17</td>
+                            <td data-title="Charge" class="text-right charge">8.42</td>
+                            <td data-title="History">
+                                <canvas id="myChart" width="100" height="20" class="sparkline"
+                                data-chart_values="[2,6,4,2,4,5,8,7,2,1,5,99,124,154,84,120]"
+                                data-chart_StrokeColor="rgba(189, 195, 199,1)"
+                                data-chart_FillColor="rgba(189, 195, 199,1)"></canvas>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Server" class="textlight">web3-core</td>
+                            <td data-title="Last check" class="textlight">11:02:53</td>
+                            <td data-title="Charge" class="text-right charge">0.72</td>
+                            <td data-title="History">
+                                <canvas id="myChart" width="100" height="20" class="sparkline"
+                                data-chart_values="[42,48,40,19,96,27,100,42,48,40,19,96,27,100]"
+                                data-chart_StrokeColor="rgba(189, 195, 199,1)"
+                                data-chart_FillColor="rgba(189, 195, 199,1)"></canvas>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Server" class="textlight">webn-core</td>
+                            <td data-title="Last check" class="textlight">11:01:17</td>
+                            <td data-title="Charge" class="text-right charge">0.87</td>
+                            <td data-title="History">
+                                <canvas id="myChart" width="100" height="20" class="sparkline"
+                                data-chart_values="[2,6,4,2,4,5,8,7,2,1,5,99,124,154,84,120]"
+                                data-chart_StrokeColor="rgba(189, 195, 199,1)"
+                                data-chart_FillColor="rgba(189, 195, 199,1)"></canvas>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> <!--/col -->
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <table id="no-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Server</th>
+                            <th>Last check</th>
+                            <th class="text-right">Charge</th>
+                            <th class="text-center">History</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-title="Server" class="textlight">web1-core</td>
+                            <td data-title="Last check" class="textlight">11:02:53</td>
+                            <td data-title="Charge" class="text-right charge">0.54</td>
+                            <td data-title="History">
+                                <canvas id="myChart" width="100" height="20" class="sparkline"
+                                data-chart_values="[42,48,40,19,96,27,100,42,48,40,19,96,27,100]"
+                                data-chart_StrokeColor="rgba(189, 195, 199,1)"
+                                data-chart_FillColor="rgba(189, 195, 199,1)"></canvas>
+                            </td>
+                        </tr>
+                        <tr class="danger">
+                            <td data-title="Server" class="textlight">web2-core</td>
+                            <td data-title="Last check" class="textlight">11:01:17</td>
+                            <td data-title="Charge" class="text-right charge">8.42</td>
+                            <td data-title="History">
+                                <canvas id="myChart" width="100" height="20" class="sparkline"
+                                data-chart_values="[2,6,4,2,4,5,8,7,2,1,5,99,124,154,84,120]"
+                                data-chart_StrokeColor="rgba(189, 195, 199,1)"
+                                data-chart_FillColor="rgba(189, 195, 199,1)"></canvas>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Server" class="textlight">web3-core</td>
+                            <td data-title="Last check" class="textlight">11:02:53</td>
+                            <td data-title="Charge" class="text-right charge">0.72</td>
+                            <td data-title="History">
+                                <canvas id="myChart" width="100" height="20" class="sparkline"
+                                data-chart_values="[42,48,40,19,96,27,100,42,48,40,19,96,27,100]"
+                                data-chart_StrokeColor="rgba(189, 195, 199,1)"
+                                data-chart_FillColor="rgba(189, 195, 199,1)"></canvas>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Server" class="textlight">webn-core</td>
+                            <td data-title="Last check" class="textlight">11:01:17</td>
+                            <td data-title="Charge" class="text-right charge">0.87</td>
+                            <td data-title="History">
+                                <canvas id="myChart" width="100" height="20" class="sparkline"
+                                data-chart_values="[2,6,4,2,4,5,8,7,2,1,5,99,124,154,84,120]"
+                                data-chart_StrokeColor="rgba(189, 195, 199,1)"
+                                data-chart_FillColor="rgba(189, 195, 199,1)"></canvas>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> <!--/col -->
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/sparks.js"></script>
+</html>
+
+<!-- sparkline
+<canvas id="myChart" width="100" height="30" class="sparkline"
+data-chart_values="[42,48,40,19,96,27,100]"
+data-chart_StrokeColor="rgba(151,187,0,1)"></canvas>
+-->

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Payment Settings</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/PaymentSettings.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body>
+        <div class="container-fluid">
+                <div class="row-fluid m_y">
+                    <h1>Gestion des modes de paiement</h1>
+                        <h3>Modes de paiement activés</h3>
+                        <ul id="payment-types-list">
+                            <li>
+                                <div class="span10 bold">Nom</div>
+                                <div class="span2 bold text-center">Actions<div>
+                            </li>
+                            <li>
+                                <div class="span10">Carte bancaire en ligne - Préautorisation</div>
+                                <div class="span2 text-center">
+                                    <a href="#"><i class="fa fa-pencil-square-o m_x" alt="Modifier"></i></a>
+                                    <a href="#"><i class="fa fa-times-circle"></i></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="span10">Carte bancaire en ligne - Prépaiement</div>
+                                <div class="span2 text-center">
+                                    <a href="#"><i class="fa fa-pencil-square-o m_x" alt="Modifier"></i></a>
+                                    <a href="#"><i class="fa fa-times-circle"></i></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="span10 text-grey">Le mode de paiement désactivé</div>
+                                <div class="span2 text-center">
+                                    <a href="#" class="bold">Réactiver ce mode de paiement</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="span10 text-grey">
+                                    <input type="text" class="nemesis span12" placeholder="Indiquer le nom du nouveau mode de paiement">
+                                </div>
+                                <div class="span2 text-center">
+                                    <a href="#"><i class="fa fa-pencil-square-o m_x" alt="Modifier"></i></a>
+                                    <a href="#"><i class="fa fa-times-circle"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                        <btn class="btn btn-success m_y pull-right nemesis">Enregistrer</btn>
+                        <btn class="btn btn-default m_y pull-right nemesis m_x">Ajouter un mode de paiement</btn>
+                    </div>
+                </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap2.js"></script>
+    </body>
+    </html>

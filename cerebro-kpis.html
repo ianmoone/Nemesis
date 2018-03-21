@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>j4rv1s - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/cerebro-kpis.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<!-- Content begins -->
+<div class="container-fluid content">
+<!-- __ Filters __ -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Filters
+            </div>
+            <div class="panel-body">
+                <div id="no-table" class="panel-body">
+                    <table id="pr-list" class="table table-hover sortable">
+                        <thead>
+                            <th>Product</th>
+                            <th class="text-right">Uptime</th>
+                            <th class="text-right">Change <small>%</small></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="product">Product name</td>
+                                <td data-title="uptime" class="text-right">99,97 %</td>
+                                <td data-title="delta" class="text-right">- 2 %</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div><!-- /panel -->
+</div><!-- /row -->
+</div><!-- /container -->
+
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/tablesorter.js"></script>
+<script>
+    $(document).ready(function(){
+        $(function(){
+            $("#pr-list").tablesorter();
+        });
+    });
+</script>
+</html>

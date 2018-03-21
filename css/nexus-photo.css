@@ -1,0 +1,173 @@
+/*
+ _____
+|   | |___ _ _ _ _ ___
+| | | | -_|_'_| | |_ -|
+|_|___|___|_,_|___|___| mark I
+*/
+
+/* Generics
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.small {font-size: 12px; }
+.big{font-size: 16px;}
+.hulk{font-size: 24px;}
+.m-x{margin: 0 10px;}
+.m-y{margin: 20px 0;}
+.m-all{margin: 10px;}
+.flatblue {background: #3bafda!important; color: #ffffff!important; }
+.flatgreen {background: #589442!important; color: #ffffff!important; }
+.flatred {background: #e74c3c!important; color: #ffffff!important; }
+.flatorange {background: #f1c40f!important; color: #ffffff!important; }
+.flatpurple {background: #967ADC!important; color: #ffffff!important; }
+.flatgrey {background: #bdc3c7!important; }
+.textblue {color: #2980b9; }
+.textgreen {color: #589442; }
+.textred {color: #e74c3c; }
+.textorange {color: #f1c40f; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+.row {margin: 0; height: 100%;}
+.btn {padding: 6px 8px; border-radius: 4px;}
+.btn-xs {padding: 1px 5px; border-radius: 4px;}
+.btn i{padding: 0 5px 0 0;}
+.light {font-weight: 300;}
+.shadow {-webkit-box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.2); -moz-box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.2); box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.4);}
+*:hover, .open {transition: all 0.2s ease;}
+h1, h2, h3, h4, h5, h6 {font-weight: 300;}
+
+/***************************************************
+           ___       ___        ___      ___  __  **
+|  | |    |__  |    |__   |\/| |__  |\ |  |  /__` **
+\__/ |    |___ |___ |___  |  | |___ | \|  |  .__/ **
+***************************************************/
+
+html {height: 100%;}
+body {height: 100%; background: #f8f8f8;}
+.container-fluid {height: 100%; padding: 0 0 0 0;}
+
+
+/* Elements
+-------------------------------------------------- */
+/*Header
+*/
+header {
+    background: #273135;
+    height: 60px;
+    width: 100%;
+    color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 942;
+    position: fixed;
+    padding: 20px;
+    transition: width 0.4s ease;
+}
+.collapser { cursor: pointer;}
+
+/*Sidebar
+*/
+/*.sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #273135;
+    padding-top: 20px;
+    transition: width 0.4s ease;
+    text-indent: -9999px;
+}
+.sidebar ul {margin: 0; padding: 0;}
+.sidebar li {list-style-type: none; color: #70767c; padding: 0 20px 0 20px; transition: padding 0.4s ease;}
+.sidebar li i {padding: 10px 20px 10px 0; font-size: 24px;}
+.sidebar li .menu-item {padding: 10px 0 10px 0; font-size: 16px; font-weight: 300;}
+.sidebar li.active, .sidebar li.active:hover {color: #fff; background: #464B50;}
+.sidebar li:hover {color: #fff; background: #2E353B; cursor: pointer;}
+.sidebar.collapsed {width: 80px; transition: width 0.4s ease;}
+.sidebar.collapsed li {padding-left: 30px; transition: padding 0.4s ease;}
+.sidebar.collapsed li .menu-item {display: none;}
+.sidebar.collapsed li.active ul.collapse {
+    position: absolute;
+    background: #464B50;
+    left: 80px;
+    margin-top: -45px;
+}*/
+
+
+/* Bootstrap Overrides
+-------------------------------------------------- */
+.btn-default {border-color: #ddd;}
+.btn-default:hover {background: #f5f5f1;border-color: #eee}
+.btn.btn-default:active, .btn.btn-default.active{
+  box-shadow: none;
+  /*background: #28bd72;*/
+  color: #fff;
+}
+
+.btn-info {
+    background-color: #3a9ed3;
+    border-color: #3a9ed3;
+    color: #FFF;
+}
+
+.btn-info:hover {
+    background-color: #2c91c7;
+    border-color: #2c91c7;
+}
+
+.panel {
+    border: 0;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    box-shadow: none;
+}
+
+.panel-default>.panel-heading {
+    background: #ffffff;
+    margin-bottom: 0;
+    border-bottom: 1px solid #dedede;
+    min-height: 40px;
+    padding: 10px 0;
+}
+
+.panel-title { font-size: 16px; }
+.panel-heading { padding: 0; border: 0; }
+.panel-heading .restaurant-name { font-weight: bold; }
+.panel-heading .cuisine { font-weight: 200; color: #999; }
+.panel-heading:hover { cursor: pointer; }
+.panel-body { padding: 15px; }
+.panel-body [class*='col-']:first-of-type {padding: 0;}
+
+.report-pending{}
+.report-published{
+    background: #6FB356;
+}
+.report-unpublished{
+    background: #E84A52;
+}
+
+.customer-photo {
+    height: 240px;
+    min-height: 240px;
+    width: 100%
+}
+
+.food-report-title {
+    color: #333;
+    margin: 10px 0;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.food-report-description {
+    color: #666;
+}
+.btn-group{margin: 20px 0 10px 0;}
+.btn-group button {width: 50%; border-radius: 2px;}
+.btn-block+.btn-block {margin-top: 0;}
+
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

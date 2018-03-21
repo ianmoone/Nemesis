@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Nemesis</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/apo.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body class="navbar-fixed">
+        <!-- header -->
+        <header id="header" class="navbar">
+            <div class="pull-right p_xy">
+                <h4 class="opensans nomargin">Wednesday 29th September 2013 -- 17:30</h4>
+            </div>
+            <a class="navbar-brand" href="#">
+                <img src="img/fork-50.png">
+            </a>
+            <button type="button" class="btn btn-link pull-left nav-toggle visible-xs" data-toggle="class:slide-nav slide-nav-left" data-target="body">
+            <i class="icon-reorder icon-xlarge text-default"></i>
+            </button>
+        </header>
+        <!-- / header -->
+        <section id="content">
+            <section class="main p_xy"> 
+                <div class="row">
+                    <div class="col-lg-3">
+                        <section class="panel"> 
+                            <header class="panel-heading"> 
+                                <h3 class="opensans nomargin">Incoming reservations</h3>
+                            </header> 
+                            <section class="panel-body"> 
+                                <article class="m_y">
+                                    <div class="data"> 
+                                        3 281<small>4 042 yesterday</small>
+                                    </div> 
+                                </article>
+                            </section>
+                        </section> <!-- / module--> 
+                    </div><!-- / col -->
+                    <div class="col-lg-9">
+                        <section class="panel"> 
+                            <header class="panel-heading"> 
+                                <h3 class="opensans nomargin">Pending reservations</h3>
+                            </header> 
+                            <section class="panel-body scroll-y"> 
+                                <article class="col-lg-4 m_y nopr">
+                                    <div class="data"> 
+                                        2 474<small>FR</small>
+                                    </div>
+                                </article>
+                                <article class="col-lg-4 m_y">
+                                    <div class="data"> 
+                                        723<small>ES</small>
+                                    </div>
+                                </article> 
+                                <article class="col-lg-4 m_y nopl">
+                                    <div class="data"> 
+                                        42<small>CH</small>
+                                    </div> 
+                                </article>
+                            </section>
+                            <footer>
+                                <section>
+                                    <ul class="tools">
+                                        <li><a href="#"><i class="icon-cloud-upload"></i>Upload</a></li>
+                                        <li><a href="#"><i class="icon-refresh"></i>Refresh</a></li>
+                                        <li class="delete"><a href="#"><i class="icon-trash"></i>Delete</a></li>
+                                    </ul>
+                                </section>
+                            </footer>
+                        </section> <!-- / module--> 
+                    </div><!-- / col -->
+                </div><!--  / row -->
+                <div class="row">
+                    <div class="col-lg-3 rubrik">
+                        <h3 class="heading"><span>Da title</span></h3>
+                        <div class="content">
+                            xxx
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <footer id="footer"> 
+            <div class="text-center padder clearfix"> 
+                <p> 
+                    <small>&copy; - 2013 Nemesis template </small>
+                </p> 
+            </div> 
+        </footer> 
+    <div class="modal fade" id="modal"> 
+        <form class="m-b-none"> 
+            <div class="modal-dialog"> 
+                <div class="modal-content"> 
+                    <div class="modal-header"> 
+                        <button data-dismiss="modal" class="close" type="button">
+                        <i class="icon-remove"></i>
+                        </button> 
+                        <h4 id="myModalLabel" class="modal-title">Post your first idea</h4> 
+                    </div> 
+                    <div class="modal-body"> 
+                        <div class="block"> 
+                            <label class="control-label">Title</label> 
+                            <input type="text" placeholder="Post title" class="form-control"> 
+                        </div> 
+                        <div class="block"> 
+                            <label class="control-label">Content</label> 
+                            <textarea rows="5" placeholder="Content" class="form-control"></textarea> 
+                        </div> 
+                        <div class="checkbox"> 
+                            <label> <input type="checkbox"> Share with all memebers of first </label> 
+                        </div> 
+                        <div class="modal-footer"> 
+                            <button data-dismiss="modal" class="btn btn-sm btn-default" type="button">Save</button> 
+                            <button data-loading-text="Publishing..." class="btn btn-sm btn-primary" type="button">Publish</button> 
+                    </div> 
+                </div><!-- /.modal-content --> 
+            </div> 
+        </form> 
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+    <script>
+$( ".nav-toggle" ).click(function() {
+  $( ".navbar-fixed" ).toggleClass( "slide-nav slide-nav-left" );
+});
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Renovatio - mark I</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/renovatio.css"type="text/css"/>
+            <link rel="stylesheet"href="css/nanoscroll.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body class="navbar-fixed">
+        <nav class="drawer effect" id="menu-1">
+            <h2 class="drawertitle">
+                Prise de réservation
+                <span class="drawer-close pull-right m_x">&#10005;</span>
+            </h2>
+            <div class="col-md-12 pbt">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="dd/mm/yyyy" class="col-lg-12 form-control input-lg">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="HH:MM" class="col-lg-12 form-control input-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 m_y">
+                        <div class="form-inline col-lg-6 nopl">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default btn-lg"> - </button>
+                                </span>
+                                <input type="text" class="form-control input-lg" placeholder="3">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default btn-lg"> + </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="bold btn-lg col-lg-6">
+                            Pers.
+                        </div>
+                    </div>
+                    <div class="col-lg-6 m_y">
+                        <div class="col-lg-6 nopl">
+                            <input type="text" placeholder="Table" class="form-control input-lg">
+                        </div>
+                        <div class="col-lg-6 btn-lg nopl">
+                            <a href="#" class="textblue">Afficher le plan</a>
+                        </div>
+                    </div>
+                </div>
+                <select class="form-control input-lg m_y">
+                    <option selected>Civilité</option>
+                    <option>Mr</option>
+                    <option>Mle</option>
+                    <option>Mme</option>
+                </select>
+                <input type="text" placeholder="Nom" class="col-lg-12 form-control input-lg">
+                <input type="text" placeholder="Prénom" class="col-lg-12 form-control input-lg m_y">
+                <input type="text" placeholder="Email" class="col-lg-12 form-control input-lg">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <select class="form-control input-lg m_y">
+                            <option selected>+33</option>
+                            <option>+44</option>
+                            <option>+42</option>
+                            <option>+...</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-10 m_y">
+                        <input type="text" placeholder="Téléphone" class="form-control input-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="Prescripteur" class="form-control input-lg">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="Entreprise" class="form-control input-lg">
+                    </div>
+                </div>
+                <textarea class="form-control m_y input-lg" rows="3" placeholder="Note"></textarea>
+                <div class="col-lg-12 p_y">
+                    <a href="#" id="closer" class="btn btn-success btn-block btn-lg m_y">Valider</a>
+                </div>
+            </div>
+        </nav><!-- //drawer -->
+        <nav class="portal-menu effect" id="menu-2">
+            <div class="portal-logo"></div>
+            <ul class="portal-menu-list">
+                <li class="portal-category">I'm a category</li>
+                <li class="portal-item">I'm a menu item</li>
+                <li class="portal-item">I'm a menu item</li>
+                <li class="portal-item collapsed" data-toggle="collapse" href="#subone">
+                    I'm a dropdown
+                    <span class="fa fa-angle-right"></span>
+                    <span class="fa fa-angle-down"></span>
+                </li>
+                    <ul id="subone" class="submenu collapse">
+                        <li class="subitem">Sub-item</li>
+                        <li class="subitem">Sub-item</li>
+                        <li class="subitem">Sub-item</li>
+                        <li class="subitem">Sub-item</li>
+                    </ul>
+                <li class="portal-item">I'm a menu item</li>
+                <li class="portal-item dropdown">I'm a menu item with dropdown</li>
+                <li class="portal-item">I'm a menu item</li>
+                <li class="portal-item">I'm a menu item</li>
+                <li class="portal-category">I'm a category</li>
+                <li class="portal-item">I'm a menu item</li>
+                <li class="portal-item">I'm a menu item</li>
+                <li class="portal-item">I'm a menu item</li>
+            </ul>
+        </nav><!-- //PortalMenu -->
+        <div class="overlay"></div>
+        <!-- header -->
+        <header id="header" class="navbar">
+            <div id="menudisplay" class="col-lg-2">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+            <div class="selector col-lg-5">
+                <div class="btn-group col-lg-8 col-lg-offset-3 m_t">
+                  <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    DD/MM/YYYY - Lunch <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 nopr">
+                <div id="trigger" class="take-resa opensans pull-right">
+                + NOUVELLE RESERVATION</div>
+                <i class="fa fa-search fa-2x pull-right p_x m_y"></i>
+            </div>
+        </header>
+        <!-- / header -->
+        <!-- Content begins -->
+        <section id="content" class="container-fluid nopl nopr fullheight">
+            <div class="col-lg-4 col-md-4 col-xs-4 nopl fullheight">
+                <div class="panel panel-default resaslist">
+                    <div class="panel-heading">
+                        <h3 class="panel-title opensans pull-left">
+                        Dejeuner <span class="text-small textgrey">(42 / 78)</span>
+                        </h3>
+                        <div class="switch pull-right">
+                            <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox" checked="checked">
+                            <label for="cmn-toggle-1"></label>
+                        </div>
+                    </div>
+                    <div class="panel-body nopl nopr">
+                        <div class="tabbable-panel">
+                            <div class="tabbable-line tabs-below">
+                                <div class="tab-content nano">
+                                    <div class="tab-pane active nano-content" id="tab_below_1">
+                                        <div class="resa p_xy">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                                <div class="text-xlarge opensans">21:30</div>
+                                                <div class="text-large opensans textgrey">3 pers.</div>
+                                                <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                            </div>
+                                            <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                                <div class="fromlfwithlove m-r">
+                                                <img src="img/minifork.png">
+                                                </div>
+                                            </div> -->
+                                            <div class="col-xs-10 col-md-10 col-lg-8">
+                                                <span class="fa fa-border fa-plus pull-right"></span>
+                                                <div class="text-medium">Mr Walt HEISENBERG</div>
+                                                    <p class="textgrey text-slim text-small">
+                                                    <span class="textorange bold block">-50% sur la carte</span>
+                                                    Merci de prévoir un gâteau et une table ronde.</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- //resa --> 
+                                    </div>
+                                    <div class="tab-pane  nano-content" id="tab_below_2">
+                                        <p> Howdy, I'm in Tab 2. </p>
+                                    </div>
+                                    <div class="tab-pane  nano-content" id="tab_below_3">
+                                        <p> Howdy, I'm in Tab 3. </p>
+                                    </div>
+                                    <div class="tab-pane  nano-content" id="tab_below_4">
+                                        <p> Howdy, I'm in Tab 3. </p>
+                                    </div>
+                                    <div class="tab-pane  nano-content" id="tab_below_5">
+                                        <p> Howdy, I'm in Tab 3. </p>
+                                    </div>
+                                </div>
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#tab_below_1" data-toggle="tab">Tout</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab_below_2" data-toggle="tab">A venir</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab_below_3" data-toggle="tab">En cours</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab_below_4" data-toggle="tab">Attente</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab_below_5" data-toggle="tab">Autre</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- /tabs panel -->
+                    </div>
+                </div><!-- /panel -->
+            </div>
+            <div class="col-lg-8 col-md-8 col-xs-8 nopr fullheight">
+                <div class="panel panel-default">
+                    <div class="col-lg-12">
+                        <p>On affichera un plan...d'ici là je vais poser quelques styles de composants</p>
+                            <h4>Boutons</h4>
+                            <a href="#" class="btn btn-default">
+                                Bouton standard
+                            </a>
+                            <a href="#" class="btn btn-success">
+                                Bouton validation
+                            </a>
+                            <a href="#" class="btn btn-danger">
+                                Bouton suppression
+                            </a>
+                            <a href="#">Lien discard</a>
+                            <!-- <a href="#">Bouton standard</a> -->
+                            <h4>Tableaux</h4>
+                            <table class="table table-hover">
+                                <thead>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Alias</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Robin</td>
+                                        <td>Laurent</td>
+                                        <td>Setec astronomy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cavana</td>
+                                        <td>Guillaume</td>
+                                        <td>Loulou</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Poissonnet</td>
+                                        <td>Florent</td>
+                                        <td>Sinatra</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+        <!-- //content -->
+       <!--  <footer id="footer"> 
+            <div class="text-center padder clearfix"> 
+                <p> 
+                    <small>&copy; - 2013 Nemesis template </small>
+                </p> 
+            </div> 
+        </footer> -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/nanoscroll.js"></script>
+    <script>
+        $(function() {
+            var $portalmenu = $('.portal-menu');
+            $('#menudisplay').on('click',function(event){
+                if(!$portalmenu.hasClass('st-menu-open')) {
+                    $portalmenu.addClass('st-menu-open');
+                    $('.overlay').addClass('visible');
+                    event.stopPropagation();
+                }
+            });
+            $(document).on('click',function(event){
+                var $target = $(event.target);
+                if(!$target.closest('.portal-menu').length) {
+                    if($portalmenu.hasClass('st-menu-open')) {
+                    $portalmenu.removeClass('st-menu-open');
+                    $('.overlay').removeClass('visible');
+                }   
+                }
+            });
+            $('#closer').on('click',function(event){
+                if($portalmenu.hasClass('st-menu-open')) {
+                    $portalmenu.removeClass('st-menu-open');
+                    $('.overlay').removeClass('visible');
+                }
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var $drawer = $('.drawer');
+            $('#trigger').on('click',function(event){
+                if(!$drawer.hasClass('st-menu-open')) {
+                    $drawer.addClass('st-menu-open');
+                    $('.overlay').addClass('visible');
+                    event.stopPropagation();
+                }
+            });
+            $(document).on('click',function(event){
+                var $target = $(event.target);
+                if(!$target.closest('.drawer').length) {
+                    if($drawer.hasClass('st-menu-open')) {
+                    $drawer.removeClass('st-menu-open');
+                    $('.overlay').removeClass('visible');
+                }   
+                }
+            });
+            $('#closer').on('click',function(event){
+                if($drawer.hasClass('st-menu-open')) {
+                    $drawer.removeClass('st-menu-open');
+                    $('.overlay').removeClass('visible');
+                }
+            });
+        });
+    </script>
+    <script>
+        $(".nano").nanoScroller({alwaysVisible: true});
+    </script>
+    </body>
+    </html>

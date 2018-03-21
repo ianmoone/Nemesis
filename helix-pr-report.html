@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>heliX</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/helix.css"type="text/css"/>
+        <link rel="stylesheet"href="css/octicons.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAABQCAYAAABbAybgAAAFbUlEQVR4Ac3bS2xUVRzHcZFK8LEwIdFEjYqPBSC12mmxDbT2oX1QoCm1tIUpIlJMaFMlCNIWbcG2gBaRFmtc1KhxY0I0unDVuHBldGnwEYkSTIPFlpaxj+k8/v4SziX/TOZ2zr3n/DssPrtJmC//cx+nJ3MLEbmqHyx+Al6Cw0o9rEz4jIiiN9ZmQAD2Qp+yB1bxzznfwy0gC87BJFCCMfgQHpAIUREF8C1MAyWYgE/gcbcQJ6LGCUjhAmQLRDTDNaAURmELD+ERhRAC0nQRAhYjWiACpGkMVjshTsRy+AGIEY9hEfsgBuTR15CRuKTIp0uQaziJKJAPc/AUDzkLZGAU8nxE7HcmYeAAD/kKyNDfkO8xIg5k6AMe8g2QBaOQrxHxGpAlQzxkGMiSf6BggYiDELcY0sVD9gBZdBmeTRLRDmRRFNbzkHvgIpDlyRSyiENAlv0EdyY+EINAll2BsuL2zE6BiAiUur2iHBGIma7p3xAp7ciyGRGDtlQvjZ1Atm09VUClHU/aiJiH1hRvv/IxJWYxESdCK0TFdEjE1L6HyXRm+Z1Ei/Z+JCHm0E0SE4ZXVID3EBVzMM0xc9DMAvyFqJgDaYrhEeYhKmY/xO3HFNJzyWPC8HLyCIMQFdO2SDEzsMs9wjBExeyDiMQyUzGzLEIoRNk2UNQidM1M4XUmqBFhJwT/Y2c39+VZD4EQNIqHqIguIKDNx/PiAjHTsE0sREUcdSKEY2ag3nqIijgOxEjHzEHQSogKWAYngBayqe8ZEorZaSUEe4nPyrsD7hGLE9NkFKKe5oTbbby8KzvdMVWeQ1TE8zAPdCOmWzOmVyRmFB7RDlERd8GPQBxiYrrLrKp3nUTMsNeQ7UCKfoz8ZP6DHC8h3wMtEBP3MJmQ+gJkyZDuidUamAZKFVOROuZXCODz5TBpKeQSrNAJaQVSTGJ+g4fZmrYVE4USnZBPgbRjzhTFyt56OjHiD3hIBXAVlmLaUp0hLmPXh5eYKIv5Ge5NjGBKYdwwZCBVyFIYBPIV05V9HhH3uUUwhYaT+UgsRPkFVmqcj9Ru7Mm9KhbCl5aB3+HRBSLqYAZo49u55PNvAAPmF7uev2B1kojtMAvkqDyW4yemzfz2q+9PWMUiGmEOiOExMdu3X/5ANHUBHlQRbBJGMfyBqP+KYgoPzQnczSKuETzmqFbMkMFLo3FMVHc/U3E9JmrrpVG9xtuNKTOPGTbYWKVrMgGqH0BMwsbKaKubtpjugHPNRKHK9HzkWLpjat5d32PrfKQnTTERaIZbzUNkJ4Nts2vMPOyWOh95U2IySbbNYWiSPh/pFI6Zg+BinY+clFlmgTBbTuLHCkvhdPXJfBI6UigQD0FABvRCvPjwWkJMXCBmgsWIHCvcBj1AN1yPiQnEjMMG6yFqEq7nI0IxU1BkLURN4h2ghWw5kR8XiikxClERy3lEmmImoch3iDqp6gfyAjESy+walHkOUcvptNcI4cnMQr1WiIq4Hd4HMoEDUhKICcOOlCEq4gyQDYiJC8UEXUPUhT0IZBNiJvm21ZIo1LmFvA5k2SQ04B99USAmBNlOiBPxGIxZjrgKdezibIKY5ZgRWMJD2gUiGlQAtxMiFkPmIZ+HnLMc8UJiBLPD8l9ndvGQ7yxF/AvVbhFMg8Vl1sdDRixEXIGaVBFMo6VldoSHfG4YMe4xgk8mbBgS5CF7DSdR5TWCqTOICcEaHrICzvuIuMwiTNT6vAF8nOyBWAezHiM2mUYwW2HW4w9t7k8WsgRaYVojYhQqbUUw1TCheehamOrttxJGYCZJwBR8ATmCv57OhC8h5DKFIbhbdz9yB6yDV+EU9MNuyIQM9rm0cr7H/+ZF7Dizj3X7AAAAAElFTkSuQmCC">heliX
+        </div>
+    </header><!-- /Header -->
+
+    <div class="sidebar">
+        <ul>
+            <li>
+                <div class="form-group">
+                    <label for="creationDate">Created since</label>
+                    <input type="date" class="form-control" id="creationDate" placeholder="Choose a date">
+                </div>
+            </li>
+            <li>
+                <div class="form-group">
+                    <label for="repositories">Repositories</label>
+                        <select id="example-getting-started" multiple="multiple">
+                            <option value="cheese">Cheese</option>
+                            <option value="tomatoes">Tomatoes</option>
+                            <option value="mozarella">Mozzarella</option>
+                            <option value="mushrooms">Mushrooms</option>
+                            <option value="pepperoni">Pepperoni</option>
+                            <option value="onions">Onions</option>
+                        </select>
+                </div>
+            </li>
+            <li>
+                <div class="form-group">
+                    <label for="buildStatus">Build status</label>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="success">
+                            success
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="fail">
+                            fail
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="form-group">
+                    <label for="hasComments">Has comments
+                        <input type="checkbox" id="hasComments" value="1">
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-group">
+                    <label for="isMergeable">Is mergeable ?
+                        <input type="checkbox" id="isMergeable" value="1">
+                    </label>
+                </div>
+            </li>
+            <div class="btn-group m-y col-md-12">
+                <button class="btn btn-default">Discard filters</button>
+                <button class="btn btn-success">Apply filters</button>
+            </div>
+        </ul>
+    </div>
+    <!-- /sidebar -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-xs-6">
+                <div class="info-box">
+                    <i class="octicon octicon-git-pull-request"></i>
+                    <span class="heading">Opened prs</span>
+                    <span class="value"><span>4949</span></span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="info-box">
+                    <i class="octicon octicon-git-merge"></i>
+                    <span class="heading">merged today</span>
+                    <span class="value"><span>42</span></span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="info-box">
+                    <i class="octicon octicon-x"></i>
+                    <span class="heading">closed today</span>
+                    <span class="value"><span>4949</span></span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="info-box">
+                    <i class="octicon octicon-git-pull-request"></i>
+                    <span class="heading">Opened prs</span>
+                    <span class="value"><span>4949</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 pr-list">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    TheFork Pull Requests
+                    <span class="pr-total">131 PR to go !</span>
+                </div>
+                <div class="pull-request defcon">
+                    <div class="pr-author"><img src="img/avatar_4.jpg" class="avatar"></div>
+                    <div class="pr-title">
+                        <span class="pr-number">#642</span>
+                        All your code are belong to us
+                    </div>
+                    <div class="pr-details">
+                        <div class="pr-creation-date"><span>created</span> 29 Sept. 2016</div>
+                        <div class="repository">lafourchette-portal</div>
+                        <div class="pr-files label label-default">11 files</div>
+                        <div class="pr-label label label-success">+1</div>
+                        <div class="pr-label label label-primary">READ JGO</div>
+                        <div class="pr-label label label-primary">READ GCA</div>
+                    </div>
+                </div><!--/pr-->
+                <div class="pull-request defcon">
+                    <div class="pr-author"><img src="img/avatar_sj.jpg" class="avatar"></div>
+                    <div class="pr-title">
+                        <span class="pr-number">#642</span>
+                        All your code are belong to us
+                    </div>
+                    <div class="pr-details has-comments">
+                        <div class="repository">lafourchette-portal</div>
+                        <div class="pr-files label label-default">11 files</div>
+                        <div class="pr-label label label-warning">BACK</div>
+                        <div class="pr-creation-date">29 Sept. 2016</div>
+                    </div>
+                </div><!--/pr-->
+                <div class="pull-request">
+                    <div class="pr-author"><img src="img/avatar_17.jpg" class="avatar"></div>
+                    <div class="pr-title">
+                        <span class="pr-number">#642</span>
+                        All your code are belong to us
+                    </div>
+                    <div class="pr-details">
+                        <div class="repository">lafourchette-portal</div>
+                        <div class="pr-files label label-default">11 files</div>
+                        <div class="pr-creation-date">29 Sept. 2016</div>
+                    </div>
+                </div><!--/pr-->
+                <div class="pull-request">
+                    <div class="pr-author"><img src="img/avatar_1.jpg" class="avatar"></div>
+                    <div class="pr-title">
+                        <span class="pr-number">#642</span>
+                        All your code are belong to us
+                    </div>
+                    <div class="pr-details">
+                        <div class="repository">lafourchette-portal</div>
+                        <div class="pr-files label label-default">11 files</div>
+                        <div class="pr-creation-date">29 Sept. 2016</div>
+                    </div>
+                </div><!--/pr-->
+                <div class="pull-request">
+                    <div class="pr-author"><img src="img/avatar_20.jpg" class="avatar"></div>
+                    <div class="pr-title">
+                        <span class="pr-number">#642</span>
+                        All your code are belong to us
+                    </div>
+                    <div class="pr-details">
+                        <div class="repository">lafourchette-portal</div>
+                        <div class="pr-files label label-default">11 files</div>
+                        <div class="pr-creation-date">29 Sept. 2016</div>
+                    </div>
+                </div><!--/pr-->
+            </div><!--/panel-->
+        </div> <!--/col -->
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/multiselect.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#example-getting-started').multiselect({
+            enableFiltering: true,
+            maxHeight: 400
+        });
+    });
+</script>
+</html>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Hogosha - mark II</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/hogosha.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<header>
+    <h1 class="text-center"><i class="fa fa-glass fa-lg textgreen"></i>Hogosha</h1>
+</header>
+<!-- Content begins -->
+<div class="container">
+    <div class="col-lg-12 col-xs-12">
+        <div class="panel panel-status status-success">
+            <div class="panel-body nopl nopr nopt">
+                <div class="status-icon hexagon flatgreen pull-left">
+                    <i class="fa fa-check hulk fa-inverse"></i>
+                </div>
+                <span class="status-message">All systems operational</span>
+                <span class="status-timestamp pull-right textgrey">Refreshed 42 minutes ago</span>
+            </div>
+        </div>
+        <div class="panel panel-status">
+            <div class="panel-body nopl nopr nopt">
+                <div class="status-icon flatred pull-left">
+                    <i class="fa fa-times hulk fa-inverse"></i>
+                </div>
+                <span class="status-message">Break down ! </span>
+                <span class="status-timestamp pull-right textgrey">Refreshed 42 seconds ago</span>
+            </div>
+        </div>
+    </div><!-- /global-status -->
+    <div class="col-lg-12 col-xs-12">
+        <div class="services">
+            <div class="panel panel-service">
+                <div class="panel-body nopl nopr">
+                    <i class="fa fa-circle textgreen bubble"></i>
+                    <span  data-toggle="tooltip">A service name</span>
+                    <span class="textgreen pull-right status">Everything is operational</span>
+                </div>
+            </div><!-- /panel -->
+            <div class="panel panel-service">
+                <div class="panel-body nopl nopr">
+                    <i class="fa fa-circle textorange bubble"></i>
+                    <span>A service name</span>
+                    <span class="textorange pull-right status">Run Forrest run !</span>
+                </div>
+            </div><!-- /panel -->
+            <div class="panel panel-service">
+                <div class="panel-body nopl nopr">
+                    <i class="fa fa-circle textred bubble"></i>
+                    <span>A service name</span>
+                    <span class="textred pull-right status">Houston we've got a problem</span>
+                </div>
+            </div><!-- /panel -->
+        </div>
+    </div><!-- /services list -->
+    <div class="col-lg-12 col-xs-12 events">
+        <h4>30 Sept. 2015</h4>
+        <div class="list">
+            <div class="panel panel-event">
+                <div class="panel-body nopl nopr">
+                    <i class="fa fa-check big textgreen pull-left"></i>
+                    <span class="small textgrey timestamp pull-right">OOh ! A timestamp 14:00</span>
+                    <div class="title">An event title</div>
+                    <div class="description">Here you should put some description in order to inform our users.</div>
+                </div>
+            </div><!-- /panel -->
+        </div><!-- /events history -->
+        <h4>29 Sept. 2015</h4>
+        <div class="list">
+            <div class="panel panel-event event-success">
+                <div class="panel-body nopl nopr">
+                    <i class="fa fa-check big textgreen pull-left"></i>
+                    <span class="small textgrey timestamp pull-right">OOh ! A timestamp 14:00</span>
+                    <div class="title">An event title</div>
+                    <div class="description">Here you should put some description in order to inform our users.</div>
+                </div>
+            </div><!-- /panel -->
+            <div class="panel panel-event event-warning">
+                <div class="panel-body nopl nopr">
+                    <i class="fa fa-bolt big textorange pull-left"></i>
+                    <span class="small textgrey timestamp pull-right">OOh ! A timestamp 14:00</span>
+                    <div class="title">An event title</div>
+                    <div class="description">Here you should put some description in order to inform our users.</div>
+                </div>
+            </div><!-- /panel -->
+            <div class="panel panel-event event-alert" data-toggle="tooltip" data-placement="top" title="Core Customer API">
+                <div cl./ass="panel-body nopl nopr">
+                    <i class="fa fa-times big textred pull-left"></i>
+                    <span class="small textgrey timestamp pull-right">OOh ! A timestamp 14:00</span>
+                    <div class="title">An event title</div>
+                    <div class="description">Here you should put some description in order to inform our users.</div>
+                </div>
+            </div><!-- /panel -->
+        </div><!-- /events history -->
+    </div>
+    <div class="col-lg-12 col-xs-12">
+        <div class="footer">
+            <div class="copyright">Hogosha status page powered by <strong>Hogosha</strong> </div>
+            <div class="actions">
+                <a href="#">A corporate link</a>
+                <button class="btn btn-warning">Subscribe</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay-danger"></div>
+<!-- //content -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Avalon - mark I</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/avalon.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body>
+    <div class="header">
+        <h1 class="header-title">
+            <img src="img/logolf.png" class="logo pull-left">
+            Build your own behat suite</h1>
+    </div>
+    <!-- Content begins -->
+    <section class="container-fluid">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+            <div class="panel panel-default rounded-top">
+                <div class="panel-heading" data-toggle="collapse" href="#panel-001">
+                    <h3 class="panel-title pull-left">Filters</h3>
+                </div>
+                <div id="panel-001" class="panel-body nopl nopr collapse in">
+                    <div class="col-lg-2 col-md-2 col-xs-12 nopl">
+                        <div class="btn-group col-xs-12 nopl nopr" data-toggle="buttons">
+                            <label class="btn btn-default small active col-xs-3"><input type="checkbox" name="status" id="option1" value="option1">ALL</label>
+                            <label class="btn btn-default small col-xs-3"><input type="checkbox" name="status" id="option2" value="option2">b2b</label>
+                            <label class="btn btn-default small col-xs-3"><input type="checkbox" name="status" id="option3" value="option3">b2c</label>
+                            <label class="btn btn-default small col-xs-3"><input type="checkbox" name="status" id="option3" value="option3">feniX</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-xs-6">
+                        <input type="text" placeholder="Tags" name="srch-term" id="srch-term" class="form-control">
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-xs-6">
+                        <select class="form-control">
+                            <optgroup label="Development">
+                                <option>Preprod</option>
+                                <option>Integ1</option>
+                                <option>Integ 2</option>
+                                <option>Integ n</option>
+                            </optgroup>
+                            <optgroup label="He's alive !!">
+                                <option>Prod baby !</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+            </div><!-- /panel -->
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="panel panel-default rounded-top">
+                <div class="panel-heading">
+                    <h3 class="panel-title pull-left">b2b</h3>
+                </div>
+                <div class="panel-body nopl nopr">
+                    <ul class="tree">
+                        <li><a href="#"><input type="checkbox" class="treecheck">b2b</a>
+                            <ul>
+                                <li><input type="checkbox" class="treecheck">Feature</li>
+                                    <li><input type="checkbox" class="treecheck">Feature
+                                        <ul>
+                                        <li><input type="checkbox" class="treecheck">Folder
+                                            <ul>
+                                                <li><input type="checkbox" class="treecheck">Feature1</li>
+                                                <li><input type="checkbox" class="treecheck">Feature2</li>
+                                                <li><input type="checkbox" class="treecheck">Feature3</li>
+                                            </ul>
+                                        </li>
+                                        <li><input type="checkbox" class="treecheck">Feature</li>
+                                        </ul>
+                                    </li>
+                                <li><input type="checkbox" class="treecheck">Feature</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="panel panel-default rounded-top">
+                <div class="panel-heading">
+                    <h3 class="panel-title pull-left">b2c</h3>
+                </div>
+                <div class="panel-body nopl nopr">
+                    <ul class="tree">
+                        <li><a href="#"><input type="checkbox" class="treecheck">b2b</a>
+                            <ul>
+                                <li><input type="checkbox" class="treecheck">Feature</li>
+                                    <li><input type="checkbox" class="treecheck">Feature
+                                        <ul>
+                                        <li><input type="checkbox" class="treecheck">Folder
+                                            <ul>
+                                                <li><input type="checkbox" class="treecheck">Feature1</li>
+                                                <li><input type="checkbox" class="treecheck">Feature2</li>
+                                                <li><input type="checkbox" class="treecheck">Feature3</li>
+                                            </ul>
+                                        </li>
+                                        <li><input type="checkbox" class="treecheck">Feature</li>
+                                        </ul>
+                                    </li>
+                                <li><input type="checkbox" class="treecheck">Feature</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="panel panel-default rounded-top">
+                <div class="panel-heading">
+                    <h3 class="panel-title pull-left">feniX</h3>
+                </div>
+                <div class="panel-body nopl nopr">
+                    <ul class="tree">
+                        <li><a href="#"><input type="checkbox" class="treecheck">b2b</a>
+                            <ul>
+                                <li><input type="checkbox" class="treecheck">Feature</li>
+                                    <li><input type="checkbox" class="treecheck">Feature
+                                        <ul>
+                                        <li><input type="checkbox" class="treecheck">Folder
+                                            <ul>
+                                                <li><input type="checkbox" class="treecheck">Feature1</li>
+                                                <li><input type="checkbox" class="treecheck">Feature2</li>
+                                                <li><input type="checkbox" class="treecheck">Feature3</li>
+                                            </ul>
+                                        </li>
+                                        <li><input type="checkbox" class="treecheck">Feature</li>
+                                        </ul>
+                                    </li>
+                                <li><input type="checkbox" class="treecheck">Feature</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-xs-12">
+            <a href="#" class="btn btn-success btn-lg pull-right">Build it !</a>
+        </div>
+    </section>
+    <!-- <div id="particles" class="pull-left"></div> -->
+    <!-- //content -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!--<script>
+    // $.fn.extend({
+    //   treed: function() {
+    //     return this.each(function() {
+    //         //initialize each of the top levels
+    //         var tree = $(this);
+    //         tree.addClass("tree");
+    //         tree.find('li').has("ul").each(function () {
+    //             var branch = $(this); //li with children ul
+    //             branch.prepend("<i class='indicator fa fa-plus'></i>");
+    //             branch.addClass('branch');
+    //             branch.on('click', function (e) {
+    //                 if (this == e.target) {
+    //                     var icon = $(this).children('i:first');
+    //                     icon.toggleClass("fa-minus fa-plus");
+    //                     $(this).children().children().toggle();
+    //                 }
+    //             })
+    //             branch.children().children().toggle();
+    //         });
+    //         //fire event from the dynamically added icon
+    //         $('.branch .indicator').on('click',function(){
+    //             $(this).closest('li').click();
+    //         })
+    //         //fire event to open branch if the li contains an anchor instead of text
+    //         $('.branch a').on('click',function(){
+    //             $(this).closest('li').click();
+    //         })
+    //     }); 
+    //   }
+    // });
+
+
+    // $('.tree').treed();
+    </script>-->
+    <script src="js/sparkline.js"></script>
+    <script src="js/particles.js"></script>
+    <script>
+      particlesJS('particles', {
+        particles: {
+          color: '#fff',
+          shape: 'circle',
+          opacity: 0.6,
+          size: 2.5,
+          size_random: true,
+          nb: 10,
+          line_linked: {
+            enable_auto: true,
+            distance: 100,
+            color: '#fff',
+            opacity: 0.5,
+            width: 1,
+            condensed_mode: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 600
+            }
+          },
+          anim: {
+            enable: true,
+            speed: 2.5
+          }
+        },
+        interactivity: {
+          enable: true,
+          mouse: {
+            distance: 250
+          },
+          detect_on: 'canvas',
+          mode: 'grab',
+          line_linked: {
+            opacity: 0.5
+          },
+          events: {
+            onclick: {
+              push_particles: {
+                enable: true,
+                nb: 4
+              }
+            }
+          }
+        },
+        retina_detect: true
+    });
+    </script>
+    </body>
+</html>

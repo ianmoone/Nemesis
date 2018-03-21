@@ -1,0 +1,284 @@
+/*
+  _    _       _
+ | |  | |     | |
+ | |__| | __ _| |
+ |  __  |/ _` | |
+ | |  | | (_| | |
+ |_|  |_|\__,_|_| mark.I
+*/
+
+/* Alignment, emphasis & Colors
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.m-x {margin: 0 15px;}
+.m-y {margin: 10px 0;}
+.m-b {margin-bottom: 10px;}
+.flatblue {background: #3bafda; color: #ffffff; }
+.flatgreen {background: #28bb72; color: #ffffff; }
+.flatred {background: #e74c3c; color: #ffffff; }
+.flatorange {background: #f1c40f; color: #ffffff; }
+.flatpurple {background: #967ADC; color: #ffffff; }
+.flatgrey {background: #bdc3c7; }
+.textblue {color: #2980b9; }
+.textgreen {color: #28bb72; }
+.textred {color: #e74c3c; }
+.textorange {color: #f1c40f; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+small { font-size: 65%; }
+.row {margin: 10px 0; }
+
+/* Content elements
+-----------------------------------------------------*/
+html {min-height: 100%;}
+html.danger {border: 8px solid #e74c3c;}
+body{font-size: 16px; background: #f9fafc; margin-top: 20px; min-height: 100%;}
+body.login, body.admin{background: #f0f2f6; margin-top: 0;}
+h1, h2, h3, h4 {font-weight: 200;color: #999;}
+header{min-height: 200px; background: url("../img/bg2.jpg") no-repeat center center; margin-bottom: 20px;}
+.logo img{width: 300px; margin-top: 100px;}
+.container{margin-bottom: 20px;}
+.container-fluid {height: 100%;}
+.list{background: #fff; border-radius: 4px; border: 1px solid #eee; padding: 0; margin-top: 20px;}
+.events{margin-top: 10px;}
+.events h4{padding-left: 15px;}
+.events .list{margin-top: 10px;}
+.bubble{font-size: 14px;}
+.status{font-weight: 200;}
+.panel-status{height: 60px; line-height: 60px; background: #fff;}
+.status-icon{width: 60px; height: 60px; line-height: 60px;margin: -1px 20px 0 -16px; border-radius: 4px 0 0 4px;}
+.status-icon i{margin: 16px 0 0 18px;}
+.status-timestamp{font-size: 14px; font-weight: 300;}
+.panel-service{color: #888; border-bottom: 1px solid #EBEBE9;}
+.panel-service:last-child{border-bottom: 0;}
+.panel-event{padding-left: 20px;}
+.panel-service i, .panel-event i{margin-top: 8px;min-width: 20px;}
+.event-warning{background: rgba(241, 196, 15, 0.2);}
+.event-alert{background: rgba(231, 76, 60, 0.2);}
+.timestamp{text-transform: uppercase; text-decoration: underline;}
+.description{color: #888; font-weight: 200; font-size: 14px;}
+.overlay-danger {opacity: 0;}
+.overlay-danger.active {opacity: 1; position: fixed; top: 0; bottom: 0; left: 0; right: 0; border: 8px solid red;}
+
+/* Bootstrap overrides
+-------------------------------------------------- */
+.panel {border-radius: 0;padding: 0 15px; margin: 1px 0;border: 1px solid #e6e9f1;}
+.panel-default .panel-heading {background: transparent; border: 0; font-size: 14px; font-weight: 300; padding: 10px 0;}
+.panel:last-child{margin-bottom: 0; box-shadow: none;}
+.panel-body {padding: 10px 0;}
+.login .panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    padding: 0;
+}
+.login .panel-default {
+    border-color: #ddd;
+}
+.btn, .btn-lg{border-radius: 3px;}
+
+/* Responsive table
+-------------------------------------------------- */
+@media only screen and (max-width: 800px) {
+/* Force table to not be like tables anymore */
+  #no-table table,
+  #no-table thead,
+  #no-table tbody,
+  #no-table th,
+  #no-table td,
+  #no-table tr {
+    display: block;
+  }
+
+/* Hide table headers (but not display: none;, for accessibility) */
+  #no-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-table tr { border: 1px solid #ccc; }
+
+  #no-table td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align:left;
+  }
+
+  #no-table td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align:left;
+    font-weight: 500;
+    color: #333;
+  }
+
+/*
+Label the data
+*/
+  #no-table td:before { content: attr(data-title); }
+}
+
+/* Hogosha login
+-------------------------------------------------- */
+.login-form {position: relative; width: 30%; margin: 0 auto; margin-top: 8%;}
+.login-form panel {margin-bottom: 20px;}
+.logo {width: 200px; padding-top: 10px;}
+.login-links, .login-links a{color: rgba(0, 0, 0,.4); font-weight: 300; padding-top: 40px;}
+.welcome {color: #999; font-weight: 300;}
+a.button, span.button, label.button { line-height: 42px; text-decoration: none;}
+.btn-social { position: relative; font-weight: 600; margin-bottom: 5px;}
+.btn-social i { font-size: 22px; font-weight: normal; position: relative; top: 3px;}
+.github { background-color: #34495e; color: rgba(255, 255, 255, 1); padding-left: 60px; font-weight: 300;}
+.github:hover { background-color: #2c3e50; color: rgba(255, 255, 255, 1); transition: all 0.4s;}
+.github span { background-color: #2c3e50; width: 45px; position: absolute; left: 0; text-align: center;}
+.twitter { background-color: #00acee; color: rgba(255, 255, 255, 1); padding-left: 60px; font-weight: 300;}
+.twitter:hover { background-color: #009AD5; color: rgba(255, 255, 255, 1); transition: all 0.4s;}
+.twitter span { background-color: #009AD5; width: 45px; position: absolute; left: 0; text-align: center;}
+.google { background-color: #dd4b39; color: rgba(255, 255, 255, 1); padding-left: 60px; font-weight: 300;}
+.google:hover { background-color: #C03121; color: rgba(255, 255, 255, 1); transition: all 0.4s;}
+.google span { background-color: #C03121; width: 45px; position: absolute; left: 0; text-align: center;}
+label {font-weight: 300;}
+/* Hogosha admin
+-------------------------------------------------- */
+form {}
+form > [class*='col-lg'] {padding: 10px 15px;}
+.label-floatlabel {color: #2ecc71!important;}
+.btn-default {color: #666; background-color: #fff; border-color: #dedede;}
+.btn-default:hover {color: #333; background-color: #e9e9e9; border-color: #dedede; font-weight: bold; transition: all 0.2s;}
+.btn-default.active,.btn-default.active:hover {color: #fff; background-color: #3498db; font-weight: normal; border-color: #dedede;}
+.btn-group-justified .btn {border-right-width:0px}
+.btn-group-justified .btn:last-of-type {border-right-width:1px}
+.btn:hover {transition: all 0.4s ease;}
+.content>.header {background: #fff; height: 54px; line-height: 54px; position: fixed; top: 0; left: 220px; width: 100%;}
+.header h1 {margin-top: 10px;}
+
+.adminlogo{color: #fff; font-size: 24px; padding: 10px 0; font-weight: 300;padding-left: 20px; background: #9b59b6;}
+.adminlogo img {width: 50px;margin: -8px 10px 0 30px;}
+.bottom-menu {position: absolute; bottom: -10px; width: 100%;}
+a.logout {background: #e74c3c; color: rgba(255, 255, 255, 1);}
+a.logout:hover {background: #c0392b; color: rgba(255, 255, 255, 1);}
+.metric {font-size: 30px; text-align: center;}
+#line {width: 100%; max-height: 300px;}
+
+/*NewAdmin*/
+
+/* Sidebar
+-------------------------------------------------- */
+.header {height: 50px; line-height: 50px;width: 100%;display: block; z-index: 42; background: #fff;}
+.header img{height: 50px;margin: -3px 0 0 0;}
+.container-fluid.content {
+    padding: 0 20px 0 10px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+    min-height: 100%;
+    height: 100%;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+.container-fluid.sidebar-collapsed {margin-left: 50px;}
+
+.sidebar {
+    background: #31343b;
+    width: 200px;
+    color: #333;
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    float: none;
+    min-height: 100%;
+    height: 100%;
+    z-index: 742;
+    transition: width .2s ease-in-out;
+}
+.sidebar.sidebar-collapsed {width: 50px; transition: width .2s ease-in-out;}
+
+
+.sidebar ul {
+    padding: 0;
+}
+.sidebar ul li.active a{
+    text-decoration: none;
+    color: rgba(255,255,255,1);
+    background-color: rgba(68,71,78,1);
+}
+
+.sidebar a {
+    padding: 0 10px;
+    display: block;
+    color: #6D747F;
+}
+
+#sidebar a:hover,
+#sidebar a:focus {
+    text-decoration: none;
+    color: #fff;
+    background: #44474E;
+}
+
+#sidebar {
+    left: 0;
+    padding: 0;
+    position: fixed;
+    top: 50px;
+    z-index: 42;
+    width: 200px;
+}
+.sidebar-collapsed #sidebar{width: 50px;}
+.sidebar-expanded #sidebar a span i {margin-right: 10px;}
+
+#sidebar a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    display: block;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    position: relative;
+    padding-left: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: 300;
+}
+
+.bottom-menu {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+}
+.bottom-menu a {
+    text-decoration: none;
+    display: block;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    position: relative;
+    padding-left: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+a.logout {
+    background: #e74c3c;
+    color: rgba(255,255,255,1);
+}
+
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

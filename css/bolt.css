@@ -1,0 +1,92 @@
+/*
+    __          ____
+   / /_  ____  / / /_
+  / __ \/ __ \/ / __/
+ / /_/ / /_/ / / /_
+/_.___/\____/_/\__/  mark I
+*/
+
+/* Alignment, emphasis & Colors
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.m-x {margin: 0 15px;}
+.m-y {margin: 10px 0;}
+.m-b {margin-bottom: 10px;}
+.flatblue {background: #3bafda; color: #ffffff; }
+.flatgreen {background: #28bb72; color: #ffffff; }
+.flatred {background: #e74c3c; color: #ffffff; }
+.flatorange {background: #f1c40f; color: #ffffff; }
+.flatpurple {background: #967ADC; color: #ffffff; }
+.flatgrey {background: #bdc3c7; }
+.textblue {color: #2980b9; }
+.textgreen {color: #28bb72; }
+.textred {color: #e74c3c; }
+.textorange {color: #f1c40f; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+small { font-size: 65%; }
+.row {margin: 10px 0; }
+
+/* Content elements
+-----------------------------------------------------*/
+html {min-height: 100%;}
+html.danger {border: 8px solid #e74c3c;}
+body{font-size: 16px; background: #f9fafc; margin-top: 20px; min-height: 100%;}
+body.login, body.admin{margin-top: 0;}
+h1, h2, h3, h4 {font-weight: 200; color: #333;}
+h1 {font-size: 30px;}
+header{min-height: 200px; background: url("../img/bg2.jpg") no-repeat center center; margin-bottom: 20px;}
+.logo {width: 200px; padding-top: 10px;}
+.container{margin-bottom: 20px;}
+.container-fluid {height: 100%;}
+.panel-heading {font-weight: bold;}
+.panel-heading small{font-weight: normal; color: #666}
+.panel-service{color: #888; border-bottom: 1px solid #EBEBE9;}
+.panel-service:last-child{border-bottom: 0;}
+.panel-event{padding-left: 20px;}
+
+/* Bootstrap overrides
+-------------------------------------------------- */
+.panel {border-radius: 0;padding: 0 15px; margin: 1px 0;border: 1px solid #e6e9f1;}
+.panel-default .panel-heading {background: transparent; border: 0;padding: 10px 0;}
+.panel:last-child{margin-bottom: 0; box-shadow: none;}
+.panel-body {padding: 10px 0;}
+.btn, .btn-lg{border-radius: 3px;}
+
+/* Sidebar
+-------------------------------------------------- */
+.header { height: 50px; line-height: 50px; width: 100%; display: block; z-index: 42; background: #fff; position: fixed; }
+.header>.logo{ padding: 0 0 0 14px; background: #3498db; color: #fff; transition: all .2s ease-in-out; }
+.header.sidebar-collapsed>.logo{ width: 50px; padding: 0 14px; transition: all .2s ease-in-out; }
+.header.sidebar-collapsed>.logo>span{ display: none; }
+.expander { position: absolute; left: 220px; top: 20px; color: rgba(0, 0, 0,.6); transition: all .2s ease-in-out; }
+.header.sidebar-collapsed>.expander { left: 70px; transition: all .2s ease-in-out; }
+.expander:hover { color: rgba(0, 0, 0, 1); text-decoration: none; cursor: pointer;}
+.header img { height: 50px; margin: -3px 0 0 0; }
+.container-fluid.content { padding: 50px 20px 0 10px; margin-left: 200px; margin-bottom: 10px; min-height: 100%; height: 100%; position: relative; transition: all .2s ease-in-out; }
+.container-fluid.sidebar-collapsed { margin-left: 50px; }
+.sidebar { background: #2F313B; width: 200px; height: 100%; padding: 0 0 20px 0; display: block; position: fixed; font-weight: 300; font-size: 15px; top: 50px; transition: all .2s ease-in-out; }
+.sidebar.sidebar-collapsed { width: 50px; transition: all .2s ease-in-out; z-index: 42;}
+.sidebar ul { padding: 0; }
+.sidebar a { padding: 15px 14px; display: block; color: #b8c7ce; }
+.sidebar a:hover, .sidebar a:focus { background: #1e282c; color: #fff; text-decoration: none; }
+.sidebar a i { padding-right: 10px; }
+.sidebar ul li { color: #fff; list-style-type: none; line-height: 30px; }
+.sidebar-collapsed ul li { height: 50px; }
+.sidebar-collapsed .submenu li { line-height: 30px; height: 40px; }
+.sidebar-collapsed ul li span { display: none; }
+.sidebar-collapsed .submenu { position: absolute; top: 0px; left: 100%; min-width: 200px; background: rgb(47, 49, 59); }
+.submenu a { padding: 5px 0 5px 40px; background: #2c3b41; }
+a .fa.fa-arrow:before { content: "\f107" }
+a.collapsed .fa.fa-arrow:before { content: "\f105" }
+.fa.pull-right {margin-top: 8px;}
+.bottom-menu { position: absolute; bottom: 40px; width: 100%; }
+.bottom-menu a { text-decoration: none; display: block; height: 50px; font-size: 16px; position: relative; cursor: pointer; line-height: 20px!important; overflow: hidden; }
+a.logout { background: #e74c3c; color: #fff; }
+a.logout:hover { background: #c0392b; color: #fff; }
+
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

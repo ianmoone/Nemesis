@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Elixir - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/elixir.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<header>
+    <img src="img/renovatio.png" class="hidden-xs">
+    <!-- <img src="img/fork.png" class="visible-xs"> -->
+    <div class="title pull-left">Elixir</div>
+</header>
+<!-- Content begins -->
+<div class="particles" id="particles-js"></div>
+<div class="container-fluid">
+    <div class="col-lg-6 col-md-6 col-xs-12">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-heading">
+                <h3 class="panel-title pull-left">Profile</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="panel panel-default rounded-top project">
+                        <div id="panel-001" class="panel-body nopl nopr collapse in">
+                            <div class="panel-bg img-responsive"></div>
+                            <div class="profile-pic"></div>
+                            <div class="add">+</div>
+                            <h2>Da title</h2>
+                            <h6>Da subtitle</h6>
+                        </div>
+                    </div><!-- /panel -->
+                </div>
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-6 col-md-6 col-xs-12">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-body">
+                <div class="user flatblue col-lg-6 nopl nopr">
+                    <div class="user-pic"></div>
+                    <h1>Bill MURRAY</h1>
+                </div>
+                <div class="col-lg-6 nopl nopr">
+                    xxx
+                </div>
+            </div>
+        </div><!-- /panel -->
+    </div>
+</div>
+<!-- //content -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/particles.js"></script>
+<script>
+  particlesJS('particles-js', {
+    particles: {
+      color: '#fff',
+      shape: 'circle',
+      opacity: 0.6,
+      size: 2.5,
+      size_random: true,
+      nb: 80,
+      line_linked: {
+        enable_auto: true,
+        distance: 100,
+        color: '#fff',
+        opacity: 0.5,
+        width: 1,
+        condensed_mode: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 600
+        }
+      },
+      anim: {
+        enable: true,
+        speed: 2.5
+      }
+    },
+    interactivity: {
+      enable: true,
+      mouse: {
+        distance: 250
+      },
+      detect_on: 'canvas',
+      mode: 'grab',
+      line_linked: {
+        opacity: 0.5
+      },
+      events: {
+        onclick: {
+          push_particles: {
+            enable: true,
+            nb: 4
+          }
+        }
+      }
+    },
+    retina_detect: true
+});
+</script>
+</html>

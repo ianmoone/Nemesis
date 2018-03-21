@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Nemesis</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/nemesis.css"type="text/css"/>
+            <link rel="stylesheet"href="css/unobtainium.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body id="home" class="navbar-fixed">
+        <nav class="drawer effect" id="menu-1">
+            <h2 class="drawertitle">Prise de réservation</h2>
+            <div class="col-md-12 pbt">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="dd/mm/yyyy" class="col-lg-12 form-control input-lg">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="HH:MM" class="col-lg-12 form-control input-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 m_y">
+                        <div class="form-inline col-lg-6 nopl">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default btn-lg"> - </button>
+                                </span>
+                                <input type="text" class="form-control input-lg" placeholder="3">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default btn-lg"> + </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="bold btn-lg col-lg-6">
+                            Pers.
+                        </div>
+                    </div>
+                    <div class="col-lg-6 m_y">
+                        <div class="col-lg-6 nopl">
+                            <input type="text" placeholder="Table" class="form-control input-lg">
+                        </div>
+                        <div class="col-lg-6 btn-lg nopl">
+                            <a href="#" class="textblue">Afficher le plan</a>
+                        </div>
+                    </div>
+                </div>
+                <select class="form-control input-lg m_y">
+                    <option selected>Civilité</option>
+                    <option>Mr</option>
+                    <option>Mle</option>
+                    <option>Mme</option>
+                </select>
+                <input type="text" placeholder="Nom" class="col-lg-12 form-control input-lg">
+                <input type="text" placeholder="Prénom" class="col-lg-12 form-control input-lg m_y">
+                <input type="text" placeholder="Email" class="col-lg-12 form-control input-lg">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <select class="form-control input-lg m_y">
+                            <option selected>+33</option>
+                            <option>+44</option>
+                            <option>+42</option>
+                            <option>+...</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-10 m_y">
+                        <input type="text" placeholder="Téléphone" class="form-control input-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="Prescripteur" class="form-control input-lg">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="Entreprise" class="form-control input-lg">
+                    </div>
+                </div>
+                <textarea class="form-control m_y input-lg" rows="3" placeholder="Note"></textarea>
+                <div class="col-lg-12 p_y">
+                    <a href="#" id="closer" class="btn btn-success btn-block btn-lg m_y">Valider</a>
+                </div>
+            </div>
+        </nav><!-- //drawer -->
+        <!-- header -->
+        <header id="header" class="navbar"> 
+            <ul class="nav navbar-nav navbar-avatar pull-right">
+                <li class="dropdown"> 
+                    <a href="#"class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="hidden-xs-only">Ian MOONE</span>
+                        <span class="thumb-small avatar inline">
+                            <img src="img/13.png" alt="Da user"class="img-circle"> 
+                        </span>
+                        <b class="caret hidden-xs-only"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-bell-o pull-right">3</span>Notifications
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li> 
+                            <a href="docs.html">Aide</a>
+                        </li>
+                        <li> <a href="signin.html">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/fork-50.png">
+                        </a>
+                        <button type="button" class="btn btn-link pull-left nav-toggle visible-xs" data-toggle="class:slide-nav slide-nav-left" data-target="body">
+                        <i class="fa fa-bars icon-xlarge text-default"></i>
+                        </button>
+                        <ul class="nav navbar-nav hidden-xs">
+                            <li> 
+                                <div class="m-t m-b-small" id="panel-notifications">
+                                    <a href="#"class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-bell-o icon-xlarge text-default"></i>
+                                            <b class="badge badge-notes bg-danger count-n">2</b>
+                                    </a>
+                                    <section class="dropdown-menu m-l-small m-t-mini">
+                                        <section class="panel panel-large arrow arrow-top">
+                                            <header class="panel-heading bg-white">
+                                                <span class="h5">
+                                                    <strong>You have <span class="count-n">2</span> notifications</strong>
+                                                </span>
+                                            </header>
+                                            <div class="list-group">
+                                                <a href="#" class="media list-group-item">
+                                                    <span class="pull-left thumb-small">
+                                                        <img src="images/avatar.jpg" alt="John said" class="img-circle">
+                                                    </span>
+                                                    <span class="media-body block m-b-none">
+                                                        Moved to Bootstrap 3.0 <br> 
+                                                        <small class="text-muted">
+                                                            23 June 13
+                                                        </small>
+                                                    </span>
+                                                </a>
+                                                <a href="#" class="media list-group-item">
+                                                    <span class="media-body block m-b-none">
+                                                        first v.1 (Bootstrap 2.3 based) released <br>
+                                                        <small class="text-muted">
+                                                            19 June 13
+                                                        </small>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <footer class="panel-footer text-small">
+                                                <a href="#" class="pull-right">
+                                                    <i class="icon-cog"></i>
+                                                </a>
+                                                <a href="#">
+                                                    See all the notifications
+                                                </a>
+                                            </footer>
+                                        </section>
+                                    </section>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="m-t-small">
+                                    <a id ="trigger" class="btn btn-sm btn-success" data-toggle="modal" href="#modal">
+                                        <i class="fa fa-plus-circle"></i>
+                                        RESA
+                                    </a>
+                                </div>
+                            </li>
+            </ul>
+            <form class="navbar-form pull-left shift" action="" data-toggle="shift:appendTo" data-target=".nav-primary">
+                <i class="icon-search text-muted"></i>
+                <input type="text" class="input-sm form-control" placeholder="Search">
+            </form>
+        </header>
+        <!-- / header -->
+        <!-- nav -->
+        <nav id="nav" class="nav-primary hidden-xs nav-vertical">
+            <ul id="sidenav" class="nav" data-spy="affix" data-offset-top="50">
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-dashboard fa-2x"></i>
+                        <span class="sidelabel">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-book fa-2x"></i>
+                        <span>Gestion de service</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-calendar fa-2x"></i>
+                        <span>Calendrier</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-desktop fa-2x"></i>
+                        <span>Gestion internet</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-user fa-2x"></i>
+                        <span>Gestion des clients</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span>Statistiques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-list fa-2x"></i>
+                        <span>Mon compte</span>
+                    </a>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="#">
+                        <i class="fa fa-cog fa-2x"></i>
+                        <span>Paramètres</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="buttons.html">item 1</a>
+                        </li>
+                        <li>
+                            <a href="icons.html">
+                                <b class="badge pull-right">302</b>
+                                item 2 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="grid.html">item 3 </a>
+                        </li>
+                        <li>
+                            <a href="widgets.html">
+                                <b class="badge bg-primary pull-right">8</b>
+                                item 4 
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- / nav -->
+        <!-- Content begins -->
+        <section id="content">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                       
+                        <h3 class="panel-title opensans nabilla text-center">
+                            <i class="fa fa-angle-left pull-left"></i>
+                            septembre 2013
+                            <i class="fa fa-angle-right pull-right"></i>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                           <div class="col-lg-6 text-center"><h4>Couverts</h4></div>
+                           <div class="col-lg-6 text-center"><h4>Ventilation par jour</h4></div>
+                        </div>
+                            <iframe src="js/samples/pieSimple.html" style="height: 320px;" class="col-lg-6"></iframe>
+                            <iframe src="js/samples/columnWeek.html" style="height: 320px;" class="col-lg-6"></iframe>
+                    </div>
+                </div>
+              </div>
+               <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title opensans nabilla text-center">popularite</h3>
+                        </div>
+                        <div class="panel-body">
+                            <span class="bold">Nb de vues portail</span>
+                            <span class="pull-right">3 241</span>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title opensans nabilla text-center">RESERVATIONS</h3>
+                        </div>
+                        <div class="panel-body">
+                                <iframe src="js/samples/pieSimple.html" style="width: 100%; height: 320px; background-color: #FFFFFF;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!-- //content -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+$( ".nav-toggle" ).click(function() {
+  $( ".navbar-fixed" ).toggleClass( "slide-nav slide-nav-left" );
+});
+    </script>
+    <script>
+    $(function() {
+        var $drawer = $('.drawer');
+        $('#trigger').on('click',function(event){
+            if(!$drawer.hasClass('st-menu-open')) {
+                $drawer.addClass('st-menu-open');
+                event.stopPropagation();
+            }
+        });
+        $(document).on('click',function(event){
+            var $target = $(event.target);
+            if(!$target.closest('.drawer').length) {
+                if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }   
+            }
+        });
+        $('#closer').on('click',function(event){
+            if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }
+        });
+    });
+    </script>
+    </body>
+    </html>

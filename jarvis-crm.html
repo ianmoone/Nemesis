@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>j4rv1s - CRM !</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+        <!-- <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/> -->
+        <link rel="stylesheet"href="css/jarvis-crm.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<div class="logo">Jarvis CRM</div>
+<header>
+    <h4 class="pull-left">{ORGANIZATION } <small>A small title</small></h4>
+    <a class="trigger pull-right">Filters</a>
+</header><!-- /Header -->
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-lg-12">
+                <h2>Campaign creation</h2>
+                <form>
+                    <div class="row">
+                        <div class="nopl col-lg-3 col-md-3 col-xs-12">
+                            <input type="text" class="floatlabel form-control" placeholder="Campaign name" data-label="Campaign name" />
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12">
+                            <input type="text" class="floatlabel form-control" placeholder="From" data-label="From" />
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12">
+                            <input type="text" class="floatlabel form-control" placeholder="To" data-label="To" />
+                        </div>
+                        <div class="nopr col-lg-3 col-md-3 col-xs-12">
+                            <input type="text" class="floatlabel form-control" placeholder="Yums attributed" data-label="Yums attributed" />
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-lg-12 rule-item">
+                        <div class="rule-type complete">Scope</div>
+                        <div class="rule-definition">
+                            <div class="btn-group col-lg-4 col-md-4 col-xs-12">
+                                <select class="form-control">
+                                    <option>Select a variable</option>
+                                    <option>Tag</option>
+                                    <option>Product</option>
+                                    <option>Brand</option>
+                                    <option>Customer</option>
+                                    <option>Reservation</option>
+                                </select>
+                            </div>
+                            <div class="btn-group col-lg-4 col-md-4 col-xs-12">
+                                <select class="form-control">
+                                    <option>Select a value</option>
+                                    <option>value</option>
+                                    <option>value</option>
+                                    <option>value</option>
+                                    <option>value</option>
+                                </select>
+                            </div>
+                            <div class="rule-tools dropdown text-right col-lg-4 col-md-4 col-xs-12">
+                                <button class="btn btn-info trigger-and">and</button>
+                                <button class="btn btn-info trigger-or">or</button>
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-cog"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>Delete this rule</li>
+                                    <li>Disable this rule</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 rule-item rule-and">
+                        <div class="rule-type">And</div>
+                        <div class="rule-definition">
+                            <div class="col-lg-4 col-md-4 col-xs-12">
+                                <select class="form-control">
+                                    <option>Select a variable</option>
+                                    <option>Tag</option>
+                                    <option>Product</option>
+                                    <option>Brand</option>
+                                    <option>Customer</option>
+                                    <option>Reservation</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12">
+                                <input type="text" class="floatlabel form-control" placeholder="From" data-label="From" />
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-12">
+                                <input type="text" class="floatlabel form-control" placeholder="To" data-label="To" />
+                            </div>
+                            <div class="rule-tools dropdown text-right col-lg-4 col-md-4 col-xs-12">
+                                <button class="btn btn-info">and</button>
+                                <button class="btn btn-info trigger-or">or</button>
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-cog"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>Delete this rule</li>
+                                    <li>Disable this rule</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rule-or">
+                    <div class="col-lg-12 rule-item">
+                        <div class="rule-type">Or</div>
+                        <div class="rule-definition">
+                            <div class="btn-group col-lg-4 col-md-4 col-xs-12">
+                                <select class="form-control">
+                                    <option>Select a variable</option>
+                                    <option>Tag</option>
+                                    <option>Product</option>
+                                    <option>Brand</option>
+                                    <option>Customer</option>
+                                    <option>Reservation</option>
+                                </select>
+                            </div>
+                            <div class="btn-group col-lg-4 col-md-4 col-xs-12">
+                                <select class="form-control">
+                                    <option>Select a value</option>
+                                    <option>value</option>
+                                    <option>value</option>
+                                    <option>value</option>
+                                    <option>value</option>
+                                </select>
+                            </div>
+                            <div class="rule-tools dropdown text-right col-lg-4 col-md-4 col-xs-12">
+                                <button class="btn btn-info">or</button>
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-cog"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>Delete this rule</li>
+                                    <li>Disable this rule</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="rule-actions nopr col-lg-12">
+                    <button class="btn btn-success pull-right">Save</button>
+                    <button href="#" class="btn btn-default pull-right m-x">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+$(document).ready(function(){
+    $('.rule-and').hide();
+    $(".trigger-and").click(function () {
+        $(".rule-and").slideToggle("slow");
+    });
+    $('.rule-or').hide();
+    $(".trigger-or").click(function () {
+        $(".rule-or").slideToggle("slow");
+    });
+});
+</script>
+</html>

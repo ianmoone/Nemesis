@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Nemesis</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/nemesis.css"type="text/css"/>
+            <link rel="stylesheet"href="css/unobtainium.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body class="navbar-fixed">
+        <!-- header -->
+        <header id="header" class="navbar"> 
+            <ul class="nav navbar-nav navbar-avatar pull-right">
+                <li class="dropdown"> 
+                    <a href="#"class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="hidden-xs-only">Ian MOONE</span>
+                        <span class="thumb-small avatar inline">
+                            <img src="img/13.png" alt="Da user"class="img-circle"> 
+                        </span>
+                        <b class="caret hidden-xs-only"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="badge bg-danger pull-right">3</span>Notifications
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li> 
+                            <a href="docs.html">Aide</a>
+                        </li>
+                        <li> <a href="signin.html">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/fork-50.png">
+                        </a>
+                        <button type="button" class="btn btn-link pull-left nav-toggle visible-xs" data-toggle="class:slide-nav slide-nav-left" data-target="body">
+                        <i class="fa fa-bars icon-xlarge text-default"></i>
+                        </button>
+                        <ul class="nav navbar-nav hidden-xs">
+                            <li> 
+                                <div class="m-t m-b-small" id="panel-notifications">
+                                    <a href="#"class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon-comment-alt icon-xlarge text-default"></i>
+                                            <b class="badge badge-notes bg-danger count-n">2</b>
+                                    </a>
+                                    <section class="dropdown-menu m-l-small m-t-mini">
+                                        <section class="panel panel-large arrow arrow-top">
+                                            <header class="panel-heading bg-white">
+                                                <span class="h5">
+                                                    <strong>You have <span class="count-n">2</span> notifications</strong>
+                                                </span>
+                                            </header>
+                                            <div class="list-group">
+                                                <a href="#" class="media list-group-item">
+                                                    <span class="pull-left thumb-small">
+                                                        <img src="images/avatar.jpg" alt="John said" class="img-circle">
+                                                    </span>
+                                                    <span class="media-body block m-b-none">
+                                                        Moved to Bootstrap 3.0 <br> 
+                                                        <small class="text-muted">
+                                                            23 June 13
+                                                        </small>
+                                                    </span>
+                                                </a>
+                                                <a href="#" class="media list-group-item">
+                                                    <span class="media-body block m-b-none">
+                                                        first v.1 (Bootstrap 2.3 based) released <br>
+                                                        <small class="text-muted">
+                                                            19 June 13
+                                                        </small>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <footer class="panel-footer text-small">
+                                                <a href="#" class="pull-right">
+                                                    <i class="icon-cog"></i>
+                                                </a>
+                                                <a href="#">
+                                                    See all the notifications
+                                                </a>
+                                            </footer>
+                                        </section>
+                                    </section>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="m-t-small">
+                                    <a class="btn btn-sm btn-success" data-toggle="modal" href="#modal">
+                                        <i class="icon-plus"></i>
+                                        RESA
+                                    </a>
+                                </div>
+                            </li>
+            </ul>
+            <form class="navbar-form pull-left shift" action="" data-toggle="shift:appendTo" data-target=".nav-primary">
+                <i class="icon-search text-muted"></i>
+                <input type="text" class="input-sm form-control" placeholder="Search">
+            </form>
+        </header>
+        <!-- / header -->
+        <!-- nav -->
+        <nav id="nav" class="nav-primary hidden-xs nav-vertical">
+            <ul class="nav" data-spy="affix" data-offset-top="50">
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-dashboard fa-2x"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-book fa-2x"></i>
+                        <span>Gestion de service</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-calendar fa-2x"></i>
+                        <span>Calendrier</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-desktop fa-2x"></i>
+                        <span>Gestion internet</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-user fa-2x"></i>
+                        <span>Gestion des clients</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span>Statistiques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-list fa-2x"></i>
+                        <span>Mon compte</span>
+                    </a>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="#">
+                        <i class="fa fa-cog fa-2x"></i>
+                        <span>Paramètres</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="buttons.html">item 1</a>
+                        </li>
+                        <li>
+                            <a href="icons.html">
+                                <b class="badge pull-right">302</b>
+                                item 2 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="grid.html">item 3 </a>
+                        </li>
+                        <li>
+                            <a href="widgets.html">
+                                <b class="badge bg-primary pull-right">8</b>
+                                item 4 
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- / nav -->
+        <!-- nav -->
+        <nav id="toolbar" class="nav-primary hidden-xs nav-toolbar">
+            <div class="cal-header">
+                <i class="icon-angle-left previous"></i>
+                <span class="date">29</span>
+                <span class="month">sep</span>
+                <span class="year">2013</span>
+                <i class="icon-angle-right next"></i>
+                <img src="img/cloudy.png" class="weather">
+            </div>
+            <div id="calendar" class="col-xs-12 col-md-12 col-lg-12 m_b">
+                <ul>
+                    <li>SUN</li>
+                    <li>MON</li>
+                    <li>TUE</li>
+                    <li>WED</li>
+                    <li>THU</li>
+                    <li>FRI</li>
+                    <li>SAT</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                    <li>31</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul><!-- //calendar -->
+            </div>
+            <div class="btn-group col-lg-12 m_y clearfix" data-toggle="buttons">
+                <label class="btn btn-default small active">
+                    <input type="radio" name="options" id="lunch">Déjeuner
+                </label>
+                <label class="btn btn-default small">
+                    <input type="radio" name="options" id="dinner">Dîner
+                </label>
+                <label class="btn btn-default small">
+                    <input type="radio" name="options" id="all">Tous
+                </label>
+            </div>
+            <div class="memo text-center bold">
+                Le titre du memo
+            </div>
+        </nav>
+        <!-- / nav -->
+        <section id="content">
+            <section class="main padder gds"> 
+                <!--<div class="row"> 
+                    <div class="col-lg-12"> 
+                        <section class="toolbar clearfix"> 
+                            <h1>Gestion de service</h1>
+                        </section>
+                    </div>
+                </div>--><!-- / row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img src="img/floorplan-banner_910x60.jpg" class="bayrou">
+                    </div>
+                </div><!--  / row -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3>Déjeuner</h3>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs gds-tabs">
+                            <li class="active col-lg-6 nopl nopr"><a href="#dej1" data-toggle="tab" class="squared">A venir</a></li>
+                            <li class="dropdown col-lg-6 nopl nopr">
+                            <a href="#" id="myTabDrop1" class="dropdown-toggle squared" data-toggle="dropdown">
+                                Autres
+                                <i class="caret pull-right"></i>
+                            </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                                    <li><a href="#dej2" data-toggle="tab">Tout</a></li>
+                                    <li><a href="#dej2" data-toggle="tab">En cours</a></li>
+                                    <li><a href="#dej2" data-toggle="tab">Attente</a></li>
+                                    <li><a href="#dej2" data-toggle="tab">Autre ...</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="dej1">
+                                <table class="table table-striped m_b">
+                                    <thead>
+                                        <tr>
+                                            <th class="bigger title minime text-center">Table</th>
+                                            <th class="bigger title minime text-center">Pax</th>
+                                            <th class="bigger title minime text-center">Heure</th>
+                                            <th class="bigger title minime">Etat</th>
+                                            <th class="bigger title">Nom</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">01</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">20:30</td>
+                                            <td class="">xxx</td>
+                                            <td class="">M. Noël LEGLANTIER</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="dej2">...</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3>Dîner</h3>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#dej1" data-toggle="tab">A venir</a></li>
+                            <li class="dropdown"><a href="#dej2" data-toggle="tab" data-toggle="dropdown">Settings</a>
+                                <ul>
+                                    <li class="dropdown-menu"><a href="#">Tout</a></li>
+                                    <li class="dropdown-menu"><a href="#">En cours</a></li>
+                                    <li class="dropdown-menu"><a href="#">Attente</a></li>
+                                    <li class="dropdown-menu"><a href="#">Autre ...</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="dej1">
+                                <table class="table table-striped m_b">
+                                    <thead>
+                                        <tr>
+                                            <th class="bigger title minime text-center">Table</th>
+                                            <th class="bigger title minime text-center">Pax</th>
+                                            <th class="bigger title minime text-center">Heure</th>
+                                            <th class="bigger title minime">Etat</th>
+                                            <th class="bigger title">Nom</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">01</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">20:30</td>
+                                            <td class="">xxx</td>
+                                            <td class="">M. Noël LEGLANTIER</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                            <td class="">xxx</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="dej2">...</div>
+                        </div>
+                    </div>
+                </div><!--  / row -->
+            </section>
+        </section>
+        <footer id="footer"> 
+            <div class="text-center padder clearfix"> 
+                <p> 
+                    <small>&copy; - 2013 Nemesis template </small>
+                </p> 
+            </div> 
+        </footer> 
+    <div class="modal fade" id="modal"> 
+        <form class="m-b-none"> 
+            <div class="modal-dialog"> 
+                <div class="modal-content"> 
+                    <div class="modal-header"> 
+                        <button data-dismiss="modal" class="close" type="button">
+                        <i class="icon-remove"></i>
+                        </button> 
+                        <h4 id="myModalLabel" class="modal-title">Post your first idea</h4> 
+                    </div> 
+                    <div class="modal-body"> 
+                        <div class="block"> 
+                            <label class="control-label">Title</label> 
+                            <input type="text" placeholder="Post title" class="form-control"> 
+                        </div> 
+                        <div class="block"> 
+                            <label class="control-label">Content</label> 
+                            <textarea rows="5" placeholder="Content" class="form-control"></textarea> 
+                        </div> 
+                        <div class="checkbox"> 
+                            <label> <input type="checkbox"> Share with all memebers of first </label> 
+                        </div> 
+                        <div class="modal-footer"> 
+                            <button data-dismiss="modal" class="btn btn-sm btn-default" type="button">Save</button> 
+                            <button data-loading-text="Publishing..." class="btn btn-sm btn-primary" type="button">Publish</button> 
+                    </div> 
+                </div><!-- /.modal-content --> 
+            </div> 
+        </form> 
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+    <script>
+$( ".nav-toggle" ).click(function() {
+  $( ".navbar-fixed" ).toggleClass( "slide-nav slide-nav-left" );
+});
+    </script>
+    </body>
+    </html>

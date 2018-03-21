@@ -1,0 +1,292 @@
+/*
+      _           _      _
+     | |         (_)    | |
+     | | ___ _ __ _  ___| |__   ___
+ _   | |/ _ \ '__| |/ __| '_ \ / _ \
+| |__| |  __/ |  | | (__| | | | (_) |
+\____/ \___|_|  |_|\___|_| |_|\___/   mark I
+/* Generics
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.small {font-size: 12px; }
+.big{font-size: 16px;}
+.hulk{font-size: 24px;}
+.m-x{margin: 0 10px;}
+.m-y{margin: 20px 0;}
+.m-all{margin: 10px;}
+.flatblue {background: #3bafda!important; color: #ffffff!important; }
+.flatgreen {background: #589442!important; color: #ffffff!important; }
+.flatred {background: #e74c3c!important; color: #ffffff!important; }
+.flatorange {background: #f1c40f!important; color: #ffffff!important; }
+.flatpurple {background: #967ADC!important; color: #ffffff!important; }
+.flatgrey {background: #bdc3c7!important; }
+.textblue {color: #2980b9; }
+.textgreen {color: #589442; }
+.textred {color: #e74c3c; }
+.textorange {color: #f1c40f; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+.row {margin: 0; height: 100%;}
+.btn {padding: 6px 8px; border-radius: 4px;}
+.btn-xs {padding: 1px 5px; border-radius: 4px;}
+.btn i{padding: 0 5px 0 0;}
+.light {font-weight: 300;}
+.shadow {-webkit-box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.2); -moz-box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.2); box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.4);}
+*:hover, .open {transition: all 0.2s ease;}
+h1, h2, h3, h4, h5, h6 {font-weight: 300;}
+
+/***************************************************
+           ___       ___        ___      ___  __  **
+|  | |    |__  |    |__   |\/| |__  |\ |  |  /__` **
+\__/ |    |___ |___ |___  |  | |___ | \|  |  .__/ **
+***************************************************/
+
+html {height: 100%;}
+body {height: 100%; background: #f3f3f1;}
+.container-fluid {height: 100%; padding: 80px 0 0 260px;transition: all 0.4s ease;}
+.container-fluid * {transition: all 0.4s ease;}
+
+
+/* Elements
+-------------------------------------------------- */
+/*Header
+*/
+header {
+    background: #fff;
+    height: 60px;
+    width: 100%;
+    color: #999;
+    top: 0;
+    left: 250px;
+    z-index: 942;
+    position: fixed;
+    padding: 20px;
+    box-shadow: 0 3px 2px -3px rgba(0, 0, 0, 0.4);
+    transition: width 0.4s ease;
+}
+
+.logo {
+    height: 60px;
+    background: #4b5161;
+    width: 250px;
+    padding-left: 10px;
+    float: left;
+    line-height: 60px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.4s ease;
+}
+
+.logo img {margin-top: -6px;}
+
+header.collapsed {
+    left: 60px;
+    transition: width 0.4s ease;
+}
+
+.logo.collapsed {
+    width: 60px;
+    transition: width 0.4s ease;
+    padding-left: 0;
+}
+.logo.collapsed span{display: none;}
+.container-fluid.collapsed{padding-left: 80px;transition: width 0.4s ease;}
+.tools {
+     right: 20px;
+     /* position: relative; */
+     padding-right: 20px;
+     /* top: 0; */
+     /* z-index: 42; */
+}
+
+.collapser { cursor: pointer;font-size: 24px;}
+
+/*Sidebar
+*/
+.sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    background: #3c4252;
+    /* padding-top: 20px; */
+    transition: width 0.4s ease;
+}
+
+.sidebar ul {margin: 0; padding: 0;}
+.sidebar li {list-style-type: none; color: rgba(255, 255, 255, 0.5); padding: 0 20px 0 20px; transition: padding 0.4s ease;}
+.sidebar li i {padding: 10px 20px 10px 0; font-size: 24px;}
+.sidebar li .menu-item {padding: 10px 0 10px 0; font-size: 16px; font-weight: 300;}
+.sidebar li.active, .sidebar li.active:hover {color: #fff; background: #273135;}
+.sidebar li:hover {color: #fff; background: #2E353B; cursor: pointer;}
+.sidebar.collapsed {width: 60px; transition: width 0.4s ease;}
+.sidebar.collapsed li {padding-left: 20px; transition: padding 0.4s ease;}
+.sidebar.collapsed li .menu-item {display: none;}
+.sidebar.collapsed li.active ul.collapse {
+    position: absolute;
+    background: #464B50;
+    left: 80px;
+    margin-top: -45px;
+}
+
+/*Layout
+*/
+[class*='col-'] {height: 100%;}
+
+
+/* Bootstrap Overrides
+-------------------------------------------------- */
+.btn-default {border-color: #ddd;}
+.btn-default:hover {background: #f5f5f1;border-color: #eee}
+.btn.btn-default:active, .btn.btn-default.active{
+  box-shadow: none;
+  /*background: #28bd72;*/
+  color: #fff;
+}
+
+.btn-info {
+    background-color: #3a9ed3;
+    border-color: #3a9ed3;
+    color: #FFF;
+}
+
+.btn-info:hover {
+    background-color: #2c91c7;
+    border-color: #2c91c7;
+}
+
+.panel {
+    border: 0;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    box-shadow: none;
+}
+
+.panel-default>.panel-heading {
+    background: #ffffff;
+    margin-bottom: 0;
+    border-bottom: 1px solid #dedede;
+    min-height: 43px;
+    padding: 5px 20px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.panel-title {
+    font-size: 20px;
+}
+
+.panel-heading {
+    padding: 0;
+    border: 0;
+}
+
+.panel-heading h3 {
+    font-weight: 200;
+}
+
+.panel-heading:hover {
+    cursor: pointer;
+}
+
+.panel-body {
+    padding: 20px 0;
+}
+
+.panel.squared {
+    border-radius: 0;
+}
+
+.rounded-top {
+    border-radius: 4px 4px 0 0;
+}
+
+.progress {
+    height: 5px;
+    background: #e7e7e7;
+}
+
+.has-feedback label~.form-control-feedback {
+    top: 35px;
+    right: 10px;
+}
+
+.tab-content > .active {
+    padding-top: 20px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav>li>a:hover {
+    color: #333;
+    cursor: default;
+    background-color: #fff;
+    border-bottom: 3px solid #589442;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+.nav-tabs>li>a {color: #999;}
+.nav>li>a:hover {cursor: pointer;}
+.nav-tabs>li {margin-left: -4px;}
+.nav-tabs>li:first-child {margin-left: -1px;}
+
+/* Responsive table
+-------------------------------------------------- */
+@media only screen and (max-width: 800px) {
+/* Force table to not be like tables anymore */
+  #no-table table,
+  #no-table thead,
+  #no-table tbody,
+  #no-table th,
+  #no-table td,
+  #no-table tr {
+    display: block;
+  }
+
+/* Hide table headers (but not display: none;, for accessibility) */
+  #no-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-table tr { border: 1px solid #ccc; }
+
+  #no-table td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align:left;
+  }
+
+  #no-table td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align:left;
+    font-weight: 500;
+    color: #333;
+  }
+
+/*
+Label the data
+*/
+  #no-table td:before { content: attr(data-title); }
+}
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

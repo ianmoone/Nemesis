@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>0m3g4 - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/elixir-omega.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<header>
+    <img src="img/renovatio-small.png" class="hidden-xs pull-left">
+    <h4 class="pull-left">{ORGANIZATION } <small>94 pending pull requests</small></h4>
+</header>
+<!-- Content begins -->
+<div class="container-fluid content">
+
+<!-- __ Filters __ -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Floating labels
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-3">
+                    <select class="form-control">
+                        <optgroup label="Repository">
+                            <option>Repository #1</option>
+                            <option>Repository #2</option>
+                            <option>Repository #3</option>
+                            <option>Repository #4</option>
+                        </optgroup>
+                        <optgroup label="Business Unit  ">
+                            <option>B2B</option>
+                            <option>B2C</option>
+                            <option>Internal Tools</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="col-lg-3">
+                <input type="text" class="floatlabel form-control" placeholder="Created by" data-label="Created by" />
+                </div>
+                <div class="col-lg-3">
+                <input type="text" class="floatlabel form-control" placeholder="Reviewed by" data-label="Reviewed by" />
+                </div>
+                <div class="col-lg-3">
+                <input type="text" class="floatlabel form-control" placeholder="Please make some input" data-label="I am a floating label !!" />
+                </div>
+            </div>
+        </div>
+    </div><!-- /panel -->
+</div><!-- /row -->
+
+<!-- __ Pull_Request __ -->
+<div class="col-lg-4">
+    <div class="panel panel-default pr">
+        <div class="panel-body">
+            <div class="col-lg-2 nopl nopr">
+                <img src="img/bts.png" class="user-pic pull-left">
+            </div>
+            <!-- <img src="img/avatar_1.jpg" class="user-pic pull-left"> -->
+            <div class="pr-details col-lg-6">
+                <div class="row">
+                    <div class="pr-title" title="Da pull request title that could be super super long">{project} - Da pull request title that could be super super long</div>
+                    </div>
+                <div class="row">
+                    <div class="label label-success">+1 - OVE</div>
+                </div>  
+            </div>
+            <div class="col-lg-4 nopl nopr">
+                <div class="row">
+                    <div class="pr-date text-muted text-right small nopr">created 29/09/2015</div>
+                </div>
+                <div class="row">
+                    <div class="pr-comments text-right nopr">42 comments</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div><!-- /panel -->
+</div>
+
+</div><!-- /container -->
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+</html>

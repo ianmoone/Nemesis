@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>neXus</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/nexus-devops.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="logo expander">
+            <img src="img/heliX.png">heliX</div>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <div data-toggle="collapse" href="#sub-1">
+                    <i class="fa fa-area-chart"></i>
+                    Monitor
+                </div>
+
+                <ul id="sub-1" class="collapse">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+
+            </li>
+            <li>
+                <i class="fa fa-rocket"></i>
+                <span class="menu-item">Deployments</span>
+            </li>
+            <li class="active">
+                <i class="fa fa-code-fork"></i>
+                <span class="menu-item">Pull requests</span>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="title">
+            <h1 class="col-lg-8">Pull requests <small>151 pending</small></h1>
+            <div class="col-lg-4">
+                <div class="pull-right">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="panel panel-default pr">
+                <div id="no-table" class="panel-body">
+                    <table id="pr-list" class="table table-hover sortable">
+                        <thead>
+                            <th>Pull request title</th>
+                            <th>Repository</th>
+                            <th>Creation date</th>
+                            <th>Author</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="PR title">[sear-316] Fix entity</td>
+                                <td data-title="Repository">lafourchette-rr</td>
+                                <td data-title="Creation date">02 Jun 2015</td>
+                                <td data-title="Author">Ian Moone</td>
+                            </tr>
+                            <tr>
+                                <td data-title="PR title">PR title</td>
+                                <td data-title="Repository">repository</td>
+                                <td data-title="Creation date">dd mmm yyyy</td>
+                                <td data-title="Author">Ian Moone</td>
+                            </tr>
+                            <tr class="danger">
+                                <td data-title="PR title">PR title</td>
+                                <td data-title="Repository">repository</td>
+                                <td data-title="Creation date">dd mmm yyyy</td>
+                                <td data-title="Author">Ian Moone</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> <!--/col -->
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>lafourchette-portal</strong> deploy pending right now
+        </div>
+
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/sparks.js"></script>
+<script>
+var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+var lineChartData2 = {
+    labels : ["January","February","March","April","May","June","July","xxx","ddd","eee","zzz","ppp"],
+    datasets : [
+        {
+            label: "My First dataset",
+            fillColor : "rgba(204, 204, 204,.3)",
+            strokeColor : "rgba(29,147,217,0)",
+            // pointColor : "rgba(255,255,255,1)",
+            // pointStrokeColor : "rgba(29,147,217,1)",
+            // pointHighlightFill : "#fff",
+            // pointHighlightStroke : "rgba(220,220,220,1)",
+            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+        }
+    ]
+};
+
+window.onload = function(){
+    var ctx1 = document.getElementById("line").getContext("2d");
+    window.line = new Chart(ctx1).Line(lineChartData2,{
+            maintainAspectRatio: false,
+            responsive: false,
+            scaleShowGridLines: false,
+            showScale: false,
+            pointDot: false,
+            bezierCurve : false,
+        });
+    var ctx2 = document.getElementById("line2").getContext("2d");
+    window.line = new Chart(ctx2).Line(lineChartData2,{
+            maintainAspectRatio: false,
+            responsive: false,
+            scaleShowGridLines: false,
+            showScale: false,
+            pointDot: false,
+            bezierCurve : false,
+        });
+    ;};
+</script>
+</html>
+
+<!-- sparkline
+<canvas id="myChart" width="100" height="30" class="sparkline"
+data-chart_values="[42,48,40,19,96,27,100]"
+data-chart_StrokeColor="rgba(151,187,0,1)"></canvas>
+-->

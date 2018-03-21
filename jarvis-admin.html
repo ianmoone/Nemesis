@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>j4rv1s - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/jarvis-admin.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<header>
+    <h1 class="pull-left">City configuration</h1>
+    <a class="trigger pull-right">Filters</a>
+</header>
+<!-- Content begins -->
+<div class="container-fluid content">
+    <div class="col-lg-12">
+
+        <div class="filters">
+            <div class="col-lg-3">
+                <input type="text" class="floatlabel form-control" placeholder="ID City" data-label="ID City" />
+            </div>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <th class="col-lg-3">ID</th>
+                <th class="col-lg-3">City Name</th>
+                <th class="col-lg-3">Country</th>
+                <th class="col-lg-3"></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2798</td>
+                    <td>Aalst</td>
+                    <td>Belgium</td>
+                    <td>
+                        <btn class="btn btn-info pull-right m-x"><i class="fa fa-eye"></i>View</btn>
+                        <btn class="btn btn-default pull-right"><i class="fa fa-pencil"></i>Edit</btn>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2798</td>
+                    <td>Aalst</td>
+                    <td>Belgium</td>
+                    <td>
+                        <btn class="btn btn-info pull-right m-x"><i class="fa fa-eye"></i>View</btn>
+                        <btn class="btn btn-default pull-right"><i class="fa fa-pencil"></i>Edit</btn>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2798</td>
+                    <td>Aalst</td>
+                    <td>Belgium</td>
+                    <td>
+                        <btn class="btn btn-info pull-right m-x"><i class="fa fa-eye"></i>View</btn>
+                        <btn class="btn btn-default pull-right"><i class="fa fa-pencil"></i>Edit</btn>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="sidebar">
+        <div class="logo text-center">
+            Jarvis
+        </div>
+        <ul>
+          <li><a href="#">City configuration</a></li>
+          <li><a href="#">Menu item</a></li>
+          <li><a href="#" class="active">Menu item</a></li>
+          <li><a href="#">Menu item</a></li>
+        </ul>
+    </div><!-- /sidebar -->
+</div><!-- /container -->
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+$(document).ready(function(){
+    $('.filters').hide();
+    $(".trigger").click(function () {
+        $(".filters").slideToggle("slow");
+    });
+});
+</script>
+</html>

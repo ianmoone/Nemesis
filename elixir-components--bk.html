@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Elixir - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/elixir-components.css"type="text/css"/>
+        <link rel="stylesheet"href="css/rickshaw.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<div class="particles" id="particles-js"></div>
+<!-- Content begins -->
+<div class="container-fluid content">
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Typography
+            </div>
+            <div class="panel-body">
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+                <p>
+                    The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
+                </p>
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Buttons
+            </div>
+            <div class="panel-body">
+                <p>Standard buttons</p>
+                <a href="#" class="btn btn-default">Label</a>
+                <a href="#" class="btn btn-info">Label</a>
+                <a href="#" class="btn btn-success">Label</a>
+                <a href="#" class="btn btn-warning">Label</a>
+                <a href="#" class="btn btn-danger">Label</a>
+                <p>XS buttons</p>
+                <a href="#" class="btn btn-default btn-xs">Howdy ! I'm extra small</a>
+                <p>Small buttons</p>
+                <a href="#" class="btn btn-default btn-small">Howdy ! I'm slightly bigger</a>
+                <p>Large buttons</p>
+                <a href="#" class="btn btn-default btn-lg">Howdy ! I'm the fat boy</a>
+                <p>Icon buttons</p>
+                <a class="btn btn-default" href="#">
+                    <i class="fa fa-cog"></i> Settings
+                </a>
+                <p>Icon buttons</p>
+                <a class="btn btn-default" href="#">
+                    <i class="fa fa-cog"></i> Settings
+                </a>
+            </div>
+        </div><!-- /panel -->
+    </div>
+</div><!-- /row -->
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Charts
+            </div>
+            <div class="panel-body">
+                <h6>Area graphe</h6>
+                <canvas id="line"></canvas>
+                <h6>Bar graphe</h6>
+                <canvas id="bar"></canvas>
+                <h6>Radial graphe</h6>
+                <div class="col-lg-3">
+                <div class="radial-neutral" data-percent="20">
+                    <span class="percent"></span>
+                </div>
+                </div>
+                <div class="col-lg-3">
+                <div class="radial-success" data-percent="40">
+                    <span class="percent"></span>
+                </div>
+                </div>
+                <div class="col-lg-3">
+                <div class="radial-warning" data-percent="60">
+                    <span class="percent"></span>
+                </div>
+                </div>
+                <div class="col-lg-3">
+                <div class="radial-danger" data-percent="80">
+                    <span class="percent"></span>
+                </div>
+                </div>
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                da title
+            </div>
+            <div class="panel-body">
+                <h4>Progress bars</h4>
+                <p>Neutral</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    </div>
+                </div>
+                <p>Success</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    </div>
+                </div>
+            </div>
+        </div><!-- /panel -->
+    </div>
+</div><!-- /row -->
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default lefty-tabs">
+            <div class="panel-body">
+                <div role="tabpanel">
+                    <ul class="col-lg-4 nopl nopr text-center menu" role="tablist">
+                            <li class="col-lg-6 tab active" href="#tab-one" aria-controls="home" role="tab" data-toggle="tab">
+                                <span class="fa fa-desktop menu-item"></span>
+                            </li>
+                            <li class="col-lg-6 tab" href="#tab-two" aria-controls="home" role="tab" data-toggle="tab">
+                                <span class="fa fa-mobile menu-item"></span>
+                            </li>
+                            <li class="col-lg-6 tab" href="#tab-three" aria-controls="home" role="tab" data-toggle="tab">
+                                <span class="fa fa-bomb menu-item"></span>
+                            </li>
+                            <li class="col-lg-6 tab" href="#tab-four" aria-controls="home" role="tab" data-toggle="tab">
+                                <span class="fa fa-mortar-board menu-item"></span>
+                            </li>
+                    </ul>
+                    <div class="col-lg-8 tab-content">
+                        <div id="tab-one" role="tabpanel" class="tab-pane active fade in">
+                            111
+                        </div>
+                        <div id="tab-two" role="tabpanel" class="tab-pane fade">
+                            222
+                        </div>
+                        <div id="tab-three" role="tabpanel" class="tab-pane fade">
+                            333
+                        </div>
+                        <div id="tab-four" role="tabpanel" class="tab-pane fade">
+                            444
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /panel -->
+    </div>
+</div><!-- /row -->
+<div class="row">
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-heading trigger">
+                Timeline avis 
+            </div>
+            <div class="panel-body">
+                <div class="timeline rate">
+                    <dl>
+                        <dd class="pos-right clearfix">
+                            <div class="circ circ-green"></div>
+                            <div class="events">
+                                <div class="events-body">
+                                    <h4 class="events-heading">
+                                    <span class="rate-value textgreen">
+                                        8<sub> / 10</sub>
+                                    </span>
+                                    Jean Marc L.
+                                    <span class="textgrey"> - 07 Avr. 2015</span>
+                                    </h4>
+                                    <p>J'ai pris une salade Lelon. C'était frais et goûteux. Le café gourmand était très gourmand en chantilly. Seul bémol : un service un peu long.</p>
+                                </div>
+                            </div>
+                        </dd>
+                        <dd class="pos-right clearfix">
+                            <div class="circ circ-red"></div>
+                            <div class="events">
+                                <div class="events-body">
+                                    <h4 class="events-heading">
+                                    <span class="rate-value textred">
+                                        5,5<sub> / 10</sub>
+                                    </span>
+                                    Guillaume V.
+                                    <span class="textgrey"> - 03 Avr. 2015</span>
+                                    </h4>
+                                    <p>Beaucoup trop d'attente et qualité des plats pas au rendez-vous pour le prix proposé. Je ne recommande pas.</p>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Timeline
+            </div>
+            <div class="panel-body">
+                <div class="timeline">
+                    <dl>
+                        <dt>Apr 2014</dt>
+                        <dd class="pos-right clearfix">
+                            <div class="circ"></div>
+                            <div class="time">Apr 14</div>
+                            <div class="events">
+                                <div class="pull-left"><img class="events-object img-rounded" src="img/13.png"></div>
+                                <div class="events-body">
+                                    <h4 class="events-heading">Message title</h4>
+                                    <p>Here goes the content</p>
+                                </div>
+                            </div>
+                        </dd>
+                        <dd class="pos-left clearfix">
+                            <div class="circ"></div>
+                            <div class="time">Apr 10</div>
+                            <div class="events">
+                                <div class="pull-left"><img class="events-object img-rounded" src="img/bts.png"></div>
+                                <div class="events-body">
+                                    <h4 class="events-heading">Bootflat</h4>
+                                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Stats component
+            </div>
+            <div class="panel-body">
+                <div id="chart" class="rickshaw_graph"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sidebar">
+    <header>
+        <img src="img/renovatio-small.png" class="hidden-xs">
+    </header>
+    <!-- / header -->
+    <!-- sidebar for Jimmy -->
+    <ul id="sidebar">
+        <li>
+            <a href="#" class="fa fa-refresh">
+                <span class="refresh">Refresh</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fa fa-play">
+                <span class="recycle">Resume</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fa fa-times-circle">
+                <span class="delete">Delete</span>
+            </a>
+        </li>
+    </ul>
+</div><!-- /sidebar -->
+</div>
+<!-- //content -->
+
+<nav class="drawer effect" id="menu-1">
+    <h5>Derniers avis publiés</h5>
+    <div class="col-md-12">
+        <div class="timeline rate">
+            <dl>
+                <dd class="pos-right clearfix">
+                    <div class="circ circ-green"></div>
+                    <div class="events">
+                        <div class="events-body">
+                            <h4 class="events-heading">
+                            <span class="rate-value textgreen">
+                                8<sub> / 10</sub>
+                            </span>
+                            Jean Marc L.
+                            <span class="textgrey"> - 07 Avr. 2015</span>
+                            </h4>
+                            <p>J'ai pris une salade Lelon. C'était frais et goûteux. Le café gourmand était très gourmand en chantilly. Seul bémol : un service un peu long.</p>
+                        </div>
+                    </div>
+                </dd>
+                <dd class="pos-right clearfix">
+                    <div class="circ circ-red"></div>
+                    <div class="events">
+                        <div class="events-body">
+                            <h4 class="events-heading">
+                            <span class="rate-value textred">
+                                5,5<sub> / 10</sub>
+                            </span>
+                            Guillaume V.
+                            <span class="textgrey"> - 03 Avr. 2015</span>
+                            </h4>
+                            <p>Beaucoup trop d'attente et qualité des plats pas au rendez-vous pour le prix proposé. Je ne recommande pas.</p>
+                        </div>
+                    </div>
+                </dd>
+                <dd class="pos-right clearfix">
+                    <div class="circ circ-red"></div>
+                    <div class="events">
+                        <div class="events-body">
+                            <h4 class="events-heading">
+                            <span class="rate-value textred">
+                                5,5<sub> / 10</sub>
+                            </span>
+                            Guillaume V.
+                            <span class="textgrey"> - 03 Avr. 2015</span>
+                            </h4>
+                            <p>Beaucoup trop d'attente et qualité des plats pas au rendez-vous pour le prix proposé. Je ne recommande pas.</p>
+                        </div>
+                    </div>
+                </dd>
+                <dd class="pos-right clearfix">
+                    <div class="circ circ-red"></div>
+                    <div class="events">
+                        <div class="events-body">
+                            <h4 class="events-heading">
+                            <span class="rate-value textred">
+                                5,5<sub> / 10</sub>
+                            </span>
+                            Guillaume V.
+                            <span class="textgrey"> - 03 Avr. 2015</span>
+                            </h4>
+                            <p>Beaucoup trop d'attente et qualité des plats pas au rendez-vous pour le prix proposé. Je ne recommande pas.</p>
+                        </div>
+                    </div>
+                </dd>
+                <dd class="pos-right clearfix">
+                    <div class="circ circ-red"></div>
+                    <div class="events">
+                        <div class="events-body">
+                            <h4 class="events-heading">
+                            <span class="rate-value textred">
+                                5,5<sub> / 10</sub>
+                            </span>
+                            Guillaume V.
+                            <span class="textgrey"> - 03 Avr. 2015</span>
+                            </h4>
+                            <p>Beaucoup trop d'attente et qualité des plats pas au rendez-vous pour le prix proposé. Je ne recommande pas.</p>
+                        </div>
+                    </div>
+                </dd>
+                <dd class="pos-right clearfix">
+                    <div class="circ circ-red"></div>
+                    <div class="events">
+                        <div class="events-body">
+                            <h4 class="events-heading">
+                            <span class="rate-value textred">
+                                5,5<sub> / 10</sub>
+                            </span>
+                            Guillaume V.
+                            <span class="textgrey"> - 03 Avr. 2015</span>
+                            </h4>
+                            <p>Beaucoup trop d'attente et qualité des plats pas au rendez-vous pour le prix proposé. Je ne recommande pas.</p>
+                        </div>
+                    </div>
+                </dd>
+                <dd class="pos-right clearfix">
+                    <div class="circ circ-red"></div>
+                    <div class="events">
+                        <div class="events-body">
+                            <h4 class="events-heading">
+                            <span class="rate-value textred">
+                                5,5<sub> / 10</sub>
+                            </span>
+                            Guillaume V.
+                            <span class="textgrey"> - 03 Avr. 2015</span>
+                            </h4>
+                            <p>Beaucoup trop d'attente et qualité des plats pas au rendez-vous pour le prix proposé. Je ne recommande pas.</p>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</nav><!-- //drawer -->
+
+</body>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/d3.v3.js"></script>
+<script src="js/d3-layout.min.js"></script>
+<script src="js/rickshaw.min.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/easypiechart.js"></script>
+<script>
+    particlesJS('particles-js', {
+        particles: {
+          color: '#fff',
+          shape: 'circle',
+          opacity: 0.6,
+          size: 2.5,
+          size_random: true,
+          nb: 80,
+          line_linked: {
+            enable_auto: true,
+            distance: 100,
+            color: '#fff',
+            opacity: 0.5,
+            width: 1,
+            condensed_mode: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 600
+            }
+          },
+          anim: {
+            enable: true,
+            speed: 2.5
+          }
+        },
+        interactivity: {
+          enable: true,
+          mouse: {
+            distance: 250
+          },
+          detect_on: 'canvas',
+          mode: 'grab',
+          line_linked: {
+            opacity: 0.5
+          },
+          events: {
+            onclick: {
+              push_particles: {
+                enable: true,
+                nb: 4
+              }
+            }
+          }
+        },
+        retina_detect: true
+    });
+</script> <!-- /particles -->
+<script>
+    $(function() {
+        var $drawer = $('.drawer');
+        $('.trigger').on('click',function(event){
+            if(!$drawer.hasClass('st-menu-open')) {
+                $drawer.addClass('st-menu-open');
+                event.stopPropagation();
+            }
+        });
+        $(document).on('click',function(event){
+            var $target = $(event.target);
+            if(!$target.closest('.drawer').length) {
+                if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }   
+            }
+        });
+        $('#closer').on('click',function(event){
+            if($drawer.hasClass('st-menu-open')) {
+                $drawer.removeClass('st-menu-open');
+            }
+        });
+    });
+</script><!-- /drawer -->
+<script>
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var lineChartData = {
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(165,212,240,1)",
+                strokeColor : "rgba(29,147,217,1)",
+                pointColor : "rgba(255,255,255,1)",
+                pointStrokeColor : "rgba(29,147,217,1)",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+
+    var lineChartData2 = {
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(165,212,240,1)",
+                strokeColor : "rgba(29,147,217,1)",
+                pointColor : "rgba(255,255,255,1)",
+                pointStrokeColor : "rgba(29,147,217,1)",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(220,220,220,1)",
+                animationSteps: 600,
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+
+    var barChartData = {
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+            {
+                label: "My Bar Chart",
+                fillColor : "rgba(40,189,114,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+
+    window.onload = function(){
+    var ctx1 = document.getElementById("line").getContext("2d");
+    window.line = new Chart(ctx1).Line(lineChartData); 
+
+    var ctx2 = document.getElementById("bar").getContext("2d");
+    window.bar = new Chart(ctx2).Bar(barChartData);
+
+    var ctx3 = document.getElementById("line2").getContext("2d");
+    window.line = new Chart(ctx3).Line(lineChartData2);  };
+</script> <!-- / charts -->
+<script>
+    $('.radial-neutral').easyPieChart({
+        barColor: '#3bafda',
+        trackColor: '#e7e7e7',
+        lineWidth: 10,
+        lineCap: 'butt',
+        easing: 'easeOutBounce',
+        onStep: function(from, to, percent) {
+            $(this.el).find('.percent').text(Math.round(percent));
+        }
+    });
+    $('.radial-success').easyPieChart({
+        barColor: '#28bd72',
+        trackColor: '#e7e7e7',
+        lineWidth: 10,
+        lineCap: 'butt',
+        easing: 'easeOutBounce',
+        onStep: function(from, to, percent) {
+            $(this.el).find('.percent').text(Math.round(percent));
+        }
+    });
+    $('.radial-warning').easyPieChart({
+        barColor: '#f1c40f',
+        trackColor: '#e7e7e7',
+        lineWidth: 10,
+        lineCap: 'butt',
+        easing: 'easeOutBounce',
+        onStep: function(from, to, percent) {
+            $(this.el).find('.percent').text(Math.round(percent));
+        }
+    });
+    $('.radial-danger').easyPieChart({
+        barColor: '#e74c3c',
+        trackColor: '#e7e7e7',
+        lineWidth: 10,
+        lineCap: 'butt',
+        easing: 'easeOutBounce',
+        onStep: function(from, to, percent) {
+            $(this.el).find('.percent').text(Math.round(percent));
+        }
+    });
+</script> <!-- /radial chart -->
+<script>
+
+    // set up our data series with 150 random data points
+
+    var seriesData = [ [], [], [], [], [], [], [], [], [] ];
+    var random = new Rickshaw.Fixtures.RandomData(150);
+
+    for (var i = 0; i < 150; i++) {
+        random.addData(seriesData);
+    }
+
+    var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
+
+    // instantiate our graph!
+
+    var graph = new Rickshaw.Graph( {
+        element: document.getElementById("chart"),
+        width: 900,
+        height: 500,
+        renderer: 'area',
+        stroke: true,
+        preserve: true,
+        series: [
+            {
+                color: palette.color(),
+                data: seriesData[0],
+                name: 'Moscow'
+            }, {
+                color: palette.color(),
+                data: seriesData[1],
+                name: 'Shanghai'
+            }, {
+                color: palette.color(),
+                data: seriesData[2],
+                name: 'Amsterdam'
+            }, {
+                color: palette.color(),
+                data: seriesData[3],
+                name: 'Paris'
+            }, {
+                color: palette.color(),
+                data: seriesData[4],
+                name: 'Tokyo'
+            }, {
+                color: palette.color(),
+                data: seriesData[5],
+                name: 'London'
+            }, {
+                color: palette.color(),
+                data: seriesData[6],
+                name: 'New York'
+            }
+        ]
+    } );
+
+    graph.render();
+
+    var preview = new Rickshaw.Graph.RangeSlider( {
+        graph: graph,
+        element: document.getElementById('preview'),
+    } );
+
+    var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+        graph: graph,
+        xFormatter: function(x) {
+            return new Date(x * 1000).toString();
+        }
+    } );
+
+    var annotator = new Rickshaw.Graph.Annotate( {
+        graph: graph,
+        element: document.getElementById('timeline')
+    } );
+
+    var legend = new Rickshaw.Graph.Legend( {
+        graph: graph,
+        element: document.getElementById('legend')
+
+    } );
+
+    var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
+        graph: graph,
+        legend: legend
+    } );
+
+    var order = new Rickshaw.Graph.Behavior.Series.Order( {
+        graph: graph,
+        legend: legend
+    } );
+
+    var highlighter = new Rickshaw.Graph.Behavior.Series.Highlight( {
+        graph: graph,
+        legend: legend
+    } );
+
+    var smoother = new Rickshaw.Graph.Smoother( {
+        graph: graph,
+        element: document.querySelector('#smoother')
+    } );
+
+    var ticksTreatment = 'glow';
+
+    var xAxis = new Rickshaw.Graph.Axis.Time( {
+        graph: graph,
+        ticksTreatment: ticksTreatment,
+        timeFixture: new Rickshaw.Fixtures.Time.Local()
+    } );
+
+    xAxis.render();
+
+    var yAxis = new Rickshaw.Graph.Axis.Y( {
+        graph: graph,
+        tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+        ticksTreatment: ticksTreatment
+    } );
+
+    yAxis.render();
+
+
+    var controls = new RenderControls( {
+        element: document.querySelector('form'),
+        graph: graph
+    } );
+
+    // add some data every so often
+
+    var messages = [
+        "Changed home page welcome message",
+        "Minified JS and CSS",
+        "Changed button color from blue to green",
+        "Refactored SQL query to use indexed columns",
+        "Added additional logging for debugging",
+        "Fixed typo",
+        "Rewrite conditional logic for clarity",
+        "Added documentation for new methods"
+    ];
+
+    setInterval( function() {
+        random.removeData(seriesData);
+        random.addData(seriesData);
+        graph.update();
+
+    }, 3000 );
+
+    function addAnnotation(force) {
+        if (messages.length > 0 && (force || Math.random() >= 0.95)) {
+            annotator.add(seriesData[2][seriesData[2].length-1].x, messages.shift());
+            annotator.update();
+        }
+    }
+
+    addAnnotation(true);
+    setTimeout( function() { setInterval( addAnnotation, 6000 ) }, 6000 );
+
+    var previewXAxis = new Rickshaw.Graph.Axis.Time({
+        graph: preview.previews[0],
+        timeFixture: new Rickshaw.Fixtures.Time.Local(),
+        ticksTreatment: ticksTreatment
+    });
+
+    previewXAxis.render();
+</script>
+</html>

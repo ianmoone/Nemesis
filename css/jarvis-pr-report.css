@@ -1,0 +1,127 @@
+/*
+   ___                  _
+  |_  |                (_)
+    | | __ _ _ ____   ___ ___
+    | |/ _` | '__\ \ / / / __|
+/\__/ / (_| | |   \ V /| \__ \
+\____/ \__,_|_|    \_/ |_|___/ mark.I
+*/
+
+/* Generics
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.small {font-size: 12px; }
+.big{font-size: 16px;}
+.hulk{font-size: 24px;}
+.m-x{margin: 0 10px;}
+.m-y{margin: 20px 0;}
+.m-all{margin: 10px;}
+.flatblue {background: #3bafda!important; color: #ffffff!important; }
+.flatgreen {background: #589442!important; color: #ffffff!important; }
+.flatred {background: #e74c3c!important; color: #ffffff!important; }
+.flatorange {background: #f1c40f!important; color: #ffffff!important; }
+.flatpurple {background: #967ADC!important; color: #ffffff!important; }
+.flatgrey {background: #bdc3c7!important; }
+.textblue {color: #2980b9; }
+.textgreen {color: #589442; }
+.textred {color: #e74c3c; }
+.textorange {color: #f1c40f; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+.row {margin: 20px 0; }
+.btn {padding: 6px 8px; border-radius: 4px;}
+.btn-xs {padding: 1px 5px; border-radius: 4px;}
+.btn i{padding: 0 5px 0 0;}
+.light {font-weight: 300;}
+.shadow {-webkit-box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.2); -moz-box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.2); box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.4);}
+h1, h2, h3, h4, h5, h6 {font-weight: 300;}
+
+/***************************************************
+           ___       ___        ___      ___  __  **
+|  | |    |__  |    |__   |\/| |__  |\ |  |  /__` **
+\__/ |    |___ |___ |___  |  | |___ | \|  |  .__/ **
+***************************************************/
+
+body {height: 100%; background: #e7e7e7;}
+h2 a {color: #444;}
+h3 a {color: #666; margin-top: 0;}
+h3 {margin-top: 0;}
+em {font-size: 12px!important;}
+
+th {font-weight: 500; color: #333}
+
+@media only screen and (max-width: 800px) {
+/* Force table to not be like tables anymore */
+  #no-table table,
+  #no-table thead,
+  #no-table tbody,
+  #no-table th,
+  #no-table td,
+  #no-table tr {
+    display: block;
+  }
+
+/* Hide table headers (but not display: none;, for accessibility) */
+  #no-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-table tr { border: 1px solid #ccc; }
+
+  #no-table td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align:left;
+  }
+
+  #no-table td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align:left;
+    font-weight: 500;
+    color: #333;
+  }
+
+/*
+Label the data
+*/
+  #no-table td:before { content: attr(data-title); }
+}
+
+/* Bootstrap Overrides
+-------------------------------------------------- */
+.btn-default {border-color: #ddd;}
+.btn-default:hover {background: #f5f5f1;border-color: #eee}
+.btn.btn-default:active, .btn.btn-default.active{ box-shadow: none; /*background: #28bd72;*/ color: #fff;}
+.btn-info { background-color: #3a9ed3; border-color: #3a9ed3; color: #FFF; }
+.btn-info:hover { background-color: #2c91c7; border-color: #2c91c7; }
+.btn:hover {transition: all .4s ease;}
+.panel { border: 0; border-radius: 0; margin: 10px 0; padding: 10px; box-shadow: none; }
+.panel-default>.panel-heading { background: #ffffff; margin-bottom: 0; border-bottom: 1px solid #dedede; min-height: 43px; padding: 5px 15px; font-size: 20px; }
+.panel-title { font-size: 20px; }
+.panel-heading { padding: 0; border: 0; }
+.panel-heading h3 { font-weight: 200; }
+.panel-heading:hover { cursor: pointer; }
+.panel-body { padding: 20px 0; }
+.panel.squared { border-radius: 0; }
+.rounded-top { border-radius: 4px 4px 0 0; }
+.progress { height: 5px; background: #e7e7e7; }
+.has-feedback label~.form-control-feedback { top: 35px; right: 10px; }
+
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

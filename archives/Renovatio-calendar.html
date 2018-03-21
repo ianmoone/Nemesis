@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Renovatio Calendar - mark I</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/renovatio.css"type="text/css"/>
+            <link rel="stylesheet"href="css/nanoscroll.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body class="navbar-fixed">
+        <nav class="drawer effect" id="menu-1">
+            <h2 class="drawertitle">Prise de réservation</h2>
+            <div class="col-md-12 pbt">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="dd/mm/yyyy" class="col-lg-12 form-control input-lg">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="HH:MM" class="col-lg-12 form-control input-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 m_y">
+                        <div class="form-inline col-lg-6 nopl">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default btn-lg"> - </button>
+                                </span>
+                                <input type="text" class="form-control input-lg" placeholder="3">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default btn-lg"> + </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="bold btn-lg col-lg-6">
+                            Pers.
+                        </div>
+                    </div>
+                    <div class="col-lg-6 m_y">
+                        <div class="col-lg-6 nopl">
+                            <input type="text" placeholder="Table" class="form-control input-lg">
+                        </div>
+                        <div class="col-lg-6 btn-lg nopl">
+                            <a href="#" class="textblue">Afficher le plan</a>
+                        </div>
+                    </div>
+                </div>
+                <select class="form-control input-lg m_y">
+                    <option selected>Civilité</option>
+                    <option>Mr</option>
+                    <option>Mle</option>
+                    <option>Mme</option>
+                </select>
+                <input type="text" placeholder="Nom" class="col-lg-12 form-control input-lg">
+                <input type="text" placeholder="Prénom" class="col-lg-12 form-control input-lg m_y">
+                <input type="text" placeholder="Email" class="col-lg-12 form-control input-lg">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <select class="form-control input-lg m_y">
+                            <option selected>+33</option>
+                            <option>+44</option>
+                            <option>+42</option>
+                            <option>+...</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-10 m_y">
+                        <input type="text" placeholder="Téléphone" class="form-control input-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="Prescripteur" class="form-control input-lg">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="Entreprise" class="form-control input-lg">
+                    </div>
+                </div>
+                <textarea class="form-control m_y input-lg" rows="3" placeholder="Note"></textarea>
+                <div class="col-lg-12 p_y">
+                    <a href="#" id="closer" class="btn btn-success btn-block btn-lg m_y">Valider</a>
+                </div>
+            </div>
+        </nav><!-- //drawer -->
+        <!-- header -->
+        <header id="header" class="navbar">
+            <div class="col-lg-2">
+                <i id="trigger" class="fa fa-bars fa-2x"></i>
+            </div>
+            <div class="selector col-lg-5">
+                xxx select date+lunch
+            </div>
+            <div class="col-lg-5 nopr">
+                <div class="take-resa opensans pull-right"> + NOUVELLE RESERVATION</div>
+                <i class="fa fa-search pull-right m_x m_y"></i>
+            </div>
+        </header>
+        <!-- / header -->
+        <!-- Content begins -->
+        <section id="content" class="container-fluid nopl nopr fullheight">
+            <div class="col-md-8 col-lg-8 nopr squared">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title opensans pull-left">Calendrier<h3>
+                    </div>
+                    <div class="panel-body nopl nopr">
+                        <div id="calendar-small">
+                            <ul>
+                                <li>SUN</li>
+                                <li>MON</li>
+                                <li>TUE</li>
+                                <li>WED</li>
+                                <li>THU</li>
+                                <li>FRI</li>
+                                <li>SAT</li>
+                                <li class="opensans">1</li>
+                                <li class="opensans">2</li>
+                                <li class="opensans">3</li>
+                                <li class="opensans">4</li>
+                                <li class="opensans">5</li>
+                                <li class="opensans">6</li>
+                                <li class="opensans">7</li>
+                                <li class="opensans">8</li>
+                                <li class="opensans">9</li>
+                                <li class="opensans">10</li>
+                                <li class="opensans">11</li>
+                                <li class="opensans">12</li>
+                                <li class="opensans">13</li>
+                                <li class="opensans">14</li>
+                                <li class="opensans">15</li>
+                                <li class="opensans">16</li>
+                                <li class="opensans">17</li>
+                                <li class="opensans">18</li>
+                                <li class="opensans">19</li>
+                                <li class="opensans">20</li>
+                                <li class="opensans">21</li>
+                                <li class="opensans">22</li>
+                                <li class="opensans">23</li>
+                                <li class="opensans">24</li>
+                                <li class="opensans">25</li>
+                                <li class="opensans">26</li>
+                                <li class="opensans">27</li>
+                                <li class="opensans">28</li>
+                                <li class="opensans">29</li>
+                                <li class="opensans">30</li>
+                                <li class="opensans">31</li>
+                                <li class="opensans">1</li>
+                                <li class="opensans">2</li>
+                                <li class="opensans">3</li>
+                                <li class="opensans">4</li>
+                            </ul><!-- //calendar -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 nopl squared fullheight calendarview">
+                <div class="panel panel-default nano">
+                    <div class="header">
+                        <span class="opensans nabilla m_x">29</span>
+                        <span class="textgrey text-small opensans day">Mer.</span>
+                        <span class="textgrey opensans month">SEPT</span>
+                    </div>
+                    <div class="lunch">DEJEUNER</div>
+                    <div class="panel-body nopl nopr nopt nano-content">
+                        <div class="resas-list">
+                            <div class="resa resalf display-details">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une ...</p>
+                                    </div>
+                                </div>
+                                <div class="row resa-details">
+                                    <div class="mail">
+                                        <i class="fa fa-envelope textgrey"></i>
+                                        <span class="m_l">walt.heisenberg@gmail.com</span>
+                                    </div>
+                                    <div class="phone">
+                                        <i class="fa fa-phone textgrey"></i>
+                                        <span class="m_l">+33 7 79 90 64 85</span>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                            <div class="resa p_xy resalf">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-spotlight nopr">
+                                    <div class="text-xlarge opensans">21:30</div>
+                                    <div class="text-large opensans textgrey">3 pers.</div>
+                                    <div class="fromlfwithlove m-r visible-md visible-xs"></div>
+                                </div>
+                                <!-- <div class="col-lg-2 hidden-md hidden-xs padding-none">
+                                    <div class="fromlfwithlove m-r">
+                                    <img src="img/minifork.png">
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-10 col-md-10 col-lg-8">
+                                    <div class="text-medium">Mr Walt HEISENBERG</div>
+                                        <p class="textgrey text-slim text-small">
+                                        <span class="textorange bold block">-50% sur la carte</span>
+                                        Merci de prévoir un gâteau et une table ronde.</p>
+                                    </div>
+                                </div>
+                            </div><!-- //resa -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //content -->
+       <!--  <footer id="footer"> 
+            <div class="text-center padder clearfix"> 
+                <p> 
+                    <small>&copy; - 2013 Nemesis template </small>
+                </p> 
+            </div> 
+        </footer> -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/nanoscroll.js"></script>
+    <script>
+        $(function() {
+            var $drawer = $('.drawer');
+            $('#trigger').on('click',function(event){
+                if(!$drawer.hasClass('st-menu-open')) {
+                    $drawer.addClass('st-menu-open');
+                    event.stopPropagation();
+                }
+            });
+            $(document).on('click',function(event){
+                var $target = $(event.target);
+                if(!$target.closest('.drawer').length) {
+                    if($drawer.hasClass('st-menu-open')) {
+                    $drawer.removeClass('st-menu-open');
+                }   
+                }
+            });
+            $('#closer').on('click',function(event){
+                if($drawer.hasClass('st-menu-open')) {
+                    $drawer.removeClass('st-menu-open');
+                }
+            });
+        });
+    </script>
+    <script>
+        $(".nano").nanoScroller();
+    </script>
+    <script>
+        $(".display-details").click(function(){
+          $(".resa-details").toggle();
+        });
+    </script>
+    </body>
+    </html>

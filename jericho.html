@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>neXus</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+        <!-- <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/> -->
+        <link rel="stylesheet"href="css/jericho.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/w-panda.png"><span class="brand">jerich0</span></div>
+        <span class="fa fa-bars collapser"></span>
+        <div class="tools pull-right col-lg-8">
+        </div>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li class="active">
+                <div data-toggle="collapse" href="#sub-1">
+                    <i class="fa fa-home"></i>
+                    <span class="menu-item">A label</span>
+                </div>
+
+                <ul id="sub-1" class="collapse">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+
+            </li>
+            <li>
+                <div data-toggle="collapse" href="#sub-2">
+                    <i class="fa fa-rocket"></i>
+                    <span class="menu-item">A label</span>
+                </div>
+
+                <ul id="sub-2" class="collapse">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li>
+                <i class="fa fa-star-o"></i>
+                <span class="menu-item">A label</span>
+            </li>
+            <li>
+                <i class="fa fa-envelope-o"></i>
+                <span class="menu-item">A label</span>
+            </li>
+            <li>
+                <i class="fa fa-gears"></i>
+                <span class="menu-item">A label</span>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default rounded-top">
+                    <div class="panel-heading">
+                        Here goes your title
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group col-lg-6">
+                            <label for="input">A label</label>
+                            <input type="email" class="form-control" id="input" placeholder="Here goes your placeholder">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="input">A label</label>
+                            <input type="email" class="form-control" id="input" placeholder="Here goes your placeholder">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="input">A label</label>
+                            <input type="email" class="form-control" id="input" placeholder="Here goes your placeholder">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="input">A label</label>
+                            <input type="email" class="form-control" id="input" placeholder="Here goes your placeholder">
+                        </div>
+                        <div class="col-lg-6 col-lg-push-6">
+                            <button class="btn btn-info btn-block">Action label</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--/col -->
+            <div class="col-lg-6">
+                <div class="panel panel-default rounded-top">
+                    <div class="panel-body">
+                        <div role="tabpanel" class="col-lg-12">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Tab #1</a></li>
+                                <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Tab #2</a></li>
+                                <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Tab #3</a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="tab1">Tab #1 content</div>
+                                <div role="tabpanel" class="tab-pane" id="tab2">Tab #2 content</div>
+                                <div role="tabpanel" class="tab-pane" id="tab3">Tab #3 content</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--/col -->
+        </div> <!--/row -->
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+$(document).ready(function(){
+    $(".collapser").click(function () {
+        $(".sidebar,header,.logo,.container-fluid").toggleClass("collapsed");
+    });
+});
+</script>
+</html>

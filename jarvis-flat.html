@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>j4rv1s - Xtranet !</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/jarvis-flat.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<header>
+    <img src="img/renovatio-small.png" class="hidden-xs pull-left">
+    <h4 class="pull-left">{ORGANIZATION } <small>94 pending pull requests</small></h4>
+    <a class="trigger pull-right">Filters</a>
+</header><!-- /Header -->
+
+<div class="filters shadow">
+    <div class="col-lg-3">
+        <label for="projects" class="col-lg-12 nopl">Display statistics</label>
+        <div class="btn-group col-lg-12 nopl nopr" data-toggle="buttons">
+            <label class="btn btn-default col-lg-6 active">
+                <input type="radio" autocomplete="off" checked>
+                by booking date
+            </label>
+            <label class="btn btn-default col-lg-6">
+                <input type="radio" autocomplete="off">
+                by meal date
+            </label>
+        </div>
+    </div>
+    <div class="col-lg-3 form-group">
+        <label class="col-lg-12 nopl">Campaign</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="col-lg-2 form-group has-feedback">
+        <label class="col-lg-12 nopl">Start date</label>
+        <input type="text" class="form-control">
+        <span class="fa fa-calendar-o form-control-feedback"></span>
+    </div>
+    <div class="col-lg-2 form-group has-feedback">
+        <label class="col-lg-12 nopl">End date</label>
+        <input type="text" class="form-control">
+        <span class="fa fa-calendar-o form-control-feedback"></span>
+    </div>
+    <div class="col-lg-2 form-group">
+        <a href="#" class="btn btn-primary btn-block m-y pull-right">Apply</a>
+    </div>
+</div><!-- /Filters -->
+
+<!-- Content begins -->
+<div class="container-fluid content">
+    <div class="col-lg-4">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-body hero">
+                <div class="value">142</div>
+                <span class="label">réservations nettes</span>
+                <span class="fa fa-arrow-up textgreen"></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-body hero">
+                <input type="text" value="75" class="dial" data-thickness=".1" data-readOnly="true" data-width="100" data-height="100" data-unit="%">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-body hero">
+                <div class="value">142</div>
+                <span class="label">réservations nettes</span>
+                <span class="fa fa-arrow-up textgreen"></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <h4 class="panel-title"><i class="fa fa-rocket"></i>Gross vs net bookings</h4>
+        <div class="panel panel-default rounded-top">
+            <div class="panel-body">
+                <canvas id="line2"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-heading">
+                <h4>Gross bookings</h4>
+            </div>
+            <div class="panel-body">
+                <canvas id="line"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-heading">
+                <h4>Gross bookings</h4>
+            </div>
+            <div class="panel-body">
+                <canvas id="bar"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-heading">
+                <h4>Gross bookings</h4>
+            </div>
+            <div class="panel-body">
+                <canvas id="donut"></canvas>
+                <div class="donut-legend"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-heading">
+                <h4>Gross bookings</h4>
+            </div>
+            <div class="panel-body">
+                xyz
+            </div>
+        </div>
+    </div>
+</div><!-- /container -->
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/knob.js"></script>
+<script>
+    var randomScalingFactor = function(){ return Math.round(Math.random()*50)};
+    var lineChartData = {
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(165,212,240,1)",
+                strokeColor : "rgba(29,147,217,1)",
+                pointColor : "rgba(255,255,255,1)",
+                pointStrokeColor : "rgba(29,147,217,1)",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+
+    var lineChartData2 = {
+        labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(52, 152, 219,0.8)",
+                strokeColor : "rgba(29,147,217,0)",
+                // pointColor : "rgba(255,255,255,1)",
+                // pointStrokeColor : "rgba(29,147,217,1)",
+                // pointHighlightFill : "#fff",
+                // pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            },
+            {
+                label: "My Second dataset",
+                fillColor : "rgba(46, 204, 113,0.8)",
+                strokeColor : "rgba(29,147,217,0)",
+                // pointColor : "rgba(255,255,255,1)",
+                // pointStrokeColor : "rgba(29,147,217,1)",
+                // pointHighlightFill : "#fff",
+                // pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+
+    var lineChartData3 = {
+        labels : ["v1","v2","v3","v4","v5","v6","v7","v8","v9","v10","v11","v12"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(230, 126, 34,1)",
+                strokeColor : "rgba(29,147,217,0)",
+                // pointColor : "rgba(255,255,255,1)",
+                // pointStrokeColor : "rgba(29,147,217,1)",
+                // pointHighlightFill : "#fff",
+                // pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+
+    var sparklineData = {
+        labels : ["v1","v2","v3","v4","v5","v6","v7","v8","v9","v10","v11","v12"],
+        datasets : [
+            {
+                label: "",
+                fillColor : "rgba(230, 126, 34,0)",
+                strokeColor : "rgba(29,147,217,1)",
+                // pointColor : "rgba(255,255,255,1)",
+                // pointStrokeColor : "rgba(29,147,217,1)",
+                // pointHighlightFill : "#fff",
+                // pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+
+    var donutData = [
+            {
+                value: randomScalingFactor(),
+                color:"rgba(52, 152, 219,1.0)",
+                highlight: "rgba(41, 128, 185,1.0)",
+                label: "Blue"
+            },
+            {
+                value: randomScalingFactor(),
+                color: "rgba(46, 204, 113,1.0)",
+                highlight: "rgba(39, 174, 96,1.0)",
+                label: "Green"
+            },
+            {
+                value: randomScalingFactor(),
+                color: "rgba(230, 126, 34,1.0)",
+                highlight: "rgba(211, 84, 0,1.0)",
+                label: "Yellow"
+            },
+            {
+                value: randomScalingFactor(),
+                color: "rgba(155, 89, 182,1.0)",
+                highlight: "rgba(142, 68, 173,1.0)",
+                label: "Purple"
+            }
+    ];
+
+    var barChartData = {
+        labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+        datasets : [
+            {
+                label: "My Bar Chart",
+                fillColor : "rgba(40,189,114,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+
+    window.onload = function(){
+    var ctx1 = document.getElementById("line").getContext("2d");
+    window.line = new Chart(ctx1).Line(lineChartData,{
+            maintainAspectRatio: false,
+            responsive: true,
+        });
+    //
+    var ctx2 = document.getElementById("bar").getContext("2d");
+    window.bar = new Chart(ctx2).Bar(barChartData,{
+            maintainAspectRatio: false,
+            responsive: true,
+            scaleShowGridLines: false,
+            showScale: true,
+            scaleFontSize: 14,
+            pointDot: false,        
+    });
+
+    var ctx3 = document.getElementById("line2").getContext("2d");
+    window.line = new Chart(ctx3).Line(lineChartData2,{
+            maintainAspectRatio: false,
+            responsive: true,
+            scaleShowGridLines: false,
+            showScale: false,
+            scaleFontSize: 14,
+            pointDot: false,
+        });
+
+    // var ctx4 = document.getElementById("line3").getContext("2d");
+    // window.line = new Chart(ctx4).Line(lineChartData3,{
+    //         maintainAspectRatio: false,
+    //         responsive: true,
+    //         scaleShowGridLines: false,
+    //         showScale: false,
+    //         pointDot: false,
+    //     });
+    //
+    var ctx5 = document.getElementById("donut").getContext("2d");
+    window.line = new Chart(ctx5).Doughnut(donutData,{
+            maintainAspectRatio: false,
+            responsive: true,
+            percentageInnerCutout: 0,
+        });
+    //
+    // var ctx6 = document.getElementById("sparkline").getContext("2d");
+    // window.line = new Chart(ctx6).Line(sparklineData,{
+    //         maintainAspectRatio: false,
+    //         responsive: true,
+    //         showScale: false,
+    //         scaleShowGridLines: false,
+    //         pointDot: false,
+    //         datasetFill: false,
+    //         scaleFontSize: 1,
+    //         scaleFontColor: "rgba(0,0,0,0)",
+    //     });
+    ;};
+</script> <!-- / charts -->
+<script>
+$(function() {
+    $(".dial").knob()
+});
+</script>
+<script>
+$(document).ready(function(){
+    $('.filters').hide();
+    $(".trigger").click(function () {
+        $(".filters").slideToggle("slow");
+    });
+});
+</script>
+</html>

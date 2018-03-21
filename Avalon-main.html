@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Avalon - mark I</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/avalon.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body>
+    <div class="header">
+        <h1 class="header-title">Da page title</h1>
+    </div>
+    <!-- Content begins -->
+    <section class="container-fluid">
+        <div class="col-lg-6 col-md-6 col-xs-6">
+            <div class="panel panel-default rounded-top">
+                <div class="panel-heading" data-toggle="collapse" href="#panel-001">
+                    <h3 class="panel-title opensans pull-left">
+                        Panel title
+                    </h3>
+                </div>
+                <div id="panel-001" class="panel-body nopl nopr collapse in">
+                    <iframe src="js/samples/columnWeek.html" style="height: 320px;" class="col-lg-12"></iframe>
+                </div>
+            </div><!-- /panel -->
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-6">
+            <div class="panel panel-default rounded-top">
+                <div class="panel-heading" data-toggle="collapse" href="#panel-002">
+                    <h3 class="panel-title opensans pull-left">
+                        <span class="fa fa-ellipsis text-grey"></span>
+                        Panel title
+                    </h3>
+                </div>
+                <div id="panel-002" class="panel-body nopl nopr collapse in">
+                    <iframe src="js/samples/pie3d.html" style="height: 320px;" class="col-lg-12"></iframe>
+                </div>
+            </div><!-- /panel -->
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-6">
+            <div class="panel panel-default rounded-top">
+                <div class="panel-heading" data-toggle="collapse" href="#panel-003" aria-expanded="true">
+                    <h3 class="panel-title opensans pull-left">
+                        <span class="fa fa-ellipsis text-grey"></span>
+                        Modal box
+                    </h3>
+                </div>
+                <div id="panel-003" class="panel-body nopl nopr collapse in">
+                    <button type="button" class="btn btn-default col-lg-4 col-md-4 col-xs-4" data-toggle="modal" data-target="#simplemodal">
+                    demo modal
+                    </button>
+                    <button type="button" class="btn btn-default col-lg-4 col-md-4 col-xs-4" data-toggle="modal" data-target="#successmodal">
+                    success modal
+                    </button>
+                    <button type="button" class="btn btn-default col-lg-4 col-md-4 col-xs-4" data-toggle="modal" data-target="#infomodal">
+                    info modal
+                    </button>
+                    <button type="button" class="btn btn-default col-lg-4 col-md-4 col-xs-4" data-toggle="modal" data-target="#dangermodal">
+                    danger modal
+                    </button>
+                    <button type="button" class="btn btn-default col-lg-4 col-md-4 col-xs-4" data-toggle="modal" data-target="#errormodal">
+                    error modal
+                    </button>
+                </div>
+            </div><!-- /panel -->
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-6">
+            <div class="panel panel-default rounded-top">
+                <div class="panel-heading" data-toggle="collapse" href="#panel-004" aria-expanded="true">
+                    <h3 class="panel-title opensans pull-left">
+                        <span class="fa fa-ellipsis text-grey"></span>
+                        charts.js
+                    </h3>
+                </div>
+                <div id="panel-004" class="panel-body nopl nopr collapse in">
+                    <canvas id="canvas" width="100%" height="250px"></canvas>
+                </div>
+            </div><!-- /panel -->
+        </div>
+    </section>
+
+<!-- SimpleModal -->
+<div class="modal fade" id="simplemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        xxx
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<!-- AlertModal -->
+<div class="modal fade" id="successmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header ng success rounded-top">
+        <i class="fa fa-check-circle-o"></i><!-- success icon -->
+      </div>
+      <div class="modal-body">
+        <h4>Congrats ! l'opération s'est bien passée</h4>
+        Ici on met un peu plus d'infos sur le succès
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<!-- AlertModal -->
+<div class="modal fade" id="infomodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header ng info rounded-top">
+        <i class="fa fa-info-circle"></i><!-- info icon -->
+      </div>
+      <div class="modal-body">
+        <h4>Look at me ! j'ai une information pour vous</h4>
+        Ici on affiche l'information
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<!-- AlertModal -->
+<div class="modal fade" id="dangermodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header ng danger rounded-top">
+        <i class="fa fa-exclamation-triangle"></i><!-- danger icon -->
+      </div>
+      <div class="modal-body">
+        <h4>Houston ! We've got a problem</h4>
+        Ici on met un peu plus d'infos sur le problème
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<!-- AlertModal -->
+<div class="modal fade" id="errormodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header ng error rounded-top">
+        <i class="fa fa-bomb"></i><!-- error icon -->
+      </div>
+      <div class="modal-body">
+        <h4>Alert ! We've got an issue</h4>
+        Ici on met un peu plus d'infos sur le problème
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+    <!-- //content -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/charts.js"></script>
+<script>
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var lineChartData = {
+        labels : ["","","","","","","","","","","","","","","","","","","","",""],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(52, 152, 219,0.5)",
+                strokeColor : "rgba(220,220,220,1)",
+                pointColor : "",
+                pointStrokeColor : "",
+                pointHighlightFill : "",
+                pointHighlightStroke : "",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            },
+            // {
+            //     label: "My Second dataset",
+            //     fillColor : "rgba(151,187,205,0.2)",
+            //     strokeColor : "rgba(151,187,205,1)",
+            //     pointColor : "rgba(151,187,205,1)",
+            //     pointStrokeColor : "#fff",
+            //     pointHighlightFill : "#fff",
+            //     pointHighlightStroke : "rgba(151,187,205,1)",
+            //     data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            // }
+        ]
+
+    }
+window.onload = function(){
+    var ctx = document.getElementById("canvas").getContext("2d");
+    window.myLine = new Chart(ctx).Line(lineChartData, {
+        responsive: true,
+        scaleShowGridLines : false,
+        pointDot : false,
+        // scaleShowLabels: false,
+        scaleShowVerticalLines: false
+    });
+}
+    </script>
+    </body>
+</html>

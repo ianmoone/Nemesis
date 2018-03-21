@@ -1,0 +1,120 @@
+/*
+  _    _       _
+ | |  | |     | |
+ | |__| | __ _| |
+ |  __  |/ _` | |
+ | |  | | (_| | |
+ |_|  |_|\__,_|_| mark.I
+*/
+
+/* Alignment, emphasis & Colors
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.m-x {margin: 0 15px;}
+.m-y {margin: 10px 0;}
+.m-b {margin-bottom: 10px;}
+.flatblue {background: #3bafda; color: #ffffff; }
+.flatgreen {background: #28bb72; color: #ffffff; }
+.flatred {background: #e74c3c; color: #ffffff; }
+.flatorange {background: #f1c40f; color: #ffffff; }
+.flatpurple {background: #967ADC; color: #ffffff; }
+.flatgrey {background: #bdc3c7; }
+.textblue {color: #2980b9; }
+.textgreen {color: #28bb72; }
+.textred {color: #e74c3c; }
+.textorange {color: #f1c40f; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+small { font-size: 65%; }
+.row {margin: 10px 0; }
+
+/* Generic elements
+-----------------------------------------------------*/
+html {min-height: 100%;}
+html.danger {border: 8px solid #e74c3c;}
+body{font-size: 16px; background: #f8f8f8; min-height: 100%;}
+h1, h2, h3, h4 {font-weight: 200; color: #333;}
+.container-fluid {margin-top: 20px; padding: 0;}
+
+/* Header
+-------------------------------------------------- */
+.header {height: 50px;line-height: 50px;width: 100%;display: block;z-index: 42;background: #fff;box-shadow: 0 1px 3px -2px rgba(0, 0, 0,0.6);}
+.header>.logo{padding: 0 0 0 14px;background: #589442;color: #fff;transition: all .2s ease-in-out;width: 200px;}
+.avatars{float: right;/* margin-right: 20px; */}
+.avatars img {width: 30px;height: 30px;border-radius: 50%;}
+.metric {text-align: center; border-right: 1px solid #ccc;}
+.metric:last-child {border-right: none;}
+.metric-value {font-size: 32px;font-weight: bold;display: block;}
+.metric-value span {padding-left: 6px; font-size: 16px;}
+.metric-label {font-size: 14px;margin-top: -8px;display: block;}
+canvas {height: 60px;}
+#line2 {padding-right: 15px;}
+
+
+/* Bootstrap overrides
+-------------------------------------------------- */
+.panel {border-radius: 0;padding: 0 15px;margin: 0 0 20px 0;border: none;box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);}
+.panel-default .panel-heading {background: transparent;border: 0;font-size: 20px;/* font-weight: bold; */padding: 10px 0;line-height: 30px;}
+.panel-body {padding: 10px 0;}
+.btn, .btn-lg{border-radius: 3px;}
+.text-muted {color: #bbb; font-weight: 300;}
+.label-default {background-color: #ddd;color: #999;}
+
+/* Responsive table
+-------------------------------------------------- */
+@media only screen and (max-width: 800px) {
+/* Force table to not be like tables anymore */
+  #no-table table,
+  #no-table thead,
+  #no-table tbody,
+  #no-table th,
+  #no-table td,
+  #no-table tr {
+    display: block;
+  }
+
+/* Hide table headers (but not display: none;, for accessibility) */
+  #no-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-table tr { border: 1px solid #ccc; }
+
+  #no-table td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align:left;
+  }
+
+  #no-table td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align:left;
+    font-weight: 500;
+    color: #333;
+  }
+
+/*
+Label the data
+*/
+  #no-table td:before { content: attr(data-title); }
+}
+
+
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

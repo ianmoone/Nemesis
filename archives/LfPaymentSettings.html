@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Nemesis</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/apo.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+        <section id="content">
+            <div class="row">
+            <h1 class="hr_bottom">Paramétrage des options de prépaiement et d'empreintes bancaires</h1>
+            </div>
+            <div class="row">
+                <h3>Paramétrage des repas <i class="fa fa-question-circle pull-right textgrey" data-toggle="tooltip" data-placement="top" title="Ici on va expliquer à quoi cela sert"></i></h3>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                Stocks restaurant
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <!-- <div class="row">
+                                    <div class="col md-2 col-md-2 col-lg-2 col-md-offset-10 col-lg-offset-10 text-center flatblack textwhite p_y">TOUS</div>
+                                </div> -->
+                                <div class="row p_y">
+                                    <div class="col-md-10 col-lg-10 bold">Type de paiement</div>
+                                    <div class="col-md-2 col-lg-2">
+                                        <select class="form-control">
+                                            <option>Aucun</option>
+                                            <option>Caution</option>
+                                            <option>Acompte</option>
+                                        </select>
+                                    </div>
+                                </div><!-- /row -->
+                                <div class="row p_y">
+                                    <div class="col-md-10 col-lg-10 bold">Montant</div>
+                                    <div class="col-md-2 col-lg-2">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div><!-- /row -->
+                                <div class="row p_y">
+                                    <div class="col-lg-12 bold">Paiement obligatoire sur les dispositifs ci-dessous</div>
+                                    <div class="col-md-4 col-lg-4">
+										<div class="checkbox">
+											<label>
+												<input type="checkbox"> Module Marque Blanche
+											</label>
+										</div>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4">
+										<div class="checkbox">
+											<label>
+												<input type="checkbox"> Réservation logiciel
+											</label>
+										</div>
+                                    </div>
+                                </div><!-- /row -->
+                            </div>
+                        </div><!-- /collapse -->
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                <i class="fa fa-play"></i>
+                                Stocks internet
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <!-- <div class="row">
+                                    <div class="col md-2 col-md-2 col-lg-2 col-md-offset-10 col-lg-offset-10 text-center flatblack textwhite p_y">TOUS</div>
+                                </div> -->
+                                <div class="row p_y">
+                                    <div class="col-md-10 col-lg-10">Type de paiement</div>
+                                    <div class="col-md-2 col-lg-2">
+                                        <select class="form-control">
+                                            <option>Aucun</option>
+                                            <option>Préautorisation</option>
+                                            <option>Prépaiement</option>
+                                        </select>
+                                    </div>
+                                </div><!-- /row -->
+                                <div class="row p_y">
+                                    <div class="col-md-10 col-lg-10">Montant</div>
+                                    <div class="col-md-2 col-lg-2">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div><!-- /row -->
+                                <div class="row p_y">
+                                    <div class="col-md-10 col-lg-10">Activé dans le module de réservation</div>
+                                    <div class="col-md-2 col-lg-2 text-center">
+                                        <input type="checkbox">
+                                    </div>
+                                </div><!-- /row -->
+                                <div class="row p_y">
+                                    <div class="col-md-10 col-lg-10">Activé dans MyFourchette</div>
+                                    <div class="col-md-2 col-lg-2 text-center">
+                                        <input type="checkbox">
+                                    </div>
+                                </div><!-- /row -->
+                            </div>
+                        </div><!-- /collapse -->
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="textorange">
+                                <i class="fa fa-forward"></i>
+                                Stock hors Promo
+                                </a>
+                                <i class="fa fa-link pull-right"></i>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <!-- <div class="row">
+                                    <div class="col md-2 col-md-2 col-lg-2 col-md-offset-10 col-lg-offset-10 text-center flatblack textwhite p_y">TOUS</div>
+                                </div> -->
+                                <div class="row p_y">
+                                    <div class="col-md-10 col-lg-10">Type de paiement</div>
+                                    <div class="col-md-2 col-lg-2">
+                                        <select class="form-control">
+                                            <option>Aucun</option>
+                                            <option>Préautorisation</option>
+                                            <option>Prépaiement</option>
+                                        </select>
+                                    </div>
+                                </div><!-- /row -->
+                                <div class="row p_y">
+                                    <div class="col-md-10 col-lg-10">Montant</div>
+                                    <div class="col-md-2 col-lg-2">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div><!-- /row -->
+                                <div class="row p_y">
+                                    <div class="col-md-10 col-lg-10">Activé dans le module de réservation</div>
+                                    <div class="col-md-2 col-lg-2 text-center">
+                                        <input type="checkbox">
+                                    </div>
+                                </div><!-- /row -->
+                                <div class="row p_y">
+                                    <div class="col-md-10 col-lg-10">Activé dans MyFourchette</div>
+                                    <div class="col-md-2 col-lg-2 text-center">
+                                        <input type="checkbox">
+                                    </div>
+                                </div><!-- /row -->
+                            </div>
+                        </div><!-- /collapse -->
+                    </div>
+                </div>
+            </div><!-- /row -->
+            <div class="row">
+                <h3>Conditions générales restaurant préautorisation / prépaiement</h3>
+                <!-- Tab panes -->
+                <div class="tabdown">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="fr">
+                            <textarea class="form-control" rows="5">fr -->The most astounding fact is the knowledge that the atoms that comprise life on Earth the atoms that make up the human body are traceable to the crucibles that cooked light elements into heavy elements in their core under extreme temperatures and pressures. These stars, the high mass ones among them went unstable in their later years they collapsed and then exploded scattering their enriched guts across the galaxy guts made of carbon, nitrogen, oxygen and all the fundamental ingredients of life itself. These ingredients become part of gas cloud that condense, collapse, form the next generation of solar systems stars with orbiting planets, and those planets now have the ingredients for life itself. So that when I look up at the night sky and I know that yes, we are part of this universe, we are in this universe, but perhaps more important than both of those facts is that the Universe is in us. When I reflect on that fact, I look up – many people feel small because they’re small and the Universe is big – but I feel big, because my atoms came from those stars. There’s a level of connectivity. That’s really what you want in life, you want to feel connected, you want to feel relevant you want to feel like a participant in the goings on of activities and events around you That’s precisely what we are, just by being alive…
+                            </textarea>
+                        </div>
+                        <div class="tab-pane" id="es">
+                            <textarea class="form-control" rows="5">es -->The most astounding fact is the knowledge that the atoms that comprise life on Earth the atoms that make up the human body are traceable to the crucibles that cooked light elements into heavy elements in their core under extreme temperatures and pressures. These stars, the high mass ones among them went unstable in their later years they collapsed and then exploded scattering their enriched guts across the galaxy guts made of carbon, nitrogen, oxygen and all the fundamental ingredients of life itself. These ingredients become part of gas cloud that condense, collapse, form the next generation of solar systems stars with orbiting planets, and those planets now have the ingredients for life itself. So that when I look up at the night sky and I know that yes, we are part of this universe, we are in this universe, but perhaps more important than both of those facts is that the Universe is in us. When I reflect on that fact, I look up – many people feel small because they’re small and the Universe is big – but I feel big, because my atoms came from those stars. There’s a level of connectivity. That’s really what you want in life, you want to feel connected, you want to feel relevant you want to feel like a participant in the goings on of activities and events around you That’s precisely what we are, just by being alive…
+                            </textarea>
+                        </div>
+                        <div class="tab-pane" id="en">
+                            <textarea class="form-control" rows="5">en -->The most astounding fact is the knowledge that the atoms that comprise life on Earth the atoms that make up the human body are traceable to the crucibles that cooked light elements into heavy elements in their core under extreme temperatures and pressures. These stars, the high mass ones among them went unstable in their later years they collapsed and then exploded scattering their enriched guts across the galaxy guts made of carbon, nitrogen, oxygen and all the fundamental ingredients of life itself. These ingredients become part of gas cloud that condense, collapse, form the next generation of solar systems stars with orbiting planets, and those planets now have the ingredients for life itself. So that when I look up at the night sky and I know that yes, we are part of this universe, we are in this universe, but perhaps more important than both of those facts is that the Universe is in us. When I reflect on that fact, I look up – many people feel small because they’re small and the Universe is big – but I feel big, because my atoms came from those stars. There’s a level of connectivity. That’s really what you want in life, you want to feel connected, you want to feel relevant you want to feel like a participant in the goings on of activities and events around you That’s precisely what we are, just by being alive…
+                            </textarea>
+                        </div>
+                    </div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#fr" data-toggle="tab">FR</a></li>
+                        <li><a href="#es" data-toggle="tab">ES</a></li>
+                        <li><a href="#en" data-toggle="tab">EN</a></li>
+                    </ul>
+                </div>
+            </div><!-- /row -->
+            <div class="row p_y">
+                <a href="#" class="btn btn-success pull-right">Enregistrer</a>
+                <a href="#" class="btn btn-default pull-right m_x">Annuler</a>
+            </div>
+        </section>
+        </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $(function () { $("[data-toggle='tooltip']").tooltip(); });
+    </script>
+    </body>
+    </html>

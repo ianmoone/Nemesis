@@ -1,0 +1,934 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Newsletter</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
+    <body bgcolor="#FFFFFF" style="margin:0px;padding:0px;-webkit-text-size-adjust:none;font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:14px;background-color:#ffffff;-ms-text-size-adjust:none;">
+        <div style="background-color:#ffffff;">
+                        <!-- BEGIN preheader -->
+<table class="tableTemplateWidth" width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td bgcolor="#f2f2f2">
+            <table class="tableTemplateWidth" width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+                <tr>
+                    <td style="padding:15px 10px 0px 10px;font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#000000;line-height:130%;mso-line-height-rule:exactly;text-align:center;font-weight:bold;">
+                        <strong>
+                                                    CHANGE TITLE HERE
+                                                </strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:10px 10px 15px 10px;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#000000;line-height:13px;mso-line-height-rule:exactly;text-align:center;">
+                        Vous recevez cet email car vous êtes inscrit sur LaFourchette. Si vous souhaitez vous désinscrire,&nbsp;<a href="http://www.preprod.lafourchette.com/newsletter/unsubscribe/<%= recipient.id_customer %>-<%= recipient.ContactInfo.cx_hash %>/newsletter?cc=19513-533&amp;utm_source=CRM&amp;utm_medium=newsletter&amp;utm_campaign=tutu
+" target="_blank" _type="optout" style="color:#999999;">cliquez ici</a>.<br>
+                        Consultez notre version <a href="<%@ include view='MirrorPageUrl' %>" title="miroir" _type="mirrorPage" target="_blank" style="color:#999999;">en ligne</a>.
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- BEGIN header -->
+<% if (recipient.ContactInfo.account_type=="COLLECT") { %>
+<!-- header collecté (sans compte) -->
+<table bgcolor="#ffffff" width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td class="hideForSmall" bgcolor="#d6d6d6" style="padding-top:1px;">
+            <table width="648" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                            <tr>
+                                <td style="padding:20px 30px;">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                        <tr>
+                                            <td valign="top">
+                                                <table class="tableFullWidth" width="274" border="0" cellpadding="0" cellspacing="0" style="float:left;" align="left">
+                                                    <tr>
+                                                        <td valign="top">
+                                                            <a href="http://www.preprod.lafourchette.com/?cc=19513-533&utm_source=CRM&utm_medium=newsletter&utm_campaign=tutu" target="_blank">
+                                                                <img width="212"
+                                                                     border="0"
+                                                                     src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_header/fr_header_logo_bureau.png"
+                                                                     alt="LaFourchette"
+                                                                     title="LaFourchette"
+                                                                     style="display:block" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <table width="274" border="0" cellpadding="0" cellspacing="0" style="float:left;" align="left">
+                                                    <tr>
+                                                        <td valign="top">&nbsp;</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- header collecté (sans compte) -->
+<!-- header mobile collecté (sans compte) -->
+<table width="300" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td>
+            <!--[if !mso 9]><!-->
+            <div class="onlyForSmall" style="display:none;width:0;overflow:hidden;max-height:0;">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td bgcolor="#d6d6d6" style="padding-top:1px ">
+
+                            <table width="298" border="0" cellpadding="0" cellspacing="0" align="center">
+                                <tr>
+                                    <td bgcolor="#ffffff" style="padding:20px 20px;">
+
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tr>
+                                                <td valign="top">
+                                                    <table width="100" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <a href="http://www.preprod.lafourchette.com/?cc=19513-533&utm_source=CRM&utm_medium=newsletter&utm_campaign=tutu" target="_blank">
+                                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_header/fr_header_logo_mobile.png"
+                                                                         width="100"
+                                                                         border="0"
+                                                                         alt="LaFourchette"
+                                                                         title="LaFourchette"
+                                                                         style="display:block" />
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table width="158" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--<![endif]-->
+        </td>
+    </tr>
+</table>
+<!-- header mobile collecté (sans compte) -->
+<% } else { %>
+<!-- header non collecté (avec compte) -->
+<table class="tableTemplateWidth" width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td class="hideForSmall" bgcolor="#d6d6d6" style="padding-top:1px;">
+
+            <table width="648" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                <tr>
+                    <td bgcolor="#ffffff">
+
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                            <tr>
+                                <td style="padding:20px 30px;">
+
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                        <tr>
+                                            <td valign="top">
+                                                <table class="tableFullWidth" width="274" border="0" cellpadding="0" cellspacing="0" style="float:left;" align="left">
+                                                    <tr>
+                                                        <td valign="top">
+                                                            <a href="http://www.preprod.lafourchette.com/?cc=19513-533&utm_source=CRM&utm_medium=newsletter&utm_campaign=tutu" target="_blank">
+                                                                <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_header/fr_header_logo_bureau.png"
+                                                                     width="212"
+                                                                     border="0"
+                                                                     alt="LaFourchette"
+                                                                     title="LaFourchette"
+                                                                     style="display: block;" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <table width="274" border="0" cellpadding="0" cellspacing="0" style="float:left;" align="left">
+                                                    <tr>
+                                                        <td valign="top">
+                                                            <table border="0" cellpadding="0" cellspacing="0" align="right">
+                                                                <tr>
+                                                                    <td>
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tr>
+                                                                                <td style="padding:15px 0 0 0px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:18px;mso-line-height-rule:exactly;">
+                                                                                    <a href="http://www.preprod.lafourchette.com/mon-compte/reservations" target="_blank" style="color:#898989;text-decoration:none;">Mon compte</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td>
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tr>
+                                                                                <td style="padding:15px 0 0 15px;">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                                        <tr>
+                                                                                            <td bgcolor="#fcc62e" style="border-radius:4px;padding:4px 6px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#000000;line-height:18px;mso-line-height-rule:exactly;">
+                                                                                                <a href="http://www.preprod.lafourchette.com/mon-compte/fidelite" target="_blank" style="color:#000000;text-decoration:none;">
+                                                                                                    <%= recipient.loyalty.CustomerLoyalty.valid_loyalty %> <strong>Yums</strong>
+                                                                                                </a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- header non collecté (avec compte) -->
+<!-- header mobile non collecté (avec compte) -->
+<table width="300" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td>
+            <!--[if !mso 9]><!-->
+            <div class="onlyForSmall" style="display:none;width:0;overflow:hidden;max-height:0;">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td bgcolor="#d6d6d6" style="padding-top:1px ">
+
+                            <table width="298" border="0" cellpadding="0" cellspacing="0" align="center">
+                                <tr>
+                                    <td bgcolor="#ffffff" style="padding:20px 20px;">
+
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tr>
+                                                <td valign="top">
+                                                    <table width="100" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <a href="http://www.lafourchette.com" target="_blank">
+                                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_header/fr_header_logo_mobile.png"
+                                                                         width="100"
+                                                                         border="0"
+                                                                         alt="LaFourchette"
+                                                                         title="LaFourchette"
+                                                                         style="display:block" />
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table width="158" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                        <tr>
+                                                            <td>
+                                                                <table border="0" cellpadding="0" cellspacing="0" align="right" style="float:right;">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table border="0" cellpadding="0" cellspacing="0" align="center">
+                                                                                <tr>
+                                                                                    <td style="padding:15px 0 4px 0px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:18px;mso-line-height-rule:exactly;text-align:center;">
+                                                                                        <a href="http://www.preprod.lafourchette.com/mon-compte/reservations" target="_blank" style="color:#898989;text-decoration:none;">Mon compte</a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                            <table border="0" cellpadding="0" cellspacing="0" align="center">
+                                                                                <tr>
+                                                                                    <td bgcolor="#fcc62e" style="border-radius:4px;padding:4px 6px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#000000;line-height:18px;mso-line-height-rule:exactly;text-align:center;">
+                                                                                        <a href="http://www.preprod.lafourchette.com/mon-compte/fidelite" target="_blank" style="color:#000000;text-decoration:none;"><%= recipient.loyalty.CustomerLoyalty.valid_loyalty %> <strong>Yums</strong></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--<![endif]-->
+        </td>
+    </tr>
+</table>
+<% } %>
+
+
+
+                                        <table align="center" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="border:1px solid #bbbbbb;">
+    <tr>
+        <td width="650" height="5" bgcolor="#589442" style="font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:1px;border-collapse:collapse;line-height:0;" class="mute">&nbsp;</td>
+    </tr>
+    <tr>
+        <td height="15" style="font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:14px;border-collapse:collapse;"></td>
+    </tr>
+    <tr>
+        <td align="center" style="font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:14px;border-collapse:collapse;">
+            <table width="610" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
+                                                    <tr>
+                        <td style="font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:14px;border-collapse:collapse;">
+                            <span style="font-size:22px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; color:#101010;">coucou</span>
+                        </td>
+                    </tr>
+                                                    <tr>
+                        <td height="15" style="font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:14px;border-collapse:collapse;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>ca va bien ?</div>
+
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td height="15" style="font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:14px;border-collapse:collapse;"></td>
+                </tr>
+                <tr>
+                    <td height="1" bgcolor="#bbbbbb" style="font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:1px;border-collapse:collapse;line-height:0;" class="mute"></td>
+                </tr>
+                                <tr>
+                    <td height="15" style="font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:14px;border-collapse:collapse;"></td>
+                </tr>
+                <tr>
+                    <td valign="top" style="font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:14px;border-collapse:collapse;">
+                        <div>qfsdhkflqds ezlkqsh kljfjqdskjlsdqklfjdsq</div>
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="20" style="font-family:'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;font-size:14px;border-collapse:collapse;"></td>
+    </tr>
+    </table>
+
+                <!-- BEGIN spacer -->
+                    <table width="650" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td height="25" style="font-size: 14px;border-collapse: collapse;"></td>
+        </tr>
+    </table>
+
+
+
+            <!-- Footer -->
+
+<table class="tableTemplateWidth" border="0" cellpadding="0" cellspacing="0" width="650" align="center">
+    <tr>
+        <td class="hideForSmall">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                <tr>
+                    <td bgcolor="#f1f1f1" style="padding-top:10px;">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                            <tr>
+                                <td valign="top">
+                                    <table width="367" border="0" cellpadding="0" cellspacing="0" align="center">
+                                        <tr>
+                                            <td>
+                                                <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_mobile_spacer_left_top_bureau.png"
+                                                     width="367"
+                                                     height="34"
+                                                     border="0"
+                                                     alt=""
+                                                     title=""
+                                                     style="display:block" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" bgcolor="#ffffff">
+                                                <table width="367" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                    <tr>
+                                                        <td>
+                                                            <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_mobile_left_bureau.png"
+                                                                 width="5"
+                                                                 height="78"
+                                                                 border="0"
+                                                                 alt=""
+                                                                 title=""
+                                                                 style="display:block" />
+                                                        </td>
+                                                        <td valign="middle">
+                                                            <table width="356" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                                <tr>
+                                                                    <td style="padding:5px 10px 5px 15px;font-family:Arial,Helvetica,sans-serif;font-size:19px;color:#000000;line-height:23px;mso-line-height-rule:exactly;font-weight:bold;font-style:italic;">
+                                                                        Tous mes restos dans la poche&nbsp;!
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="line-height:2px;">
+                                                <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_mobile_spacer_left_bottom_bureau.png"
+                                                     width="367"
+                                                     height="2"
+                                                     border="0"
+                                                     alt=""
+                                                     title=""
+                                                     style="display:block" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top">
+                                    <a href="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/CRM/mail/mob_redirect_fr.html">
+                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_mobile_visuel_bureau.png"
+                                             width="167"
+                                             height="114"
+                                             border="0"
+                                             alt=""
+                                             title=""
+                                             style="display:block" />
+                                    </a>
+                                </td>
+                                <td valign="top">
+                                    <table width="116" border="0" cellpadding="0" cellspacing="0" align="center">
+                                        <tr>
+                                            <td><img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_mobile_spacer_right_bureau.png" width="116" height="40" border="0" alt="" style="display:block" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/CRM/mail/mob_redirect_fr.html" target="_blank" style="text-align:center;">
+                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_mobile_app_store_bureau.png" width="116" height="33" border="0" alt="App Store" title="App Store" style="display:block">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/CRM/mail/mob_redirect_fr.html" target="_blank" style="text-align:center;">
+                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_mobile_google_play_bureau.png" width="116" height="41" border="0" alt="Google play" title="Google play" style="display:block" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- footer mobile mobile -->
+<!--[if !mso]><!-->
+<table width="300" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td>
+            <div class="onlyForSmall" style="display:none;width:0;overflow:hidden;max-height:0;">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td height="10" bgcolor="#f1f1f1">
+                            <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" border="0" alt="" style="display:block" />
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td bgcolor="#d6d6d6" style="padding:1px 0;">
+                            <table width="298" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                                <tr>
+                                    <td bgcolor="#ffffff">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tr>
+                                                <td style="padding:10px 10px;font-family:Arial,Helvetica,sans-serif;font-size:17px;color:#000000;line-height:21px;mso-line-height-rule:exactly;font-weight:bold;text-align:center;font-style:italic;">
+                                                    Tous mes restos dans la poche&nbsp;!
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                                            <tr>
+                                                <td>
+                                                    <a href="newsletter.mail.footer.mobile.apple.mobile.link" target="_blank" style="text-align:center;">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_mobile_app_store_mobile.png" width="110" height="34" border="0" alt="App Store" title="App Store" style="display:block" />
+                                                    </a>
+                                                </td>
+                                                <td width="7">
+                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" border="0" alt="" style="display:block" />
+                                                </td>
+                                                <td>
+                                                    <a href="newsletter.mail.footer.mobile.android.mobile.link" target="_blank" style="text-align:center;">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_mobile_google_play_mobile.png" width="110" height="34" border="0" alt="Google play" title="Google play" style="display:block" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tr>
+                                                <td height="15">
+                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" border="0" alt="" style="display:block" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<!--<![endif]-->
+<!-- footer mobile mobile -->
+<!-- footer promesse  bureau -->
+<table class="hideForSmall" width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                <tr>
+                    <td height="20" bgcolor="#f1f1f1">
+                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" border="0" alt="" style="display:block" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#d6d6d6" style="padding:1px 0;">
+            <table width="648" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                <tr>
+                    <td bgcolor="#ffffff" style="padding:25px 0;">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                            <tr>
+                                <td valign="top">
+                                    <table width="210" border="0" cellpadding="0" cellspacing="0" align="center">
+                                        <tr>
+                                            <td>
+                                                <table width="58" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="http://www.preprod.lafourchette.com/?cc=19513-533&amp;utm_source=CRM&amp;utm_medium=newsletter&amp;utm_campaign=tutu" target="_blank">
+                                                                <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_promesse_picto1.png"
+                                                                     width="58"
+                                                                     height="58"
+                                                                     border="0"
+                                                                     alt="Découvrez"
+                                                                     title="Découvrez"
+                                                                     style="display:block" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                    <tr>
+                                                        <td style="padding:10px 5px 0 5px;font-family:Arial,Helvetica,sans-serif;font-size:20px;color:#000000;line-height:24px;mso-line-height-rule:exactly;text-align:center;">
+                                                            Découvrez
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding:0px 5px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#000000;line-height:18px;mso-line-height-rule:exactly;text-align:center;">
+                                                            les restaurants les mieux<br />notés de chaque quartier
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top">
+                                    <table width="188" border="0" cellpadding="0" cellspacing="0" align="center">
+                                        <tr>
+                                            <td>
+                                                <table width="58" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="http://www.preprod.lafourchette.com/?cc=19513-533&amp;utm_source=CRM&amp;utm_medium=newsletter&amp;utm_campaign=tutu" target="_blank">
+                                                                <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_promesse_picto2.png"
+                                                                     width="58"
+                                                                     height="58"
+                                                                     border="0" alt="Réservez"
+                                                                     title="Réservez"
+                                                                     style="display:block" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                    <tr>
+                                                        <td style="padding:10px 5px 0 5px;font-family:Arial,Helvetica,sans-serif;font-size:20px;color:#000000;line-height:24px;mso-line-height-rule:exactly;text-align:center;">
+                                                            Réservez
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding:0px 5px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#000000;line-height:18px;mso-line-height-rule:exactly;text-align:center;">
+                                                            directement<br />selon vos envies
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top">
+                                    <table width="210" border="0" cellpadding="0" cellspacing="0" align="center">
+                                        <tr>
+                                            <td>
+                                                <table width="58" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="http://www.preprod.lafourchette.com/?cc=19513-533&amp;utm_source=CRM&amp;utm_medium=newsletter&amp;utm_campaign=tutu" target="_blank">
+                                                                <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_promesse_picto3.png"
+                                                                     width="58"
+                                                                     height="58"
+                                                                     border="0"
+                                                                     alt="Bénéficiez"
+                                                                     title="Bénéficiez"
+                                                                     style="display:block" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                    <tr>
+                                                        <td style="padding:10px 5px 0 5px;font-family:Arial,Helvetica,sans-serif;font-size:20px;color:#000000;line-height:24px;mso-line-height-rule:exactly;text-align:center;">
+                                                            Bénéficiez
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding:0px 5px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#000000;line-height:18px;mso-line-height-rule:exactly;text-align:center;">
+                                                            d'offres exclusives jusqu'à<br />-50% et de remises fidélité
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- footer promesse  bureau -->
+<!-- footer promesse  mobile -->
+<!--[if !mso]><!-->
+<table width="300" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td>
+            <div class="onlyForSmall" style="display:none;width:0;overflow:hidden;max-height:0;">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td height="10" bgcolor="#f1f1f1">
+                            <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" border="0" alt="" style="display:block" />
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td bgcolor="#d6d6d6" style="padding:1px 0;">
+                            <table width="298" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                                <tr>
+                                    <td bgcolor="#ffffff" style="padding:15px;">
+                                        <a href="http://www.preprod.lafourchette.com/?cc=19513-533&amp;utm_source=CRM&amp;utm_medium=newsletter&amp;utm_campaign=tutu" target="_blank" style="text-decoration:none;display:block;">
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                <tr>
+                                                    <td valign="middle">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_promesse_picto1.png"
+                                                             width="58"
+                                                             height="58"
+                                                             border="0"
+                                                             alt="Découvrez"
+                                                             title="Découvrez"
+                                                             style="display:block" />
+                                                    </td>
+                                                    <td>
+                                                        <table width="210" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tr>
+                                                                <td style="padding:0px 0px 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:20px;color:#000000;line-height:24px;mso-line-height-rule:exactly;">
+                                                                    Découvrez
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding:0px 0px 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#000000;line-height:18px;mso-line-height-rule:exactly;">
+                                                                    les restaurants les mieux&lt;br /&gt;notés de chaque quartier
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </a>
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tr>
+                                                <td height="15">
+                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" border="0" alt="" style="display:block" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <a href="http://www.preprod.lafourchette.com/?cc=19513-533&amp;utm_source=CRM&amp;utm_medium=newsletter&amp;utm_campaign=tutu" target="_blank" style="text-decoration:none;display:block;">
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                <tr>
+                                                    <td valign="middle">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_promesse_picto2.png"
+                                                             width="58"
+                                                             height="58"
+                                                             border="0"
+                                                             alt="Réservez"
+                                                             title="Réservez"
+                                                             style="display:block" />
+                                                    </td>
+                                                    <td>
+                                                        <table width="210" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tr>
+                                                                <td style="padding:0 0 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:20px;color:#000000;line-height:24px;mso-line-height-rule:exactly;">
+                                                                    Réservez
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding:0px 0px 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#000000;line-height:18px;mso-line-height-rule:exactly;">
+                                                                    directement&lt;br /&gt;selon vos envies
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </a>
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <tr>
+                                                <td height="15">
+                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" border="0" alt="" style="display:block" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <a href="http://www.preprod.lafourchette.com/?cc=19513-533&amp;utm_source=CRM&amp;utm_medium=newsletter&amp;utm_campaign=tutu" target="_blank" style="text-decoration:none;display:block;">
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                <tr>
+                                                    <td valign="middle">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_promesse_picto3.png"
+                                                             width="58"
+                                                             height="58"
+                                                             border="0"
+                                                             alt="Bénéficiez"
+                                                             title="Bénéficiez"
+                                                             style="display:block" />
+                                                    </td>
+                                                    <td>
+                                                        <table width="210" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <tr>
+                                                                <td style="padding:0px 0px 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:20px;color:#000000;line-height:24px;mso-line-height-rule:exactly;">
+                                                                    Bénéficiez
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding:0px 0px 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#000000;line-height:18px;mso-line-height-rule:exactly;">
+                                                                    d&#039;offres exclusives jusqu&#039;à&lt;br /&gt;-50% et de remises fidélité
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<!--<![endif]-->
+<!-- footer réseaux bureau  -->
+<table class="tableTemplateWidth" width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td class="hideForSmall" bgcolor="#f2f2f2">
+            <table width="648" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                <tr>
+                    <td style="padding:15px 15px 15px 15px;">
+                        <table border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                            <tr>
+                                <td style="padding:0px 10px 0px 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#808080;line-height:18px;mso-line-height-rule:exactly;text-align:center;">
+                                    Retrouvez-nous sur
+                                </td>
+                                                                <td>
+                                    <a href="https://www.facebook.com/lafourchetteFR?fref=ts" target="_blank" style="color:#808080;text-align:center;">
+                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_reseau_facebook.png"
+                                             width="21"
+                                             height="24"
+                                             border="0" style="display:block;" />
+                                    </a>
+                                </td>
+                                <td width="15">
+                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" alt="" border="0" style="display:block;" />
+                                </td>
+                                                                                                <td>
+                                    <a href="https://twitter.com/LaFourchetteMmm" target="_blank" style="color:#808080;text-align:center;">
+                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_reseau_twitter.png"
+                                             width="20"
+                                             height="24"
+                                             border="0"
+                                             style="display:block;" />
+                                    </a>
+                                </td>
+                                <td width="15">
+                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" alt="" border="0" style="display:block;" />
+                                </td>
+                                                                                                <td>
+                                    <a href="https://instagram.com/lafourchette_fr/" target="_blank" style="color:#808080;text-align:center;">
+                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_reseau_instagram.png"
+                                             width="22"
+                                             height="24"
+                                             border="0"
+                                             style="display:block;" />
+                                    </a>
+                                </td>
+                                <td width="15">
+                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" alt="" border="0" style="display:block;" />
+                                </td>
+                                                                                                                                <td>
+                                    <a href="http://blog.lafourchette.com/" target="_blank" style="color:#808080;text-align:center;">
+                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_reseau_blog.png" width="38" height="24" border="0" style="display:block;" />
+                                    </a>
+                                </td>
+                                                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- footer réseaux bureau -->
+<!-- footer réseaux mobile -->
+<!--[if !mso]><!-->
+<table class="tableTemplateWidth" width="300" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td>
+            <div class="onlyForSmall" style="display:none;width:0;overflow:hidden;max-height:0;">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td bgcolor="#f2f2f2">
+                            <table width="298" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                                <tr>
+                                    <td style="padding:15px 5px 15px 5px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+                                            <tr>
+                                                <td style="padding:0px 10px 0px 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#808080;line-height:18px;mso-line-height-rule:exactly;text-align:center;">
+                                                    Retrouvez-nous sur
+                                                </td>
+                                                                                                <td>
+                                                    <a href="https://www.facebook.com/lafourchetteFR?fref=ts" target="_blank" style="color:#808080;text-align:center;">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_reseau_facebook.png" width="21" height="24" alt="facebook" title="facebook" border="0" style="display:block;" />
+                                                    </a>
+                                                </td>
+                                                <td width="15">
+                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" alt="" border="0" style="display:block;" />
+                                                </td>
+                                                                                                                                                <td>
+                                                    <a href="https://twitter.com/LaFourchetteMmm" target="_blank" style="color:#808080;text-align:center;">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_reseau_twitter.png" width="20" height="24" alt="twitter" title="twitter" border="0" style="display:block;" />
+                                                    </a>
+                                                </td>
+                                                <td width="15">
+                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" alt="" border="0" style="display:block;" />
+                                                </td>
+                                                                                                                                                <td>
+                                                    <a href="https://instagram.com/lafourchette_fr/" target="_blank" style="color:#808080;text-align:center;">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_reseau_instagram.png" width="22" height="24" alt="instagram" title="instagram" border="0" style="display:block;" />
+                                                    </a>
+                                                </td>
+                                                <td width="15">
+                                                    <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_blank.gif" width="1" height="1" alt="" border="0" style="display:block;" />
+                                                </td>
+                                                                                                                                                                                                <td>
+                                                    <a href="http://blog.lafourchette.com/" target="_blank" style="color:#808080;text-align:center;">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/staticlf/uploads/reflex/images/nslr/fr_footer/fr_footer_reseau_blog.png" width="38" height="24" border="0" style="display:block;" />
+                                                    </a>
+                                                </td>
+                                                                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<!--<![endif]-->
+<!-- footer réseaux mobile -->
+<table class="tableTemplateWidth" width="650" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#f1f1f1">
+    <tr>
+        <td class="customTD270" style="padding:15px 25px 15px 25px;" bgcolor="#f1f1f1">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                            <tr>
+                                <td style="padding:4px 0 0px 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;line-height:16px;mso-line-height-rule:exactly;text-align:center;">
+                                    Vous recevez cet e-mail car vous êtes inscrit sur <a href="http://www.preprod.lafourchette.com/?cc=19513-533&amp;utm_source=CRM&amp;utm_medium=newsletter&amp;utm_campaign=tutu" _type="optout" target="_blank" style="color:#999999;font-size:10px;text-decoration:underline !important;">LaFourchette</a>.
+                                    Conformément à la loi Informatique et Libertés, vous disposez d&#039;un droit d&#039;accès et de rectification des données vous concernant. Si vous ne souhaitez plus recevoir de message de notre part, cliquez sur <a href="http://www.preprod.lafourchette.com/newsletter/unsubscribe/<%= recipient.id_customer %>-<%= recipient.ContactInfo.cx_hash %>/newsletter?cc=19513-533&amp;utm_source=CRM&amp;utm_medium=newsletter&amp;utm_campaign=tutu
+" _type="optout" target="_blank" style="color:#999999;font-size:10px;text-decoration:underline !important;">se désinscrire</a>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:24px 0 20px 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;line-height:16px;mso-line-height-rule:exactly;text-align:center;">
+                                    &copy; LaFourchette | Tous droits réservés 2016<br>
+                                    LaFourchette SAS | 70, rue St Lazare |  75009 Paris
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- tracking pixel -->
+<img src="https://pixel.monitor1.returnpath.net/pixel.gif?r=33662496af26c916be1116c2bb8385d8e48eb378" width="1" height="1" />
+        </div>
+    </body>
+</html>

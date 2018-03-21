@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>j4rv1s - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/jarvis-cities.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<!-- Content begins -->
+<div class="container-fluid content">
+    <div class="row">
+        <h1 class="pull-left">City configuration</h1>
+        <div class="trigger pull-right">ccc</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 form">
+            xxx
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-4">
+        <table class="table">
+            <thead>
+                <th class="col-lg-2">ID</th>
+                <th class="col-lg-10">Article name</th>
+            </thead>
+            <tbody>
+                <td>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="sortable">
+                        <li class="item">art1</li>
+                        <li class="item">art2</li>
+                        <li class="item">art3</li>
+                        <li class="item">art4</li>
+                        <li class="item">art5</li>
+                        <li class="item">art6</li>
+                        <li class="item">art7</li>
+                        <li class="item">art8</li>
+                    </ul>
+                </td>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-4">
+        <table class="table">
+            <thead>
+                <th class="col-lg-2">ID</th>
+                <th class="col-lg-10">Article name</th>
+            </thead>
+            <tbody>
+                <td>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="sortable">
+                        <li class="item">art1</li>
+                        <li class="item">art2</li>
+                        <li class="item">art3</li>
+                        <li class="item">art4</li>
+                        <li class="item">art5</li>
+                        <li class="item">art6</li>
+                        <li class="item">art7</li>
+                        <li class="item">art8</li>
+                    </ul>
+                </td>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-4">
+        <table class="table">
+            <thead>
+                <th class="col-lg-2">ID</th>
+                <th class="col-lg-10">Article name</th>
+            </thead>
+            <tbody>
+                <td>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="sortable">
+                        <li class="item">art1</li>
+                        <li class="item">art2</li>
+                        <li class="item">art3</li>
+                        <li class="item">art4</li>
+                        <li class="item">art5</li>
+                        <li class="item">art6</li>
+                        <li class="item">art7</li>
+                        <li class="item">art8</li>
+                    </ul>
+                </td>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div><!-- /container -->
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script src="js/sortable.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+$(document).ready(function(){
+    $('.form').hide();
+    $(".trigger").click(function () {
+        $(".form").slideToggle("fast");
+    });
+});
+</script>
+<script>
+    $('.sortable').sortable();
+</script>
+</html>

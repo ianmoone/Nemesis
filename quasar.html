@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>heliX</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/quasar.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="row project alert">
+                    <span class="project-name">lafourchette-portal</span>
+                    <span class="release-info">v2.288.4 - 21 Jan 2016 18:34</span>
+                </div>
+                <div class="row metrics">
+                    <div class="end-user col-lg-4">
+                        <div class="metric-value">7,37 <span class="metric-unit">s</span></div>
+                        <div class="metric-label">end user</div>
+                    </div>
+                    <div class="app-server col-lg-4">
+                        <div class="metric-value">300 <span class="metric-unit">ms</span></div>
+                        <div class="metric-label">app server</div>
+                    </div>
+                    <div class="error-rate error col-lg-4">
+                        <div class="metric-value">42 <span class="metric-unit">%</span></div>
+                        <div class="metric-label">error rate</div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--/col -->
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="row project">
+                    <span class="project-name">lafourchette-rr</span>
+                    <span class="release-info">v2.288.4 - 21 Jan 2016 18:34</span>
+                </div>
+                <div class="row metrics">
+                    <div class="end-user col-lg-4">
+                        <div class="metric-value">3,26 <span class="metric-unit">s</span></div>
+                        <div class="metric-label">end user</div>
+                    </div>
+                    <div class="app-server col-lg-4">
+                        <div class="metric-value">224 <span class="metric-unit">ms</span></div>
+                        <div class="metric-label">app server</div>
+                    </div>
+                    <div class="error-rate col-lg-4">
+                        <div class="metric-value">0 <span class="metric-unit">%</span></div>
+                        <div class="metric-label">error rate</div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--/col -->
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <h3>Line chart</h3>
+                <canvas id="line"></canvas>
+                <h3>Bar chart</h3>
+                <canvas id="bar"></canvas>
+            </div>
+        </div> <!--/col -->
+    </div><!-- /container -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/sparks.js"></script>
+<script>
+var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var ChartData = {
+        labels : ["January","February","March","April","May","June","July","xxx","ddd","eee","zzz","ppp"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(52, 152, 219,.6)",
+                strokeColor : "rgba(41, 128, 185,1)",
+                // pointColor : "rgba(255,255,255,1)",
+                // pointStrokeColor : "rgba(29,147,217,1)",
+                // pointHighlightFill : "#fff",
+                // pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+    var ChartData2 = {
+        labels : ["January","February","March","April","May","June","July","xxx","ddd","eee","zzz","ppp"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(88, 146, 66,.6)",
+                strokeColor : "rgba(88, 146, 66,0)",
+                // pointColor : "rgba(255,255,255,1)",
+                // pointStrokeColor : "rgba(29,147,217,1)",
+                // pointHighlightFill : "#fff",
+                // pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+
+window.onload = function(){
+    var ctx1 = document.getElementById("line").getContext("2d");
+    window.line = new Chart(ctx1).Line(ChartData,{
+            maintainAspectRatio: false,
+            responsive: false,
+            scaleShowGridLines: false,
+            showScale: false,
+            pointDot: false,
+            bezierCurve : false,
+        });
+    var ctx2 = document.getElementById("bar").getContext("2d");
+    window.line = new Chart(ctx2).Bar(ChartData2,{
+            maintainAspectRatio: false,
+            responsive: false,
+            scaleShowGridLines: false,
+            showScale: false,
+            pointDot: false,
+            barValueSpacing : 1,
+            bezierCurve : false,
+        });
+    ;};
+</script>
+</html>
+
+<!-- sparkline
+<canvas id="myChart" width="100" height="30" class="sparkline"
+data-chart_values="[42,48,40,19,96,27,100]"
+data-chart_StrokeColor="rgba(151,187,0,1)"></canvas>
+-->

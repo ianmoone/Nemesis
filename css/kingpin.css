@@ -1,0 +1,202 @@
+/*
+  _    _                   _       
+ | |  (_)                 (_)      
+ | | ___ _ __   __ _ _ __  _ _ __  
+ | |/ / | '_ \ / _` | '_ \| | '_ \ 
+ |   <| | | | | (_| | |_) | | | | |
+ |_|\_\_|_| |_|\__, | .__/|_|_| |_|
+                __/ | |            
+               |___/|_|            mark.I
+*/
+
+/* Alignment, emphasis & Colors
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.small {font-size: 12px; }
+.big{font-size: 16px;}
+.m-x{margin: 0 20px;}
+.m-y{margin: 20px 0;}
+.m-all{margin: 20px;}
+.flatblue {background: #3bafda!important; color: #ffffff!important; }
+.flatgreen {background: #28bd72!important; color: #ffffff!important; }
+.flatred {background: #e74c3c!important; color: #ffffff!important; }
+.flatorange {background: #f1c40f!important; color: #ffffff!important; }
+.flatpurple {background: #967ADC!important; color: #ffffff!important; }
+.flatgrey {background: #bdc3c7!important; }
+.textblue {color: #2980b9; }
+.textgreen {color: #28bd72; }
+.textred {color: #e74c3c; }
+.textorange {color: #f1c40f; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+.row {margin: 10px 0; }
+.btn {padding: 6px 8px; border-radius: 2px;}
+.btn i{padding: 0 5px 0 0;}
+.sep-right{border-right: 1px solid #ccc;}
+h1,h2,h3,h4,h5,h6{color: #333; padding-bottom: 5px}
+.underlined{border-bottom: 1px solid #eee;}
+
+/* Content elements
+-----------------------------------------------------*/
+html, body {min-height: 100%; height: 100%; position: relative;}
+body{font-size: 16px; background: #fff; color: #666;}
+body.mfn{background: #fff;}
+header {height: 50px; line-height: 50px;}
+header img{height: 50px;margin: -3px 0 0 0;}
+.particles{background: #313134; height: 50px; position: fixed; width: 100%; right: 0; left: 0; z-index: 642;}
+
+
+/* Sidebar
+-------------------------------------------------- */
+.container-fluid.content {
+    padding: 20px 20px 0 200px;
+    margin-bottom: 10px;
+    min-height: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sidebar {
+    background: #fff;
+    border-right: 1px solid #dedede;
+    min-width: 180px;
+    width: 180px;
+    color: #333;
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    float: none;
+    min-height: 100%;
+    height: 100%;
+    z-index: 742;
+}
+.sidebar header{
+    width: 180px;
+    background: #589442;
+    color: #fff;
+    text-align: center;
+}
+.sidebar header img{width: 40px; height: 48px;}
+
+.sidebar ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidebar a {
+    padding: 0 10px;
+    display: block;
+    color: #6D747F;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+    text-decoration: none;
+}
+
+#sidebar {
+    left: 0;
+    padding: 0;
+    position: fixed;
+    top: 50px;
+    width: 180px;
+    z-index: 42;
+    height: 100%;
+    background: ;
+}
+
+#sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+.brand{min-height: 80px; padding-left: 20px; margin-right: 1px;}
+.brand:hover{cursor: pointer;background: #fff9e6;}
+.brand.active{background: #fff9e6;}
+.brand-flag, .brand-flag img{width: 30px; margin-top: 15px;}
+.resume{height: 80px; padding: 20px 0 0 40px;}
+.brand-country{display: block;}
+.brand-country.active{font-weight: bold;}
+.brand-domain{font-size: 12px; color: #666;}
+
+/* Overrides
+-------------------------------------------------- */
+.panel {box-shadow: none; border: 0;border-bottom: 2px solid #d4dee4; margin: 10px 0;}
+.panel-default>.panel-heading {background: #ffffff; margin-bottom: 0; border-bottom: 1px solid #dedede;min-height: 43px;}
+.panel-title {font-size: 20px;}
+.panel-heading{padding: 10px 15px; border: 0;}
+.panel-heading h3{ font-weight: 200;}
+.panel-heading:hover{cursor: pointer;}
+.panel-body {padding: 15px;}
+.panel.squared{border-radius: 0;}
+.rounded-top{border-radius: 4px 4px 0 0;}
+.progress{height: 5px; background: #e7e7e7;}
+
+/* COMPONENTS
+-------------------------------------------------- */
+
+/* Tabs
+---------------------------- */
+.lefty-tabs .panel-body{padding: 0;}
+.lefty-tabs .row {margin: 0;  }
+.lefty-tabs .tab{height: 80px; line-height: 80px;}
+.lefty-tabs p{margin: 1em;}
+.lefty-tabs .menu{font-size: 2em; cursor: pointer;}
+.lefty-tabs ul{margin-bottom: 0;}
+.lefty-tabs li{list-style: none;}
+.lefty-tabs li:hover{background: #f0f0f0;}
+.lefty-tabs .menu li.active{background: #28bd72; color: #fff;}
+
+
+/* Widgets
+---------------------------- */
+
+/*Stats widget*/
+.hero{
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.hero .value{
+    color: #444;
+    font-size: 42px;
+}
+
+.hero .label{
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: -10px;
+}
+
+.hero .fa-arrow-circle-o-up{
+    color: #28bd72;
+    font-size: 1.4em
+}
+
+.hero .fa-arrow-circle-o-down{
+    color: #e74c3c;
+    font-size: 1.4em
+}
+
+.hero .fa-arrow-circle-o-right{
+    color: #7f8c8d;
+    font-size: 1.4em
+}
+
+/*Floating labels*/
+
+
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

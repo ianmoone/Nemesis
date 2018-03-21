@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Cerebro - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/hogosha.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body class="admin">
+    <div class="header">
+        <div class="logo">
+            <i class="fa fa-graduation-cap fa-lg"></i>
+            <span>Cerebro</span>
+        </div>
+        <a class="fa fa-bars fa-lg expander"></a>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li class="active">
+                <a href="#" data-toggle="collapse" data-target="#submenu1" aria-expanded="false" aria-controls="submenu1" class="collapsed">
+                    <i class="fa fa-rocket fa-lg"></i>
+                    <span>Menu item</span>
+                    <span class="fa fa-arrow pull-right"></span>
+                </a>
+                <ul id="submenu1" class="submenu collapse">
+                    <li><a href="#">Submenu item</a></li>
+                    <li><a href="#">Submenu item</a></li>
+                    <li><a href="#">Submenu item</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-bomb fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-list fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-puzzle-piece fa-lg"></i>
+                    <span>Menu item</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /sidebar -->
+
+<!-- Content begins -->
+<div class="container-fluid content">
+    <h1 class="col-lg-12">Incidents</h1>
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                xxx
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //content -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    $( ".expander" ).click(function() {
+    $( ".header, .sidebar, .container-fluid" ).toggleClass( "sidebar-collapsed" );
+    });
+</script><!-- /sidebar expand -->
+</html>

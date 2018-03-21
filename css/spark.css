@@ -1,0 +1,82 @@
+/*
+                      _
+                     | |
+ ___ _ __   __ _ _ __| | __
+/ __| '_ \ / _` | '__| |/ /
+\__ \ |_) | (_| | |  |   <
+|___/ .__/ \__,_|_|  |_|\_\
+    | |
+    |_|                     mark I
+*/
+
+/* Alignment, emphasis & Colors
+-----------------------------------------------------*/
+.nopl {padding-left: 0!important; }
+.nopr {padding-right: 0!important; }
+.nopt{padding-top: 0!important;}
+.m-x {margin: 0 15px;}
+.m-y {margin: 10px 0;}
+.m-b {margin-bottom: 10px;}
+.flatblue {background: #3bafda; color: #ffffff; }
+.flatgreen {background: #55c9a6;color: #ffffff;}
+.flatred {background: #de5939;color: #ffffff;}
+.flatorange {background: #f1c40f; color: #ffffff; }
+.flatpurple {background: #967adc; color: #ffffff; }
+.flatgrey {background: #bdc3c7; }
+.textblue {color: #2980b9; }
+.textgreen {color: #55c9a6; }
+.textred {color: #de5939; }
+.textorange {color: #f5Ab35; }
+.textpurple {color: #8e44ad; }
+.textgrey {color: #bdc3c7; }
+small { font-size: 65%; }
+.row {margin: 10px 0; }
+
+/* Content elements
+-----------------------------------------------------*/
+html {min-height: 100%;}
+body{font-size: 16px; color: #666; background: #f9fafc; min-height: 100%;}
+h1, h2, h3, h4 {font-weight: 200; color: #333;}
+h1 {font-size: 30px;}
+header{margin: 0 0 0px 0;padding: 10px 0;background: #fff;position: fixed;top: 0;left: 0;width: 100%;z-index: 42;box-shadow: 0 2px 5px rgba(0, 0, 0, .10);}
+header h1 {font-size: 30px;margin-top: 0;}
+header h1 i {margin-right: 10px;}
+.container{margin-bottom: 20px;}
+.container-fluid {height: 100%;}
+ul {padding: 0;display: flex;}
+li {list-style-type: none;padding-bottom: 5px;font-size: 14px;line-height: 2em;}
+li a {color: #666;}
+li:hover, li:hover a:hover {background: #f5f5f5; color: #333; font-weight: bold; text-decoration: none;}
+
+/* Bootstrap overrides
+-------------------------------------------------- */
+.panel {border-radius: 4px 4px 0 0;/* padding: 0 15px; */margin: 0;border: 0;}
+.panel-default .panel-heading {color :#999;border: 0; padding: 15px; font-weight: bold; background: transparent;}
+.panel {box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);transition: all 0.3s cubic-bezier(.25,.8,.25,1);}
+.panel:hover { box-shadow: 0 14px 28px rgba(0,0,0,0.02), 0 10px 10px rgba(0,0,0,0.22); }
+.panel-body {padding: 10px 15px;}
+.panel:hover {cursor: pointer;}
+.btn, .btn-lg{border-radius: 3px;}
+
+/* Spark elements
+-------------------------------------------------- */
+
+/*booking module*/
+.month {padding: 10px;}
+.month i {margin-top: -6px;}
+.prev {float: left; font-size: 2em;}
+.month-label {text-align: center;}
+.next {float: right; font-size: 2em;}
+.wrapper {overflow-x: scroll; overflow-y: hidden; width: 100%;}
+.days {}
+.day-item {}
+.scrolling-wrapper {overflow-x: scroll;overflow-y: hidden;white-space: nowrap;}
+.card {display: inline-block;width: 22%;height: 80px;text-align: center;font-size: 44px;padding: 0 10px;line-height: 80px;font-weight: 100;border: 1px solid #e7e7e7;}
+.card.active, .card:hover {background: #3e3e3e;color: #fff; font-weight: 100;}
+::-webkit-scrollbar {
+width: 0px;  /* remove scrollbar space */
+background: transparent;  /* optional: just make scrollbar invisible */
+}
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

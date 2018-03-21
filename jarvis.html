@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>j4rv1s - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/jarvis.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<header>
+    <h4 class="pull-left">Some text</h4>
+</header>
+<!-- Content begins -->
+<div class="container-fluid content">
+    <div class="col-lg-12">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-heading">
+                <div class="heading-bg"></div>
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-3">
+                    <div class="user">
+                    </div>
+                    <div class="btn-group col-lg-12 nopl nopr">
+                        <a href="#" class="btn btn-default col-lg-6">Action</a>
+                        <a href="#" class="btn btn-default col-lg-6">Action</a>
+                    </div>
+                    <div class="side-content">
+                        xxx
+                    </div>
+                </div>
+                <div class="main-content col-lg-9 nopr">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <h1>
+                                Da mega title
+                                <a href="#" class="btn btn-primary btn-lg pull-right col-lg-3">THE BUTTON LABEL</a>
+                            </h1>
+                            <h3 class="text-muted">
+                                Superfragilistic !!
+                                <i class="fa fa-star textorange"></i>
+                                <i class="fa fa-star textorange"></i>
+                                <i class="fa fa-star textorange"></i>
+                                <i class="fa fa-star textorange"></i>
+                                <i class="fa fa-star textgrey"></i>
+                            </h3>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile">...</div>
+                        <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                        <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="logo text-center">
+            <i class="fa fa-rocket"></i>
+            Jarvis
+        </div>
+        <ul>
+          <li><a href="#">Menu item</a></li>
+          <li><a href="#">Menu item</a></li>
+          <li><a href="#" class="active">Menu item</a></li>
+          <li><a href="#">Menu item</a></li>
+        </ul>
+    </div><!-- /sidebar -->
+</div><!-- /container -->
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+</html>

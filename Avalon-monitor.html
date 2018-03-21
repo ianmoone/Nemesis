@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Avalon - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/avalon.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<div class="header">
+    <h1 class="header-title">
+    <img src="img/logolf.png">
+    Monitor
+    <btn id="trigger" class="fa fa-sliders pull-right"></btn>
+    </h1>
+</div>
+<!-- Content begins -->
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+            <div class="filterbox">
+                <div class="col-lg-2 col-md-2 col-xs-12 nopl">
+                    <div class="btn-group col-xs-12 nopl nopr" data-toggle="buttons">
+                        <label class="btn btn-default small active col-xs-4"><input type="radio" name="status" id="option1" value="option1">ALL</label>
+                        <label class="btn btn-default small col-xs-4"><input type="radio" name="status" id="option2" value="option2">Active</label>
+                        <label class="btn btn-default small col-xs-4"><input type="radio" name="status" id="option3" value="option3">Inactive</label>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 col-xs-12 nopl">
+                    <input type="text" placeholder="Service name..." name="srch-term" id="srch-term" class="form-control">
+                </div>
+                <div class="input-group col-lg-5 col-md-5">
+                    <div class="input-group-btn search-panel">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span id="search_concept">Filter by</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Uptime (day)</a></li>
+                            <li><a href="#">Uptime (week)</a></li>
+                            <li><a href="#">Uptime (all)</a></li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="search_param" value="all" id="search_param">         
+                    <input type="text" class="form-control" name="x" placeholder="Value (%)">
+                </div>
+            </div><!-- /filterbox -->
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-xs-12">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-heading running" data-toggle="collapse" href="#panel-001">
+                <h3 class="panel-title pull-left">
+                  <!-- <i class="fa fa-check"></i> -->
+                  Service name
+                </h3>
+            </div>
+            <div id="panel-001" class="panel-body nopl nopr collapse in">
+                <ul class="service-details">
+                  <li><strong>Last Query </strong> Mon, Jan 26, 2015 22:21:06 UTC</li>
+                  <li><strong>Uptime (Day) </strong> 100% (1 of 1)</li>
+                  <li><strong>Uptime (Week) </strong> 100% (3 of 3)</li>
+                  <li><strong>Uptime (All) </strong> 100% (17 of 17)</li>
+                </ul>
+                <iframe src="js/samples/upTime.html" class="service-chart"></iframe>
+              </div>
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-4 col-md-4 col-xs-12">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-heading neutral" data-toggle="collapse" href="#panel-002">
+                <h3 class="panel-title pull-left">
+                  <!-- <i class="fa fa-bomb"></i> -->
+                  Service name
+                </h3>
+            </div>
+            <div id="panel-002" class="panel-body nopl nopr collapse in">
+              <table class="table service-details">
+                <tr>
+                  <td><strong>Last Query</strong></td>
+                  <td>Mon, Jan 26, 2015 22:21:06 UTC</td>
+                </tr>
+                <tr>
+                  <td><strong>Uptime (Day)</strong></td>
+                  <td>20% (2 of 10)</td>
+                </tr>
+                <tr>
+                  <td><strong>Uptime (Week)</strong></td>
+                  <td>100% (3 of 3)</td>
+                </tr>
+                <tr>
+                  <td><strong>Uptime (All)</strong></td>
+                  <td>100% (17 of 17)</td>
+                </tr>
+              </table>
+              <iframe src="js/samples/upTime.html" class="service-chart"></iframe>
+            </div>
+        </div><!-- /panel -->
+    </div>
+    <div class="col-lg-4 col-md-4 col-xs-12">
+        <div class="panel panel-default rounded-top">
+            <div class="panel-heading alert" data-toggle="collapse" href="#panel-003">
+                <h3 class="panel-title pull-left">
+                  <!-- <i class="fa fa-check"></i> -->
+                  Service name
+                </h3>
+            </div>
+            <div id="panel-003" class="panel-body nopl nopr collapse in">
+              <table class="table service-details">
+                <tr>
+                  <td><strong>Last Query</strong></td>
+                  <td>Mon, Jan 26, 2015 22:21:06 UTC</td>
+                </tr>
+                <tr class="danger">
+                  <td><strong>Uptime (Day)</strong></td>
+                  <td>20% (2 of 10)</td>
+                </tr>
+                <tr>
+                  <td><strong>Uptime (Week)</strong></td>
+                  <td>100% (3 of 3)</td>
+                </tr>
+                <tr>
+                  <td><strong>Uptime (All)</strong></td>
+                  <td>100% (17 of 17)</td>
+                </tr>
+              </table>
+              <iframe src="js/samples/upTime.html" class="service-chart"></iframe>
+            </div>
+        </div><!-- /panel -->
+    </div>
+</section>
+<!-- //content -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reservations - WebApp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-switch.css" rel="stylesheet" media="screen">
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+  </head>
+  <body class="reservations push-top">
+  	<div class="fixed-top">
+	  	<div class="dark-heading">
+	  		<div class="container valign-middle">
+	  			<div class="row">
+		  			<div class="col-1">
+						<span class="glyphicon glyphicon-chevron-left chevron"></span>
+					</div>
+					<div class="col-11 text-center">
+						<h1 class="title">Réservations internet</h1>
+		  				<div class="color-soft italic">Matsuri Marbeuf</div>
+					</div>
+	  			</div>
+	  		</div>
+		</div>	
+		<div class="container">
+			<div class="filters bg-soft row">
+				<div class="valign-middle">
+					<div class="col-3">
+						<label>Date</label>
+						<select>
+							<option value="">Toutes</option>
+						</select>
+					</div>
+					<div class="col-3 text-center">
+						<img src="img/filter-calendar.png" class="img-icon" alt="">
+					</div>
+					<div class="col-3 border-left">
+						<label>Service</label>
+						<select>
+							<option value="">Tous</option>
+						</select>
+					</div>
+					<div class="col-3 text-center">
+						<img src="img/filter-clock.png" class="img-icon" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+  	</div>	
+  	<div class="container row-list">
+  		<div class="row day-title bg-grey">
+  			<div class="col-12 col-lg-12 col-sm-12 text-center text-shadow">
+				<strong>Lun. 30 sept. - 28 / 42</strong>
+  			</div>
+  		</div>
+<!--
+		<div class="resa row border-corporate">
+			<div class="row margin-top">
+	  			<div class="col-4 col-lg-4 col-sm-4 text-spotlight">
+                    <div class="col-12">
+                        <div class="text-xlarge">19:30</div>
+                        <div class="text-large margin-bottom">3 pers.</div>
+                    </div>
+	  			</div>
+	  			<div class="col-8 col-lg-8 col-sm-8 border-left">
+					<div class="text-medium">Me Kim Kardashian</div>
+					<p><a href="#" class="color-promo">-50% sur la carte le midi !</a></p>
+	  			</div>
+	  		</div>
+	  		<div class="curtain">
+	  			<div class="mask"></div>
+	  			<div class="wrapper text-center">
+	  				<div class="badge bg-corporate">
+		  				<span class="glyphicon glyphicon-ok text-large"></span>
+		  			</div>
+	  				<p class="bold color-corporate">Réservation validée</p>
+	  			</div>
+	  		</div>
+  		</div>
+  		<div class="resa row border-danger">
+			<div class="row margin-top">
+	  			<div class="col-4 col-lg-4 col-sm-4 text-spotlight">
+					<div class="text-xlarge">19:30</div>
+					<div class="text-large margin-bottom">3 pers.</div>
+	  			</div>
+	  			<div class="col-8 col-lg-8 col-sm-8 border-left">
+					<div class="text-medium">Me Kim Kardashian</div>
+					<p><a href="#" class="color-promo">-50% sur la carte le midi !</a></p>
+	  			</div>
+	  		</div>
+	  		<div class="curtain">
+	  			<div class="mask"></div>
+	  			<div class="wrapper text-center">
+	  				<div class="badge bg-danger">
+		  				<span class="glyphicon glyphicon-remove text-large"></span>
+		  			</div>
+	  				<p class="bold color-danger">Réservation annulée</p>
+	  			</div>
+	  		</div>
+            </div>
+-->
+        <div class="row resa border-danger">
+            <div class="row margin-top margin-bottom">
+                <div class="col-lg-4 col-sm-4 col-4 text-spotlight">
+                    <div class="col-12">
+                        <div class="text-xlarge">20:30</div>
+                        <div class="text-medium">3 pers.</div>
+                        <div><img src="img/minifork.png" class="fromlfwithlove"></div>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-8 col-sm-8 border-left">
+                    <div class="col-12">
+                        <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                        <div class="text-medium">Me Kim Kardashian</div>
+                        <div><a href="#" class="color-promo">-50% sur la carte le midi !</a></div>
+                        <div class="color-soft text-slim">Merci de prévoir un gâteau et une table ronde.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="toggle margin-top padding-top">
+                <div class="panel">
+                    <div class="row border-bottom tiny-pillow">
+                        <div class="col-5 col-lg-5 col-sm-5">Promotion :</div>
+                        <div class="col-7 col-lg-7 col-sm-7"><span class="color-promo">-50% sur la carte</span></div>
+                    </div>
+                    <div class="row border-bottom tiny-pillow">
+                        <div class="col-5 col-lg-5 col-sm-5">Tél. :</div>
+                        <div class="col-7 col-lg-7 col-sm-7"><span class="color-soft">+33 6 83 77 56 16</span></div>
+                    </div>
+                    <div class="row border-bottom tiny-pillow">
+                        <div class="col-5 col-lg-5 col-sm-5">Email :</div>
+                        <div class="col-7 col-lg-7 col-sm-7"><span class="color-soft break-word">bill.murray@lafourchette.com</span></div>
+                    </div>
+                    <div class="row tiny-pillow">
+                        <div class="col-5 col-lg-5 col-sm-5">Note client :</div>
+                        <div class="col-7 col-lg-7 col-sm-7"><span class="color-soft">Merci de prévoir une table calme proche de la sortie du restaurant.</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-top margin-top">
+                <div class="col-6 col-lg-6 col-sm-6 bg-hover border-right">
+                    <div class=" text-center">
+                        <a data-toggle="modal" href="#myModal" class="btn btn-block color-danger text-medium">Annuler</a>
+                    </div>  				
+                </div>
+                <div class="col-6 col-lg-6 col-sm-6 bg-hover bg-corporate">
+                    <div class=" text-center">
+                        <a href="#" class="btn btn-block bg-corporate text-medium"><span class="glyphicon glyphicon-ok"></span> Ok</a>
+                    </div>  				
+                </div>
+            </div>
+        </div>
+  		<div class="row resa">
+			<div class="row margin-top">
+	  			<div class="col-4 col-lg-4 col-sm-4 text-spotlight">
+					<div class="text-xlarge">21:30</div>
+					<div class="text-large">3 pers.</div>
+	  			</div>
+	  			<div class="col-8 col-lg-8 col-sm-8 border-left">
+					<span class="glyphicon glyphicon-bg glyphicon-plus pull-right"></span>
+					<div class="text-medium">Me Kim Kardashian</div>
+					<p class="color-soft text-slim">Merci de prévoir un gâteau et une table ronde.</p>
+	  			</div>
+	  		</div>
+	  		<div class="row border-top margin-top">
+	  			<div class="col-6 col-lg-6 col-sm-6 bg-hover border-right">
+			  		<div class=" text-center">
+			  			<a data-toggle="modal" href="#myModal" class="btn btn-block color-danger text-medium">Annuler</a>
+			  		</div>  				
+	  			</div>
+	  			<div class="col-6 col-lg-6 col-sm-6 bg-hover bg-corporate">
+			  		<div class=" text-center">
+			  			<a href="#" class="btn btn-block bg-corporate text-medium"><span class="glyphicon glyphicon-ok"></span> Ok</a>
+			  		</div>  				
+	  			</div>
+	  		</div>
+  		</div>
+		<div class="row resa">
+			<div class="row margin-top">
+	  			<div class="col-4 col-lg-4 col-sm-4 text-spotlight">
+					<div class="text-xlarge">21:45</div>
+					<div class="text-large">3 pers.</div>
+	  			</div>
+	  			<div class="col-8 col-lg-8 col-sm-8 border-left">
+					<span class="glyphicon glyphicon-bg glyphicon-plus pull-right"></span>
+					<div class="text-medium">Me Kim Kardashian</div>
+					<p class="color-soft text-slim">Merci de prévoir un gâteau et une table ronde.</p>
+	  			</div>
+	  		</div>
+	  		<div class="row border-top margin-top">
+	  			<div class="col-6 col-lg-6 col-sm-6 bg-hover border-right">
+			  		<div class=" text-center">
+			  			<a data-toggle="modal" href="#myModal" class="btn btn-block color-danger text-medium">Annuler</a>
+			  		</div>  				
+	  			</div>
+	  			<div class="col-6 col-lg-6 col-sm-6 bg-hover bg-corporate">
+			  		<div class=" text-center">
+			  			<a href="#" class="btn btn-block bg-corporate text-medium"><span class="glyphicon glyphicon-ok"></span> Ok</a>
+			  		</div>  				
+	  			</div>
+	  		</div>
+	  		<div class="row margin-xy">
+	  			<div class="panel">
+	  				<form>
+	  					<div class="text-center color-danger text-medium">
+	  						Raison de l'annulation
+	  					</div>
+	  					<div class="form-row radio">
+		  					<div class="square-radio color-danger">
+							    <input type="radio" value="" id="squared1" name="check">
+								<label for="squared1"></label>
+							</div>
+							<label for="squared1">Demande de l'internaute</label>	  						
+	  					</div>
+	  					<div class="form-row radio">
+		  					<div class="square-radio color-danger">
+							    <input type="radio" value="" id="squared2" name="check">
+								<label for="squared2"></label>
+							</div>
+							<label for="squared2">Restaurant complet</label>	  						
+	  					</div>
+	  					<div class="form-row radio">
+		  					<div class="square-radio color-danger">
+							    <input type="radio" value="" id="squared3" name="check">
+								<label for="squared3"></label>
+							</div>
+							<label for="squared3">Restaurant privatisé</label>	  						
+	  					</div>
+	  					<div class="form-row radio">
+		  					<div class="square-radio color-danger">
+							    <input type="radio" value="" id="squared4" name="check">
+								<label for="squared4"></label>
+							</div>
+							<label for="squared4">Restaurant fermé</label>	  						
+	  					</div>
+	  					<div class="form-row radio">
+		  					<div class="square-radio color-danger">
+							    <input type="radio" value="" id="squared5" name="check">
+								<label for="squared5"></label>
+							</div>
+							<label for="squared5">Réservation pour une personne interdite</label>	  						
+	  					</div>
+	  					<div class="form-row radio">
+		  					<div class="square-radio color-danger">
+							    <input type="radio" value="" id="squared6" name="check">
+								<label for="squared6"></label>
+							</div>
+							<label for="squared6">Autre type de refus</label>	  						
+	  					</div>
+	  				</form>
+	  				<div class="row border-top">
+	  			<div class="col-6 col-lg-6 col-sm-6 bg-hover border-right">
+			  		<div class=" text-center">
+			  			<a data-toggle="modal" href="#myModal" class="btn btn-block text-medium">Retour</a>
+			  		</div>  				
+	  			</div>
+	  			<div class="col-6 col-lg-6 col-sm-6">
+			  		<div class=" text-center">
+			  			<a href="#" class="btn btn-block color-danger text-medium">Confirmer</a>
+			  		</div>  				
+	  			</div>
+	  		</div>
+	  			</div>
+	  		</div>
+  		</div>
+		<div class="resa">
+			<div class="row margin-top">
+	  			<div class="col-4 col-lg-4 col-sm-4 text-spotlight">
+					<div class="text-xlarge">22:30</div>
+					<div class="text-large">3 pers.</div>
+	  			</div>
+	  			<div class="col-8 col-lg-8 col-sm-8 border-left">
+	  				<span class="glyphicon glyphicon-bg glyphicon-plus pull-right"></span>
+					<div class="text-medium bold">Mr Bertrand Jelensperger</div>
+					<div><a href="#" class="color-promo">-50% sur la carte le...</a></div>
+					<div class="color-soft text-slim">Merci de prévoir un ...</div>
+	  			</div>
+	  		</div>
+	  		<div class="row border-top margin-top">
+	  			<div class="col-6 col-lg-6 col-sm-6 bg-hover border-right">
+			  		<div class=" text-center">
+			  			<a data-toggle="modal" href="#myModal" class="btn btn-block color-danger text-medium" >Annuler</a>
+			  		</div>  				
+	  			</div>
+	  			<div class="col-6 col-lg-6 col-sm-6 bg-hover bg-corporate">
+			  		<div class=" text-center">
+			  			<a href="#" class="btn btn-block bg-corporate text-medium"><span class="glyphicon glyphicon-ok"></span> Ok</a>
+			  		</div>  				
+	  			</div>
+	  		</div>
+  		</div>
+  	</div>
+  	<!-- Modal -->
+  	<div class="modal fade" id="myModal">
+  		<div class="modal-dialog">
+  			<div class="modal-content">
+  				<div class="modal-header bg-danger">
+  					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  					<h4 class="modal-title">Êtes-vous certain de vouloir annuler ?</h4>
+  				</div>
+  				<div class="modal-body">
+  					<div class="title">Mon titre qu'il est joli</div>
+  					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, quam, ad similique ex ullam ipsum quasi rem enim praesentium placeat eos saepe laboriosam sapiente voluptates quo cupiditate suscipit! Numquam, ex.
+  				</div>
+  				<div class="modal-footer bg-hover bg-soft text-center">
+  					<button type="button" class="btn btn-block bg-soft text-medium" data-dismiss="modal">Continuer</button>
+  				</div>
+  			</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+  	</div><!-- /.modal -->
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-switch.min.js"></script>
+  </body>
+</html>

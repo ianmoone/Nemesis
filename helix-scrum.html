@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>HelixScrum - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/helix-scrum.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body class="admin">
+    <div class="header">
+        <div class="logo">
+            <i class="fa fa-spoon fa-lg"></i>
+            <span>Helix scrum</span>
+        </div>
+    </div>
+
+    <!-- Content begins -->
+    <div class="container-fluid content">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    B2c Content
+                    <span class="avatars">
+                        <img src="img/avatar_7.jpg">
+                        <img src="img/avatar_4.jpg">
+                        <img src="img/avatar_sj.png">
+                </div>
+                <div class="panel-body">
+                    <span class="text-muted">#84 - You should put the sprint goal right here</span>
+                    <div class="label label-default pull-right">4 days left</div>
+                    <div class="progress m-y">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+                            35% Complete</span>
+                        </div>
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                            20% To test</span>
+                        </div>
+                    </div>
+                    <div class="metrics m-y">
+                        <div class="metric col-lg-4">
+                            <div class="metric-value">55</div>
+                            <div class="metric-label text-muted">points planned #84</div>
+                        </div>
+                        <div class="metric col-lg-4">
+                            <div class="metric-value">6,2</div>
+                            <div class="metric-label text-muted">actual sprint velocity</div>
+                        </div>
+                        <div class="metric col-lg-4">
+                            <div class="metric-value">8,6<span class="fa fa-long-arrow-down textred"></span></div>
+                            <div class="metric-label text-muted">last sprint velocity</div>
+                        </div>
+                    </div>
+
+                    <h4></h4>
+                    <canvas id="line"></canvas>
+                </div>
+            </div>
+        </div><!--/sprint-->
+
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    B2c Content
+                    <span class="avatars">
+                        <img src="img/avatar_7.jpg">
+                        <img src="img/avatar_4.jpg">
+                        <img src="img/avatar_sj.png">
+                </div>
+                <div class="panel-body">
+                    <span class="text-muted">#84 - You should put the sprint goal right here</span>
+                    <div class="label label-default pull-right">4 days left</div>
+                    <div class="progress m-y">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+                            35% Complete</span>
+                        </div>
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                            20% To test</span>
+                        </div>
+                    </div>
+                    <div class="metrics m-y">
+                        <div class="metric col-lg-4">
+                            <div class="metric-value">55</div>
+                            <div class="metric-label text-muted">points planned #84</div>
+                        </div>
+                        <div class="metric col-lg-4">
+                            <div class="metric-value">6,2</div>
+                            <div class="metric-label text-muted">actual sprint velocity</div>
+                        </div>
+                        <div class="metric col-lg-4">
+                            <div class="metric-value">8,6<span class="fa fa-long-arrow-down textred"></span></div>
+                            <div class="metric-label text-muted">last sprint velocity</div>
+                        </div>
+                    </div>
+
+                    <h4></h4>
+                    <canvas id="line"></canvas>
+                </div>
+            </div>
+        </div><!--/sprint-->
+
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    B2c Content
+                    <span class="avatars">
+                        <img src="img/avatar_7.jpg">
+                        <img src="img/avatar_4.jpg">
+                        <img src="img/avatar_sj.png">
+                </div>
+                <div class="panel-body">
+                    <span class="text-muted">#84 - You should put the sprint goal right here</span>
+                    <div class="label label-default pull-right">4 days left</div>
+                    <div class="progress m-y">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+                            35% Complete</span>
+                        </div>
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                            20% To test</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="metrics m-y">
+                                <div class="metric col-lg-3">
+                                    <div class="metric-value">55</div>
+                                    <div class="metric-label text-muted">points planned #84</div>
+                                </div>
+                                <div class="metric col-lg-3">
+                                    <div class="metric-value">6,2</div>
+                                    <div class="metric-label text-muted">actual sprint velocity</div>
+                                </div>
+                                <div class="metric col-lg-3">
+                                    <div class="metric-value">8,6<span class="fa fa-long-arrow-down textred"></span></div>
+                                    <div class="metric-label text-muted">last sprint velocity</div>
+                                </div>
+                                <div class="metric col-lg-3">
+                                    <div class="metric-value">8,6<span class="fa fa-long-arrow-down textred"></span></div>
+                                    <div class="metric-label text-muted">last sprint velocity</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4></h4>
+                        <div class="col-lg-4">
+                            <canvas id="line2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/sprint-->
+    </div>
+    <!-- //content -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/charts.js"></script>
+<script>
+    var randomScalingFactor = function(){ return Math.round(Math.random()*12)};
+    var lineChartData = {
+        labels : ["v1","v2","v3","v4","v5","v6","v7","v8","v9","v10","v11","v12"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(224,239,252,1)",
+                strokeColor : "rgba(38,148,239,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+    var lineChartData2 = {
+        labels : ["v1","v2","v3","v4","v5","v6","v7","v8","v9","v10","v11","v12"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(224,239,252,1)",
+                strokeColor : "rgba(38,148,239,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+    window.onload = function(){
+    var ctx = document.getElementById("line").getContext("2d");
+    window.line = new Chart(ctx).Line(lineChartData,{
+            maintainAspectRatio: false,
+            responsive: true,
+            scaleShowGridLines: false,
+            showScale: false,
+            pointDot: false,
+        });
+    var ctx2 = document.getElementById("line2").getContext("2d");
+    window.line = new Chart(ctx2).Bar(lineChartData2,{
+            maintainAspectRatio: false,
+            responsive: true,
+            scaleShowGridLines: true,
+            scaleShowHorizontalLines: true,
+            barShowStroke: false,
+            showScale: false,
+            pointDot: false,
+            tooltipTemplate: "<%= value %>",
+            tooltipFillColor: "rgba(0,0,0,0)",
+            tooltipFontColor: "#666",
+            tooltipEvents: [],
+            tooltipCaretSize: 0,
+            onAnimationComplete: function()
+            {
+                this.showTooltip(this.datasets[0].bars, true);
+            }
+        });
+    ;};
+</script> <!-- / charts -->
+</html>

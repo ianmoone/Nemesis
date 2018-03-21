@@ -1,0 +1,71 @@
+/*
+                                   /$$
+                                  | $$
+ /$$$$$$/$$$$   /$$$$$$  /$$   /$$| $$$$$$$   /$$$$$$  /$$$$$$/$$$$
+| $$_  $$_  $$ |____  $$| $$  | $$| $$__  $$ /$$__  $$| $$_  $$_  $$
+| $$ \ $$ \ $$  /$$$$$$$| $$  | $$| $$  \ $$| $$$$$$$$| $$ \ $$ \ $$
+| $$ | $$ | $$ /$$__  $$| $$  | $$| $$  | $$| $$_____/| $$ | $$ | $$
+| $$ | $$ | $$|  $$$$$$$|  $$$$$$$| $$  | $$|  $$$$$$$| $$ | $$ | $$
+|__/ |__/ |__/ \_______/ \____  $$|__/  |__/ \_______/|__/ |__/ |__/
+                         /$$  | $$
+                        |  $$$$$$/
+                         \______/
+*/
+
+/* Generics
+-----------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {font-weight:300;}
+.m-y{margin: 20px 0;}
+
+/***************************************************
+           ___       ___        ___      ___  __  **
+|  | |    |__  |    |__   |\/| |__  |\ |  |  /__` **
+\__/ |    |___ |___ |___  |  | |___ | \|  |  .__/ **
+***************************************************/
+
+html {height:100%;}
+body {height:100%;background: #f6f6f6;color:#555555;font-size:14px;}
+.container, .container-fluid {padding: 70px 15px 20px 15px;transition:padding 0.6s ease;}
+.panel-body [class*='col-'] {padding:0;}
+
+/* Header
+-------------------------------------------------- */
+header {background:#fff; height:60px; width:100%; top:0; z-index:942; position:fixed; box-shadow:0 1px 1px rgba(0,0,0,.05);}
+.logo {height:60px; background:#fff; width:200px; float:left; line-height:60px; font-size:24px; color:#999; font-weight:300; margin-left:15px;}
+.logo img {max-height:40px;}
+.trigger, .trigger:hover {display:inline-block; color:#999; padding:2px 10px; font-size:18px; margin:20px; cursor:pointer; text-decoration:none;}
+.trigger span {margin-right:10px;}
+.filters {margin-bottom: 10px;background:#fff; height:100px; width:100%; padding:30px 20px; top:60px; left:0; z-index:942; box-shadow:0 1px 1px rgba(0,0,0,.05);}
+
+/* Elements
+-------------------------------------------------- */
+ul {margin: 10px 0 10px 0;padding: 0 20px;}
+li {
+    list-style-type: none;
+    background: #fff;
+}
+.project {background: #fff; width: 49%; margin-right: 1%;}
+.project-logo {float:left; margin-right:10px;}
+.icon {width: 100px;height: 100px;margin-left: -15px;}
+.project-title { display:block; font-weight: bold; width:auto; max-width: 85%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size: 15px; padding-top: 10px;color: #313134;}
+.project-details {height:30px;line-height:30px;color:#bbb;font-weight:300;}
+.project-links { margin-bottom: 5px; display: inline-block;}
+
+/* Bootstrap Overrides
+-------------------------------------------------- */
+.row {margin: 0;}
+.btn-default {border-color:#ddd;}
+.btn-default:hover {background:#eee;border-color:#eee;}
+.btn.btn-default:active, .btn.btn-default.active{box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125); background:#e6e6e6; font-weight:bold;}
+.btn-info {background-color:#3a9ed3; border-color:#3a9ed3; color:#FFF;}
+.btn-info:hover {background-color:#2c91c7; border-color:#2c91c7;}
+.panel {height:100%; border:0; border-radius:0; margin:10px 0; box-shadow:0 1px 1px rgba(0,0,0,.05); padding:0 0 10px 0;}
+.panel-default>.panel-heading {background:#fff;color:#999;text-align: left;text-transform:uppercase;line-height:40px;font-size:18px;font-weight:200;}
+.label {margin-top: 5px;padding: 0.3em .6em .3em;font-size: 12px;font-weight: 300;}
+.label-default {background: #ccc;}
+.form-group {margin-bottom: 0;}
+input[type=checkbox], input[type=radio] {margin: 10px 0 0;}
+.checkbox {margin-top: 0;}
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

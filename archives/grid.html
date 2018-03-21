@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>Koala</title>
+            <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+            <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+            <link rel="stylesheet"href="css/koala.css"type="text/css"/>
+            <link rel="stylesheet"href="css/nanoscroll.css"type="text/css"/>
+            <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+            <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+    </head>
+    <body>
+        <div class="container-fluid" id="content">
+            <nav class="panel effect" id="menu-1">
+                <h2 class="sidebartitle">Da title 
+                <i class="icon-arrow-right pull-right m_t"></i>
+                <i class="icon-arrow-left pull-right m_t"></i>
+                </h2>
+                <div class="maildetails">
+                    Mail envoyé le 29/09/2014 à 17:51
+                </div>
+                <div class="preview">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs preview-tabs">
+                        <li class="active col-lg-6 nopl nopr squared"><a href="#html" data-toggle="tab">Preview HTML</a></li>
+                        <li class="col-lg-6 nopl nopr squared"><a href="#brut" data-toggle="tab">Version brute</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="html">
+                            Afficher la preview html ici
+                        </div>
+                        <div class="tab-pane" id="brut">
+                            Et ici la version brute
+                        </div>
+                    </div>
+                </div>
+            </nav><!-- /sidebar -->
+            <h1 class="hr_bottom">Messages diagnostic page<a href="#" class="btn btn-info trigger pull-right">Filtres</a></h1>
+            <div class="row">
+                <div class="new-layer lunch-day ng-scope">
+                    <div class="row day-title bg-grey">
+                        <div class="text-center col-12 col-lg-12 col-sm-12">
+                            <strong>jeudi 4 septembre 2014</strong>
+                        </div>
+                    </div>
+                    <div class="ng-scope">
+                        <div class="pos-rel new-layer lunch-sale-type">
+                            <div class="row border-bottom valign-middle bg-soft">
+                            <div class="col-4 col-lg-4 col-sm-4">
+                            <span class="margin-left ng-binding">Déjeuner</span>
+                            </div>
+                            <div class="col-4 col-lg-4 col-sm-4 text-center">
+                            <span class="color-soft ng-binding">(0/800)</span>
+                            </div>
+                            <div class="col-4 col-lg-4 col-sm-4 text-right saleType-row"></div>
+                            </div>
+                            <div class="saleType-switch">
+                            <div class="switch ng-pristine ng-valid" ng-click="toggle()" toggle-switch="lunchSaleTypeController.sync()" ng-model="$parent.saleType.is_opened" int-to-boolean="" on-label="Ouvert" off-label="Fermé">
+                            <div class="switch-animate switch-on" ng-class="{'switch-off': !model.$viewValue, 'switch-on': model.$viewValue }">
+                            <span class="switch-left ng-binding" ng-bind="onLabel || 'On'">Ouvert</span>
+                            <span class="knob">&nbsp;</span><span class="switch-right ng-binding" ng-bind="offLabel || 'Off'">Fermé</span>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+            </div><!-- /row -->
+        </section>
+        </div>
+        
+        
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+    $(function() {
+        var $panel = $('.panel');
+        $('#content').on('click','.item',function(event){
+            if(!$panel.hasClass('st-menu-open')) {
+                $panel.addClass('st-menu-open');
+                event.stopPropagation();
+            }
+        });
+        $(document).on('click',function(event){
+            var $target = $(event.target);
+            if(!$target.closest('.panel').length) {
+                if($panel.hasClass('st-menu-open')) {
+                $panel.removeClass('st-menu-open');
+            }   
+            }
+        });
+    });
+    </script>
+    <script>
+    $('a.trigger').on('click', function() {
+        $('.filters').toggleClass('copperfield'); 
+    });
+    </script>
+    </body>
+    </html>

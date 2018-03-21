@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>j4rv1s - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="css/bootstrap.css"type="text/css"/>
+        <link rel="stylesheet"href="css/jarvis-admin.css"type="text/css"/>
+        <link rel="stylesheet"href="css/font-awesome.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<header>
+    <h1 class="pull-left">City configuration</h1>
+</header>
+<!-- Content begins -->
+<div class="container-fluid content">
+    <div class="col-lg-12">
+
+        <a href="#" class="trigger textgrey"><i class="fa fa-plus-square-o"></i>Afficher les filtres</a>
+        <div class="filters copperfield">
+            <div class="col-lg-3">
+                <input type="text" class="floatlabel form-control" placeholder="ID City" data-label="ID City" />
+            </div>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <th class="col-lg-3">ID</th>
+                <th class="col-lg-3">City Name</th>
+                <th class="col-lg-3">Country</th>
+                <th class="col-lg-3"></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2798</td>
+                    <td>Aalst</td>
+                    <td>Belgium</td>
+                    <td>
+                        <btn class="btn btn-info pull-right m-x"><i class="fa fa-eye"></i>View</btn>
+                        <btn class="btn btn-default pull-right"><i class="fa fa-pencil"></i>Edit</btn>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2798</td>
+                    <td>Aalst</td>
+                    <td>Belgium</td>
+                    <td>
+                        <btn class="btn btn-info pull-right m-x"><i class="fa fa-eye"></i>View</btn>
+                        <btn class="btn btn-default pull-right"><i class="fa fa-pencil"></i>Edit</btn>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2798</td>
+                    <td>Aalst</td>
+                    <td>Belgium</td>
+                    <td>
+                        <btn class="btn btn-info pull-right m-x"><i class="fa fa-eye"></i>View</btn>
+                        <btn class="btn btn-default pull-right"><i class="fa fa-pencil"></i>Edit</btn>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="sidebar">
+        <div class="logo text-center">
+            Jarvis
+        </div>
+        <ul>
+          <li><a href="#">City configuration</a></li>
+          <li><a href="#">Menu item</a></li>
+          <li><a href="#" class="active">Menu item</a></li>
+          <li><a href="#">Menu item</a></li>
+        </ul>
+    </div><!-- /sidebar -->
+</div><!-- /container -->
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/floatlabels.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.floatlabel').floatlabel();
+    });
+</script>
+<script>
+    $('a.trigger').on('click', function() {
+        $('.filters').toggleClass('copperfield');
+    });
+</script>
+</html>

@@ -1,0 +1,51 @@
+/* mark I */
+
+/* Generics
+-----------------------------------------------------*/
+html {height:100%;}
+body {height:100%;background: #f6f6f6;color:#555555;font-size:14px;}
+h1, h2, h3, h4, h5, h6 {font-weight:300;}
+.container, .container-fluid {height:100%;}
+.panel-body [class*='col-'] {padding:0;}
+
+/* Header
+-------------------------------------------------- */
+header {background:#fff; height:60px; width:100%; top:0; z-index:942; position:fixed; box-shadow:0 1px 1px rgba(0,0,0,.05);}
+.logo {height:60px; background:#fff; width:200px; float:left; line-height:60px; font-size:24px; color:#999; font-weight:300; margin-left:15px;}
+.logo img {max-height:40px;}
+.trigger, .trigger:hover {display:inline-block; color:#999; padding:2px 10px; font-size:18px; margin:20px; cursor:pointer; text-decoration:none;}
+.trigger span {margin-right:10px;}
+.filters {background:#fff; height:100px; width:100%; padding:30px 20px; top:60px; left:0; z-index:942; box-shadow:0 1px 1px rgba(0,0,0,.05);}
+
+/* Elements
+-------------------------------------------------- */
+
+
+/* Sidebar
+-------------------------------------------------- */
+.sidebar {background: #2F313B;width: 250px;height: 100%;padding: 0 0 20px 0;display: block;position: fixed;font-weight: 300;font-size: 15px;top: 50px;transition: all .2s ease-in-out;}
+.sidebar.sidebar-collapsed { width: 50px; transition: all .2s ease-in-out; z-index: 42;}
+.sidebar ul {padding: 0;}
+.sidebar li {padding: 5px 14px;display: block;color: #b8c7ce;}
+.sidebar li:first-child {padding-top: 15px}
+.sidebar ul li {list-style-type: none;line-height: 30px;}
+a .fa.fa-arrow:before { content: "\f107" }
+a.collapsed .fa.fa-arrow:before { content: "\f105" }
+.fa.pull-right {margin-top: 8px;}
+/* Bootstrap Overrides
+-------------------------------------------------- */
+.row {margin: 0;}
+.btn-default {border-color:#ddd;}
+.btn-default:hover {background:#f5f5f1;border-color:#eee}
+.btn.btn-default:active, .btn.btn-default.active{box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125); background:#e6e6e6; font-weight:bold;}
+.btn-info {background-color:#3a9ed3; border-color:#3a9ed3; color:#FFF;}
+.btn-info:hover {background-color:#2c91c7; border-color:#2c91c7;}
+.panel {height:100%; border:0; border-radius:0; margin:10px 0; box-shadow:0 1px 1px rgba(0,0,0,.05); padding:0 0 10px 0;}
+.panel-default>.panel-heading {background:#fff;color:#999;text-align: left;text-transform:uppercase;line-height:40px;font-size:18px;font-weight:200;}
+.label-default {background:#bbb;}
+.form-group {margin-bottom: 0;}
+input[type=checkbox], input[type=radio] {margin: 10px 0 0;}
+.checkbox {margin-top: 0;}
+/*-----------------------------------
+===== !! That's all Folks !! ;) =====
+---------------------------------- */

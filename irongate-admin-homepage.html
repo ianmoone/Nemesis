@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>Irongate - mark I</title>
+        <meta name="description"content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"type="text/css"/>
+        <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"type="text/css"/>
+        <link rel="stylesheet"href="css/hogosha.css"type="text/css"/>
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body class="admin">
+    <div class="sidebar">
+        <div class="adminlogo">Hal <small>1.0</small></div>
+        <ul>
+          <li><a href="#" class="active"><i class="fa fa-exclamation-triangle"></i>Incidents</a></li>
+          <li><a href="#"><i class="fa fa-object-group"></i>Components</a></li>
+          <li><a href="#"><i class="fa fa-bar-chart"></i>Metrics</a></li>
+        </ul>
+        <ul class="bottom-menu">
+            <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
+            <li><a href="#" class="logout"><i class="fa fa-power-off"></i>Logout</a></li>
+        </ul>
+    </div><!-- /sidebar -->
+<!-- Content begins -->
+<div class="container-fluid content">
+    <h1 class="col-lg-12">Dashboard</h1>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Incidents created last 30 days
+                </div>
+                <div class="panel-body">
+                    <div class="metric">14</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                xxx
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                xxx
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <canvas id="line"></canvas>
+        </div>
+    </div>
+</div>
+<!-- //content -->
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/sparks.js"></script>
+<script>
+var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var ChartData = {
+        labels : ["January","February","March","April","May","June","July","xxx","ddd","eee","zzz","ppp"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba(52, 152, 219,.6)",
+                strokeColor : "rgba(41, 128, 185,1)",
+                // pointColor : "rgba(255,255,255,1)",
+                // pointStrokeColor : "rgba(29,147,217,1)",
+                // pointHighlightFill : "#fff",
+                // pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    };
+
+window.onload = function(){
+    var ctx1 = document.getElementById("line").getContext("2d");
+    window.line = new Chart(ctx1).Line(ChartData,{
+            maintainAspectRatio: false,
+            responsive: false,
+            scaleShowGridLines: false,
+            showScale: false,
+            pointDot: false,
+            bezierCurve : true,
+        });
+    ;};
+</script>
+</html>
