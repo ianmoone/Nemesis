@@ -1,0 +1,138 @@
+/* Basic reset
+-----------------------------------------------------*/
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+/* Styling
+-----------------------------------------------------*/
+body.dark {background: #1F1F20; font-family: Arial, Helvetica, sans-serif;}
+.panel {
+	padding: 10px;
+	color: #fff;
+}
+.panel ul {list-style-type: none;}
+li {margin: 5px 0;}
+.item {background: transparent; padding: 5px;}
+.item div {padding: 5px 0;}
+.top-left {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 48%;
+}
+.top-right {
+	display: inline-block;
+	opacity: .6;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: right;
+	width: 48%;
+}
+.bottom-left {
+	display: inline-block;
+	font-size: 12px;
+	opacity: .6;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 48%;
+}
+.bottom-right {
+	display: inline-block;
+	font-size: 12px;
+	opacity: .6;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: right;
+	width: 48%;
+}
+.emphasis {font-weight: bold;}
+.item.background.red {background: #db524b; border-radius: 4px;}
+.item.background.yellow {background: #f7af3e; border-radius: 4px;}
+.item.background.blue {background: #90CAF9; border-radius: 4px;}
+.item.background.pink {background: #e5a8e2; border-radius: 4px;}
+
+.item.border.red {border-left: 3px solid #db524b;}
+.item.border.yellow {border-left: 3px solid #f7af3e;}
+.item.border.blue {border-left: 3px solid #90CAF9;}
+.item.border.pink {border-left: 3px solid #e5a8e2;}
+
+.item.running.prod {
+    background-image:
+    linear-gradient(
+        -45deg,
+        rgba(224, 179, 69, .6) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(224, 179, 69, .6) 50%,
+        rgba(224, 179, 69, .6) 75%,
+        transparent 75%,
+        transparent
+    );
+    -webkit-background-size:50px 50px;
+    -moz-background-size:50px 50px;
+    -ms-background-size:50px 50px;
+    background-size:50px 50px;
+    -webkit-animation:progress 1s linear infinite;
+    -moz-animation:progress 1s linear infinite;
+    -ms-animation:progress 1s linear infinite;
+	animation:progress 1s linear infinite;
+}
+.item.running.preprod {
+    background-image:
+    linear-gradient(
+        -45deg,
+        rgba(89, 171, 227, .6) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(89, 171, 227, .6) 50%,
+        rgba(89, 171, 227, .6) 75%,
+        transparent 75%,
+        transparent
+    );
+    -webkit-background-size:50px 50px;
+    -moz-background-size:50px 50px;
+    -ms-background-size:50px 50px;
+    background-size:50px 50px;
+    -webkit-animation:progress 1s linear infinite;
+    -moz-animation:progress 1s linear infinite;
+    -ms-animation:progress 1s linear infinite;
+    animation:progress 1s linear infinite;
+}
+@-webkit-keyframes progress{
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 75px 0px;
+    }
+}
+@keyframes progress{
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 0px;
+    }
+}

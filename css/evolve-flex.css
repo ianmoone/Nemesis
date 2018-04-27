@@ -1,0 +1,91 @@
+body {font-family: Arial, Helvetica, sans-serif; margin:0;}
+body.dark {background: #1F1F20;}
+.item {
+    background: transparent;
+    color: #fff;
+    margin: 5px 1%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.item div {
+    padding: 2px 0;
+    flex: 1 1 auto;
+    width: 48%;
+    margin: 0 1%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.item div:nth-child(n+3){font-size:12px;}
+.item div:nth-child(n+2){opacity:0.6;}
+.item div:nth-child(even){text-align: right;}
+.emphasis {font-weight: bold;}
+.item.background {border-radius: 2px;}
+.item.background.red {background: #db524b;}
+.item.background.yellow {background: #f7af3e;}
+.item.background.blue {background: #90CAF9;}
+.item.background.pink {background: #e5a8e2;}
+.item.border.red {border-left: 3px solid #db524b;}
+.item.border.yellow {border-left: 3px solid #f7af3e;}
+.item.border.blue {border-left: 3px solid #90CAF9;}
+.item.border.pink {border-left: 3px solid #e5a8e2;}
+.item.running.prod {
+    background-image:
+    linear-gradient(
+        -45deg,
+        rgba(224, 179, 69, .6) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(224, 179, 69, .6) 50%,
+        rgba(224, 179, 69, .6) 75%,
+        transparent 75%,
+        transparent
+    );
+    -webkit-background-size:50px 50px;
+    -moz-background-size:50px 50px;
+    -ms-background-size:50px 50px;
+    background-size:50px 50px;
+    -webkit-animation:progress 1s linear infinite;
+    -moz-animation:progress 1s linear infinite;
+    -ms-animation:progress 1s linear infinite;
+	animation:progress 1s linear infinite;
+}
+.item.running.preprod {
+    background-image:
+    linear-gradient(
+        -45deg,
+        rgba(89, 171, 227, .6) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(89, 171, 227, .6) 50%,
+        rgba(89, 171, 227, .6) 75%,
+        transparent 75%,
+        transparent
+    );
+    -webkit-background-size:50px 50px;
+    -moz-background-size:50px 50px;
+    -ms-background-size:50px 50px;
+    background-size:50px 50px;
+    -webkit-animation:progress 1s linear infinite;
+    -moz-animation:progress 1s linear infinite;
+    -ms-animation:progress 1s linear infinite;
+    animation:progress 1s linear infinite;
+}
+@-webkit-keyframes progress{
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 75px 0px;
+    }
+}
+@keyframes progress{
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 0px;
+    }
+}
